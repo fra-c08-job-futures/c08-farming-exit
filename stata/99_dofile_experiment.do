@@ -42,7 +42,6 @@ summarize
 tabulate foreign
 
 * ── 5. Save ──────────────────────────────────────────────────────────────────
-capture mkdir "data"                       // create folder if absent
-save "data/auto_clean.dta", replace
+save "../data/processed/01_experiment_data.dta", replace
 
-display as result _n "Done — cleaned data saved to data/auto_clean.dta"
+display as result _n "Done — cleaned data saved to /data/processed/experiment_data.dta"

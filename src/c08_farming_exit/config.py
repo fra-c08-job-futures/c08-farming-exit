@@ -11,6 +11,7 @@ NOTEBOOKS_DIR = PROJECT_ROOT / "notebooks"
 STATA_DIR = PROJECT_ROOT / "stata"
 
 STATA_EDITION = "se" # "se" = Stata SE | "mp" = Stata/MP | "be" = Stata/BE
+STATA_PATH = r"C:\Program Files\Stata18\utilities" # path to Stata's "utilities" folder, adjust per machine
 
 
 PARAMETER1 = 42
