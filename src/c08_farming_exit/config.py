@@ -1,0 +1,20 @@
+"""Central place for parameters that may change: paths, constants, settings."""
+
+from pathlib import Path
+
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
+
+DATA_DIR = PROJECT_ROOT / "data"
+RAW_DATA_DIR = DATA_DIR / "raw"
+PROCESSED_DATA_DIR = DATA_DIR / "processed"
+NOTEBOOKS_DIR = PROJECT_ROOT / "notebooks"
+STATA_DIR = PROJECT_ROOT / "stata"
+
+STATA_EDITION = "se" # "se" = Stata SE | "mp" = Stata/MP | "be" = Stata/BE
+
+
+PARAMETER1 = 42
+PARAMETER2 = 0.8
+DICCTIONARY = {
+"bla": "bliblub",
+}
