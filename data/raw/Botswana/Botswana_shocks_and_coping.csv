@@ -1,0 +1,722 @@
+interview__key,r_shocks__id,r_shocks,sh_1,sh_2,sh_3__1,sh_3__2,sh_3__3,sh_3__4,sh_3__5,sh_3__6,sh_3__7,sh_3__8,sh_3__9,sh_3__10,sh_3__11,sh_3__12,sh_3__13,sh_3__14,sh_3__96,sh_3_oth,sh_4,sh_5,sh_6,sh_7
+"30-84-56-78",1,"Chronicor Severe Illnessor Accident of a Household Member",1,"Very severe",1,2,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Extremely likely","Extremely likely","Extremely likely",0
+"30-84-56-78",6,"Dwelling Damaged",2,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Extremely likely","Very  likely","Extremely likely",0
+"30-84-56-78",13,"Loss of Employment",1,"Mild",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Very  likely","Extremely likely","Not very likely",1
+"30-84-56-78",21,"Fallen Sick of COVID-19",2,"Mild",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Extremely likely","Very  likely","Not at all likely",1
+"25-36-49-99",1,"Chronicor Severe Illnessor Accident of a Household Member",4,"Very severe",2,1,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Very  likely","Not very likely","Not very likely",0
+"25-36-49-99",7,"Drought or Extended Period of No Rain",3,"Mild",0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",1
+"25-36-49-99",15,"Large Rise in Prices of Food",4,"Severe",0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not at all likely","Not very likely","Not very likely",1
+"95-91-52-45",8,"Floods",2,"Mild",0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,"Laid sand and concrete to mitigate","Very  likely","Not very likely","Not very likely",0
+"95-91-52-45",10,"Livestock Disease/Death",3,"Very severe",0,2,0,0,0,0,0,0,0,0,0,0,1,0,0,"","Very  likely","Very  likely","Very  likely",0
+"25-55-41-68",15,"Large Rise in Prices of Food",3,"Very severe",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Not at all likely","Not at all likely","Not very likely",0
+"16-89-26-77",15,"Large Rise in Prices of Food",3,"Mild",0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,"","Very  likely","Not very likely","Very  likely",0
+"16-89-26-77",19,"Ethnic or Clan Clashes",1,"Mild",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Not very likely","Not very likely","Very  likely",0
+"32-98-78-03",1,"Chronicor Severe Illnessor Accident of a Household Member",12,"Very severe",0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Very  likely","Very  likely","Not very likely",0
+"32-98-78-03",4,"Fire on Property",1,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Very  likely","Very  likely","Not very likely",0
+"32-98-78-03",6,"Dwelling Damaged",1,"Severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Very  likely","Not at all likely","Not very likely",0
+"32-98-78-03",15,"Large Rise in Prices of Food",2,"Very severe",0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not at all likely","Not at all likely","Not at all likely",0
+"76-60-63-85",6,"Dwelling Damaged",4,"Very severe",0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Extremely likely",0
+"56-53-87-19",1,"Chronicor Severe Illnessor Accident of a Household Member",2,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not at all likely","Not very likely",0
+"56-53-87-19",2,"Death of a Household Member",1,"Severe",1,0,0,0,0,0,2,3,0,0,0,0,0,0,0,"","Very  likely","Very  likely","Very  likely",0
+"17-45-76-38",2,"Death of a Household Member",1,"Very severe",1,2,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not at all likely","Not at all likely","Not at all likely",0
+"17-45-76-38",10,"Livestock Disease/Death",6,"Very severe",2,1,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not at all likely","Not at all likely","Not at all likely",0
+"17-45-76-38",15,"Large Rise in Prices of Food",10,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not at all likely","Not at all likely","Not at all likely",0
+"66-81-51-91",15,"Large Rise in Prices of Food",3,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Very  likely","Very  likely","Very  likely",0
+"66-81-51-91",21,"Fallen Sick of COVID-19",1,"Very severe",0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Very  likely","Very  likely","Very  likely",0
+"02-25-80-90",6,"Dwelling Damaged",1,"Very severe",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Extremely likely","Very  likely","Not very likely",0
+"02-25-80-90",8,"Floods",1,"Very severe",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Very  likely","Very  likely","Very  likely",0
+"02-25-80-90",12,"Household Business Failure(Non-Agricultural)",1,"Very severe",0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,"Closed the business","Not very likely","Not very likely","Not very likely",0
+"02-25-80-90",15,"Large Rise in Prices of Food",3,"Very severe",0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,"Looked for a Job","Very  likely","Very  likely","Very  likely",0
+"46-89-61-94",1,"Chronicor Severe Illnessor Accident of a Household Member",1,"Severe",0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Very  likely","Not very likely","Very  likely",1
+"46-89-61-94",5,"Robbery/Burglary",1,"Severe",0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,"","Very  likely","Not very likely","Very  likely",0
+"46-89-61-94",12,"Household Business Failure(Non-Agricultural)",1,"Severe",1,0,0,0,0,0,2,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Very  likely",0
+"46-89-61-94",15,"Large Rise in Prices of Food",1,"Severe",1,0,0,0,0,0,0,0,0,0,0,0,0,2,0,"","Not very likely","Not very likely","Not very likely",0
+"46-89-61-94",21,"Fallen Sick of COVID-19",1,"Severe",0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Very  likely","Very  likely","Not very likely",1
+"36-57-98-87",12,"Household Business Failure(Non-Agricultural)",12,"Severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Very  likely","Not very likely","Not very likely",0
+"36-57-98-87",15,"Large Rise in Prices of Food",2,"Very severe",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Not very likely","Not very likely","Not very likely",0
+"36-57-98-87",16,"Large Rise in Prices of Agricultural Inputs(E.g.Agrochemicals,Machinery,HiredLabour)",2,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"93-61-95-87",15,"Large Rise in Prices of Food",12,"Very severe",0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,"","Very  likely","Very  likely","Very  likely",0
+"72-10-49-63",13,"Loss of Employment",1,"Very severe",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Not at all likely","Not at all likely","Extremely likely",1
+"72-10-49-63",15,"Large Rise in Prices of Food",3,"Very severe",0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,"","Not at all likely","Not at all likely","Extremely likely",1
+"65-98-70-74",13,"Loss of Employment",1,"Severe",0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,"Had to downsize on household expenses","Not at all likely","Not at all likely","Not very likely",0
+"65-98-70-74",15,"Large Rise in Prices of Food",3,"Severe",0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,"","Not at all likely","Not at all likely","Not at all likely",0
+"71-09-05-63",13,"Loss of Employment",1,"Very severe",0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,"","Very  likely","Extremely likely","Very  likely",0
+"81-05-32-56",1,"Chronicor Severe Illnessor Accident of a Household Member",1,"Mild",1,2,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Very  likely","Very  likely","Not very likely",0
+"81-05-32-56",6,"Dwelling Damaged",3,"Mild",0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,"In the process of finding money to resolve the issues","Not very likely","Not very likely","Not very likely",0
+"81-05-32-56",8,"Floods",2,"Very severe",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Not very likely","Not very likely","Not very likely",0
+"81-05-32-56",9,"Crop Failure",1,"Mild",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Very  likely","Not at all likely","Not at all likely",0
+"81-05-32-56",15,"Large Rise in Prices of Food",3,"Severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"81-05-32-56",19,"Ethnic or Clan Clashes",1,"Severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"30-09-94-93",1,"Chronicor Severe Illnessor Accident of a Household Member",12,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Very  likely","Very  likely","Very  likely",0
+"30-09-94-93",5,"Robbery/Burglary",1,"Very severe",0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,"","Very  likely","Very  likely","Very  likely",0
+"30-09-94-93",12,"Household Business Failure(Non-Agricultural)",3,"Mild",0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,"","Very  likely","Very  likely","Very  likely",0
+"30-09-94-93",15,"Large Rise in Prices of Food",2,"Very severe",0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,"","Very  likely","Very  likely","Very  likely",0
+"85-23-91-16",9,"Crop Failure",1,"Severe",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Not very likely","Not very likely","Not very likely",0
+"85-23-91-16",15,"Large Rise in Prices of Food",4,"Severe",1,0,2,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"85-23-91-16",17,"Loss of Land",1,"Severe",0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"43-14-97-16",15,"Large Rise in Prices of Food",2,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not at all likely","Not at all likely","Not at all likely",0
+"43-14-97-16",19,"Ethnic or Clan Clashes",3,"Mild",0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Very  likely","Very  likely","Very  likely",0
+"49-90-63-33",13,"Loss of Employment",1,"Severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"49-90-63-33",15,"Large Rise in Prices of Food",3,"Severe",1,0,0,0,0,0,2,0,0,0,0,0,0,0,0,"","Not very likely","Not at all likely","Not very likely",0
+"68-84-82-12",8,"Floods",1,"Very severe",0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,"","Very  likely","Not very likely","Not very likely",0
+"68-84-82-12",9,"Crop Failure",1,"Severe",2,0,0,0,0,0,1,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"68-84-82-12",15,"Large Rise in Prices of Food",3,"Severe",1,0,0,0,0,0,2,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"42-95-35-09",9,"Crop Failure",1,"Very severe",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Not at all likely","Very  likely","Not very likely",1
+"42-95-35-09",15,"Large Rise in Prices of Food",2,"Very severe",0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",1
+"54-69-26-46",13,"Loss of Employment",1,"Very severe",1,0,0,0,0,3,0,0,0,0,0,0,0,2,0,"","Extremely likely","Very  likely","Extremely likely",1
+"54-69-26-46",15,"Large Rise in Prices of Food",2,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Very  likely","Very  likely","Very  likely",0
+"92-23-96-13",9,"Crop Failure",1,"Very severe",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Not very likely","Not very likely","Not very likely",0
+"92-23-96-13",11,"Livestock Theft(IncludingRaids)",1,"Severe",0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,"","Not very likely","Not very likely","Not very likely",0
+"22-90-51-93",15,"Large Rise in Prices of Food",4,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Very  likely","Very  likely","Very  likely",1
+"15-81-26-28",15,"Large Rise in Prices of Food",2,"Mild",0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"20-52-90-88",2,"Death of a Household Member",1,"Very severe",0,1,0,0,0,0,0,0,0,0,0,0,0,2,0,"","Not very likely","Not very likely","Not very likely",0
+"20-52-90-88",6,"Dwelling Damaged",3,"Mild",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Not very likely","Not very likely","Not very likely",0
+"20-52-90-88",15,"Large Rise in Prices of Food",4,"Severe",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Not very likely","Not very likely","Not very likely",0
+"35-31-07-84",15,"Large Rise in Prices of Food",2,"Very severe",0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"09-47-23-08",1,"Chronicor Severe Illnessor Accident of a Household Member",2,"Mild",1,0,0,0,0,0,2,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"09-47-23-08",15,"Large Rise in Prices of Food",3,"Severe",1,0,0,0,0,0,2,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"03-49-16-10",1,"Chronicor Severe Illnessor Accident of a Household Member",1,"Mild",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Very  likely","Very  likely","Very  likely",0
+"03-49-16-10",15,"Large Rise in Prices of Food",4,"Severe",0,0,1,0,0,0,0,0,0,0,0,0,0,2,0,"","Not very likely","Not very likely","Not very likely",0
+"03-49-16-10",21,"Fallen Sick of COVID-19",1,"Severe",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Not very likely","Not very likely","Not very likely",0
+"54-94-74-75",1,"Chronicor Severe Illnessor Accident of a Household Member",1,"Very severe",1,2,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not at all likely","Not at all likely","Not at all likely",0
+"54-94-74-75",13,"Loss of Employment",1,"Very severe",0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,"","Not at all likely","Not at all likely","Not at all likely",0
+"54-94-74-75",15,"Large Rise in Prices of Food",2,"Very severe",2,0,1,0,0,0,0,0,0,0,0,0,0,0,0,"","Not at all likely","Not at all likely","Not at all likely",0
+"70-40-01-04",15,"Large Rise in Prices of Food",4,"Very severe",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Not very likely","Not very likely","Not very likely",0
+"33-37-06-20",2,"Death of a Household Member",1,"Very severe",1,0,0,0,0,0,0,2,0,0,0,0,0,0,0,"","Not very likely","Not at all likely","Not very likely",0
+"11-89-65-58",15,"Large Rise in Prices of Food",2,"Severe",1,0,2,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"86-01-74-97",12,"Household Business Failure(Non-Agricultural)",1,"Mild",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Very  likely","Very  likely","Very  likely",0
+"86-01-74-97",13,"Loss of Employment",1,"Mild",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Very  likely","Very  likely","Very  likely",0
+"86-01-74-97",15,"Large Rise in Prices of Food",3,"Mild",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Very  likely","Very  likely","Very  likely",0
+"69-53-29-77",15,"Large Rise in Prices of Food",3,"Severe",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Not very likely","Not very likely","Not very likely",0
+"38-36-87-54",1,"Chronicor Severe Illnessor Accident of a Household Member",1,"Very severe",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Very  likely","Very  likely","Very  likely",0
+"38-36-87-54",5,"Robbery/Burglary",1,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Very  likely","Very  likely","Very  likely",0
+"38-36-87-54",15,"Large Rise in Prices of Food",3,"Very severe",0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,"","Very  likely","Very  likely","Very  likely",0
+"96-39-11-89",10,"Livestock Disease/Death",2,"Severe",0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,"","Not very likely","Not very likely","Not very likely",0
+"62-05-75-13",9,"Crop Failure",1,"Severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Very  likely",0
+"62-05-75-13",15,"Large Rise in Prices of Food",3,"Severe",0,0,0,0,0,0,1,0,2,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"62-05-75-13",21,"Fallen Sick of COVID-19",2,"Severe",0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Very  likely",0
+"36-43-41-97",1,"Chronicor Severe Illnessor Accident of a Household Member",4,"Severe",0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"36-43-41-97",8,"Floods",5,"Severe",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Not very likely","Not very likely","Not very likely",0
+"36-43-41-97",13,"Loss of Employment",1,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"36-43-41-97",15,"Large Rise in Prices of Food",2,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"12-03-37-86",1,"Chronicor Severe Illnessor Accident of a Household Member",1,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Very  likely","Very  likely",0
+"12-03-37-86",9,"Crop Failure",1,"Severe",0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,"","Very  likely","Extremely likely","Very  likely",0
+"12-03-37-86",15,"Large Rise in Prices of Food",4,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Very  likely",0
+"33-44-32-83",15,"Large Rise in Prices of Food",4,"Severe",1,0,0,0,0,0,2,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"39-65-48-99",15,"Large Rise in Prices of Food",4,"Severe",1,0,0,0,0,0,0,0,0,0,0,0,0,2,0,"","Not very likely","Not very likely","Not very likely",0
+"07-73-56-26",1,"Chronicor Severe Illnessor Accident of a Household Member",1,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Very  likely","Very  likely",0
+"07-73-56-26",3,"Household Member Jailed",1,"Very mild",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Not very likely","Very  likely","Very  likely",1
+"07-73-56-26",15,"Large Rise in Prices of Food",2,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Very  likely",0
+"00-16-25-60",15,"Large Rise in Prices of Food",2,"Severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not at all likely","Not at all likely",0
+"05-35-63-46",21,"Fallen Sick of COVID-19",1,"Mild",0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Very  likely","Very  likely","Not very likely",0
+"00-34-52-14",15,"Large Rise in Prices of Food",4,"Mild",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Not very likely","Not very likely","Very  likely",0
+"84-33-06-87",15,"Large Rise in Prices of Food",2,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"85-48-53-30",1,"Chronicor Severe Illnessor Accident of a Household Member",2,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Very  likely","Very  likely","Very  likely",0
+"85-48-53-30",13,"Loss of Employment",1,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Very  likely","Very  likely","Very  likely",0
+"85-48-53-30",15,"Large Rise in Prices of Food",2,"Very severe",1,0,2,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Very  likely",0
+"61-17-81-33",15,"Large Rise in Prices of Food",3,"Severe",0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,"reduced  food consumption","Not very likely","Not very likely","Very  likely",0
+"70-67-46-48",15,"Large Rise in Prices of Food",3,"Very severe",0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,"","Very  likely","Very  likely","Extremely likely",1
+"17-96-77-43",15,"Large Rise in Prices of Food",2,"Severe",0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,"BORROWING MONIES FROM OTHER PEOPLE","Extremely likely","Not at all likely","Not at all likely",0
+"58-76-16-53",15,"Large Rise in Prices of Food",3,"Very severe",0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,"TRADITIONAL ALCOHOL BREWING AND SELLING","Not at all likely","Not at all likely","Not at all likely",0
+"14-93-43-30",15,"Large Rise in Prices of Food",2,"Very severe",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Not at all likely","Not very likely","Not at all likely",0
+"11-82-86-61",2,"Death of a Household Member",1,"Very severe",0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,"","Not at all likely","Not at all likely","Not very likely",0
+"11-82-86-61",7,"Drought or Extended Period of No Rain",9,"Mild",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Not very likely","Not very likely","Not very likely",0
+"11-82-86-61",15,"Large Rise in Prices of Food",10,"Severe",0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"03-50-12-90",9,"Crop Failure",1,"Very severe",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Not at all likely","Not at all likely","Extremely likely",0
+"81-28-91-79",9,"Crop Failure",1,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"81-28-91-79",15,"Large Rise in Prices of Food",4,"Severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"98-37-88-19",12,"Household Business Failure(Non-Agricultural)",3,"Very severe",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Not at all likely","Not at all likely","Not at all likely",0
+"98-37-88-19",15,"Large Rise in Prices of Food",5,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not at all likely","Not at all likely","Not at all likely",0
+"98-37-88-19",19,"Ethnic or Clan Clashes",3,"Very mild",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Very  likely","Very  likely","Very  likely",0
+"19-43-58-99",15,"Large Rise in Prices of Food",5,"Severe",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Not very likely","Not very likely","Not very likely",0
+"85-30-41-56",5,"Robbery/Burglary",3,"Severe",0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,"","Very  likely","Not very likely","Very  likely",0
+"85-30-41-56",15,"Large Rise in Prices of Food",9,"Severe",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Not very likely","Not very likely","Not very likely",0
+"78-32-31-52",1,"Chronicor Severe Illnessor Accident of a Household Member",1,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not at all likely","Not at all likely","Not at all likely",0
+"78-32-31-52",2,"Death of a Household Member",1,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not at all likely","Not at all likely","Not at all likely",0
+"78-32-31-52",7,"Drought or Extended Period of No Rain",1,"Severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"78-32-31-52",12,"Household Business Failure(Non-Agricultural)",12,"Severe",0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,"","Not at all likely","Not at all likely","Not at all likely",0
+"78-32-31-52",15,"Large Rise in Prices of Food",2,"Very severe",0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,"","Not at all likely","Not very likely","Not very likely",0
+"07-52-39-57",1,"Chronicor Severe Illnessor Accident of a Household Member",1,"Very severe",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Not very likely","Not very likely","Not very likely",0
+"07-52-39-57",2,"Death of a Household Member",1,"Very severe",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Not very likely","Not very likely","Not very likely",0
+"07-52-39-57",13,"Loss of Employment",1,"Very severe",0,0,1,0,0,0,0,0,0,0,2,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"07-52-39-57",15,"Large Rise in Prices of Food",4,"Very severe",0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,"Relied on farmers around the village for sustenance","Not very likely","Not very likely","Not very likely",0
+"80-35-75-14",12,"Household Business Failure(Non-Agricultural)",2,"Very severe",0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,"","Very  likely","Very  likely","Very  likely",0
+"80-35-75-14",15,"Large Rise in Prices of Food",2,"Very severe",0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Very  likely",0
+"94-41-84-42",15,"Large Rise in Prices of Food",3,"Severe",2,0,0,0,0,0,1,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"96-46-53-15",13,"Loss of Employment",3,"Severe",0,0,1,0,0,0,2,0,0,0,0,0,0,0,0,"","Very  likely","Very  likely","Very  likely",0
+"96-46-53-15",15,"Large Rise in Prices of Food",3,"Severe",0,0,1,0,0,0,2,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"53-23-37-57",1,"Chronicor Severe Illnessor Accident of a Household Member",2,"Mild",0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Very  likely","Very  likely","Very  likely",0
+"57-12-45-97",2,"Death of a Household Member",4,"Mild",2,0,0,0,0,0,0,1,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"96-34-22-21",12,"Household Business Failure(Non-Agricultural)",10,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not at all likely","Extremely likely",0
+"96-34-22-21",15,"Large Rise in Prices of Food",12,"Severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Very  likely",0
+"03-38-35-14",1,"Chronicor Severe Illnessor Accident of a Household Member",1,"Severe",0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Very  likely","Not very likely","Not very likely",0
+"03-38-35-14",10,"Livestock Disease/Death",2,"Severe",0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"03-38-35-14",15,"Large Rise in Prices of Food",5,"Severe",0,0,0,0,0,0,1,0,2,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"09-06-20-19",15,"Large Rise in Prices of Food",2,"Severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"51-25-36-09",7,"Drought or Extended Period of No Rain",5,"Very severe",0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,"","Not at all likely","Not at all likely","Very  likely",0
+"51-25-36-09",9,"Crop Failure",5,"Very severe",0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"51-25-36-09",10,"Livestock Disease/Death",1,"Severe",0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,"","Not at all likely","Not very likely","Very  likely",0
+"51-25-36-09",13,"Loss of Employment",1,"Very severe",0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,"started a business","Not very likely","Not very likely","Extremely likely",0
+"51-25-36-09",15,"Large Rise in Prices of Food",12,"Very severe",0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,"","Not very likely","Not at all likely","Extremely likely",0
+"51-25-36-09",16,"Large Rise in Prices of Agricultural Inputs(E.g.Agrochemicals,Machinery,HiredLabour)",12,"Very severe",0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Very  likely",0
+"04-05-30-01",15,"Large Rise in Prices of Food",2,"Mild",0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"50-01-20-35",10,"Livestock Disease/Death",2,"Very severe",0,0,0,0,0,0,0,0,0,0,2,0,1,0,0,"","Not very likely","Not very likely","Not very likely",0
+"50-01-20-35",15,"Large Rise in Prices of Food",2,"Severe",0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"67-87-75-21",1,"Chronicor Severe Illnessor Accident of a Household Member",1,"Severe",0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not at all likely","Not very likely",0
+"67-87-75-21",2,"Death of a Household Member",1,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Extremely likely",1
+"67-87-75-21",12,"Household Business Failure(Non-Agricultural)",5,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Extremely likely",1
+"67-87-75-21",13,"Loss of Employment",1,"Very severe",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Not very likely","Not very likely","Not very likely",0
+"67-87-75-21",15,"Large Rise in Prices of Food",3,"Very severe",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Not very likely","Not very likely","Not very likely",0
+"67-87-75-21",17,"Loss of Land",1,"Very severe",0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,"","Very  likely","Very  likely","Very  likely",0
+"53-81-28-44",15,"Large Rise in Prices of Food",5,"Severe",1,0,0,0,0,0,2,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",1
+"22-59-76-95",1,"Chronicor Severe Illnessor Accident of a Household Member",1,"Very severe",0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Very  likely","Very  likely","Not very likely",0
+"22-59-76-95",10,"Livestock Disease/Death",3,"Severe",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Very  likely","Very  likely","Not very likely",0
+"22-59-76-95",12,"Household Business Failure(Non-Agricultural)",5,"Mild",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Extremely likely",0
+"22-59-76-95",15,"Large Rise in Prices of Food",3,"Very severe",1,0,2,0,0,0,3,0,0,0,0,0,0,0,0,"","Not at all likely","Not very likely","Very  likely",0
+"87-80-21-51",12,"Household Business Failure(Non-Agricultural)",7,"Very severe",0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,"Relied on other income-Residential rental income","Very  likely","Not very likely","Extremely likely",0
+"87-80-21-51",15,"Large Rise in Prices of Food",12,"Very severe",0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,"","Very  likely","Not at all likely","Extremely likely",1
+"21-25-86-78",15,"Large Rise in Prices of Food",4,"Very severe",0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",1
+"28-99-62-67",15,"Large Rise in Prices of Food",3,"Mild",0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,"","Not at all likely","Not at all likely","Not at all likely",1
+"14-08-31-40",1,"Chronicor Severe Illnessor Accident of a Household Member",1,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Very  likely","Very  likely","Not very likely",0
+"14-08-31-40",15,"Large Rise in Prices of Food",3,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"43-12-71-52",15,"Large Rise in Prices of Food",3,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Very  likely",1
+"64-05-81-04",1,"Chronicor Severe Illnessor Accident of a Household Member",1,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"64-05-81-04",10,"Livestock Disease/Death",1,"Severe",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Very  likely","Very  likely","Very  likely",0
+"64-05-81-04",11,"Livestock Theft(IncludingRaids)",1,"Very severe",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Not very likely","Not very likely","Very  likely",0
+"64-05-81-04",15,"Large Rise in Prices of Food",4,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"72-80-69-88",5,"Robbery/Burglary",2,"Very severe",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Very  likely","Very  likely","Very  likely",1
+"72-80-69-88",13,"Loss of Employment",4,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Very  likely",0
+"72-80-69-88",15,"Large Rise in Prices of Food",3,"Very severe",0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,"","Very  likely","Very  likely","Very  likely",0
+"07-52-31-91",5,"Robbery/Burglary",1,"Severe",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Not very likely","Not very likely","Not very likely",0
+"99-68-20-94",15,"Large Rise in Prices of Food",12,"Very severe",0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,"","Very  likely","Very  likely","Not very likely",0
+"84-66-38-33",10,"Livestock Disease/Death",1,"Mild",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Very  likely","Very  likely","Very  likely",0
+"84-66-38-33",15,"Large Rise in Prices of Food",3,"Severe",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Not very likely","Not very likely","Not very likely",0
+"39-36-01-20",5,"Robbery/Burglary",2,"Mild",0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Very  likely","Very  likely","Not at all likely",0
+"39-36-01-20",15,"Large Rise in Prices of Food",3,"Very severe",0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,"","Very  likely","Not very likely","Extremely likely",0
+"05-30-74-26",15,"Large Rise in Prices of Food",4,"Severe",0,0,1,0,0,0,0,0,0,0,0,0,0,2,0,"","Not very likely","Not very likely","Not very likely",0
+"22-19-53-02",15,"Large Rise in Prices of Food",1,"Very severe",2,0,1,0,0,0,0,0,0,0,0,0,0,0,0,"","Not at all likely","Not at all likely","Not at all likely",0
+"20-37-92-05",1,"Chronicor Severe Illnessor Accident of a Household Member",1,"Severe",0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,"","Not very likely","Not at all likely","Not very likely",0
+"20-37-92-05",2,"Death of a Household Member",1,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not at all likely","Very  likely","Not very likely",1
+"20-37-92-05",3,"Household Member Jailed",2,"Very mild",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Not at all likely","Very  likely","Not at all likely",1
+"20-37-92-05",6,"Dwelling Damaged",1,"Very severe",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Not at all likely","Not at all likely","Very  likely",0
+"20-37-92-05",15,"Large Rise in Prices of Food",2,"Very severe",0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,"EVERY HOUSEHOLD MEMBER HAS A MINIMUM AMOUNT TO CONTRIBUTE MONTHEND","Not at all likely","Not at all likely","Not very likely",1
+"67-95-64-84",15,"Large Rise in Prices of Food",3,"Very severe",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Not at all likely","Not very likely","Not very likely",1
+"67-07-39-08",1,"Chronicor Severe Illnessor Accident of a Household Member",1,"Severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",1
+"67-07-39-08",2,"Death of a Household Member",1,"Very severe",0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Very  likely","Very  likely","Very  likely",1
+"67-07-39-08",13,"Loss of Employment",1,"Mild",0,1,2,0,0,0,0,0,0,0,0,0,0,0,0,"","Very  likely","Very  likely","Very  likely",1
+"67-07-39-08",15,"Large Rise in Prices of Food",3,"Severe",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Not very likely","Not very likely","Not very likely",0
+"72-66-07-18",1,"Chronicor Severe Illnessor Accident of a Household Member",1,"Severe",0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,"Went to a health facility","Very  likely","Very  likely","Very  likely",0
+"72-66-07-18",8,"Floods",5,"Mild",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Very  likely","Very  likely","Very  likely",1
+"72-66-07-18",13,"Loss of Employment",1,"Very severe",0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,"","Very  likely","Not very likely","Extremely likely",0
+"72-66-07-18",15,"Large Rise in Prices of Food",3,"Very severe",0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"53-41-55-25",13,"Loss of Employment",1,"Severe",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Very  likely","Not very likely","Very  likely",0
+"53-41-55-25",15,"Large Rise in Prices of Food",3,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Very  likely","Very  likely","Not very likely",0
+"99-40-82-80",3,"Household Member Jailed",1,"Mild",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Very  likely","Very  likely","Very  likely",0
+"99-40-82-80",15,"Large Rise in Prices of Food",2,"Severe",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Not very likely","Not very likely","Not very likely",0
+"23-54-03-81",5,"Robbery/Burglary",1,"Severe",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Very  likely","Very  likely","Not very likely",0
+"23-54-03-81",15,"Large Rise in Prices of Food",1,"Severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not at all likely","Not very likely","Not very likely",1
+"27-20-78-36",1,"Chronicor Severe Illnessor Accident of a Household Member",5,"Very severe",2,0,0,0,0,0,1,0,0,0,0,0,0,0,0,"","Not at all likely","Not at all likely","Extremely likely",0
+"27-20-78-36",12,"Household Business Failure(Non-Agricultural)",3,"Very severe",2,0,0,0,0,0,1,0,0,0,0,0,0,0,0,"","Not very likely","Not at all likely","Not very likely",0
+"27-20-78-36",15,"Large Rise in Prices of Food",9,"Very severe",0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,"","Not at all likely","Not very likely","Very  likely",0
+"84-90-94-70",15,"Large Rise in Prices of Food",3,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"83-85-13-86",5,"Robbery/Burglary",1,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Very  likely","Extremely likely",0
+"91-24-08-83",1,"Chronicor Severe Illnessor Accident of a Household Member",1,"Severe",0,1,0,0,0,0,2,0,0,0,0,0,0,0,0,"","Not very likely","Very  likely","Not very likely",0
+"25-32-96-44",13,"Loss of Employment",1,"Severe",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Very  likely","Very  likely","Very  likely",0
+"25-32-96-44",15,"Large Rise in Prices of Food",3,"Very severe",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Very  likely","Very  likely","Very  likely",0
+"97-99-83-33",5,"Robbery/Burglary",1,"Very severe",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Not at all likely","Not very likely","Not very likely",0
+"97-99-83-33",15,"Large Rise in Prices of Food",2,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Very  likely","Very  likely","Very  likely",1
+"55-35-77-06",1,"Chronicor Severe Illnessor Accident of a Household Member",1,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not at all likely","Not at all likely","Not at all likely",0
+"55-35-77-06",2,"Death of a Household Member",2,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not at all likely","Not at all likely","Not at all likely",0
+"55-35-77-06",6,"Dwelling Damaged",5,"Severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not at all likely","Not at all likely","Not at all likely",0
+"55-35-77-06",7,"Drought or Extended Period of No Rain",2,"Very severe",1,2,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not at all likely","Not at all likely","Not at all likely",0
+"55-35-77-06",9,"Crop Failure",1,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"55-35-77-06",10,"Livestock Disease/Death",15,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"55-35-77-06",11,"Livestock Theft(IncludingRaids)",12,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"55-35-77-06",12,"Household Business Failure(Non-Agricultural)",1,"Severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"55-35-77-06",13,"Loss of Employment",2,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not at all likely","Not at all likely","Not at all likely",0
+"55-35-77-06",14,"Large Fall in Sale Prices for Cropsand or Livestock",3,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not at all likely","Not very likely",0
+"55-35-77-06",15,"Large Rise in Prices of Food",3,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"05-01-06-84",1,"Chronicor Severe Illnessor Accident of a Household Member",1,"Mild",2,1,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not at all likely","Not at all likely","Not at all likely",0
+"05-01-06-84",5,"Robbery/Burglary",1,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"05-01-06-84",10,"Livestock Disease/Death",1,"Severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"05-01-06-84",12,"Household Business Failure(Non-Agricultural)",1,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not at all likely","Not at all likely","Not at all likely",0
+"05-01-06-84",13,"Loss of Employment",1,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not at all likely","Not at all likely","Not at all likely",0
+"05-01-06-84",15,"Large Rise in Prices of Food",2,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not at all likely","Not at all likely","Not at all likely",0
+"49-78-46-84",15,"Large Rise in Prices of Food",4,"Very severe",0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,"","Not at all likely","Not at all likely","Extremely likely",1
+"96-34-51-79",21,"Fallen Sick of COVID-19",1,"Very mild",1,0,0,0,0,0,0,0,0,0,0,0,0,2,0,"","Not very likely","Very  likely","Not very likely",0
+"05-90-60-44",12,"Household Business Failure(Non-Agricultural)",8,"Mild",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Extremely likely","Extremely likely","Extremely likely",0
+"05-90-60-44",15,"Large Rise in Prices of Food",12,"Very severe",0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,"","Extremely likely","Extremely likely","Extremely likely",0
+"32-72-73-42",15,"Large Rise in Prices of Food",2,"Very severe",0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,"","Very  likely","Very  likely","Not very likely",0
+"94-88-32-78",15,"Large Rise in Prices of Food",1,"Severe",1,0,0,0,0,0,0,0,0,0,0,0,0,2,0,"","Not very likely","Not very likely","Not very likely",0
+"18-56-14-23",1,"Chronicor Severe Illnessor Accident of a Household Member",4,"Mild",0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Very  likely","Very  likely","Very  likely",1
+"84-22-47-37",1,"Chronicor Severe Illnessor Accident of a Household Member",3,"Severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"84-22-47-37",15,"Large Rise in Prices of Food",5,"Severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"44-69-61-71",8,"Floods",1,"Severe",1,2,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not at all likely",0
+"44-69-61-71",9,"Crop Failure",1,"Very severe",0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,"","Very  likely","Very  likely","Very  likely",0
+"44-69-61-71",11,"Livestock Theft(IncludingRaids)",1,"Mild",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"05-76-24-30",6,"Dwelling Damaged",1,"Mild",0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,"","Not at all likely","Extremely likely","Very  likely",1
+"05-76-24-30",15,"Large Rise in Prices of Food",12,"Severe",0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,"","Not at all likely","Not at all likely","Extremely likely",0
+"72-65-35-75",15,"Large Rise in Prices of Food",2,"Very severe",1,0,3,0,0,0,0,0,0,0,0,0,0,2,0,"","Not very likely","Not very likely","Very  likely",0
+"92-30-60-06",2,"Death of a Household Member",1,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Very  likely","Not at all likely",0
+"94-77-43-36",13,"Loss of Employment",1,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Very  likely","Very  likely","Very  likely",0
+"94-77-43-36",15,"Large Rise in Prices of Food",5,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Very  likely",0
+"72-37-57-39",15,"Large Rise in Prices of Food",12,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Very  likely","Not at all likely","Very  likely",1
+"75-53-97-04",1,"Chronicor Severe Illnessor Accident of a Household Member",1,"Severe",2,1,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"75-53-97-04",10,"Livestock Disease/Death",4,"Very severe",1,0,0,0,0,0,2,0,0,0,0,0,0,0,0,"","Not at all likely","Not very likely","Not at all likely",0
+"75-53-97-04",15,"Large Rise in Prices of Food",1,"Severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"61-20-94-35",15,"Large Rise in Prices of Food",4,"Very severe",0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,"","Not very likely","Not at all likely","Not very likely",0
+"33-94-27-06",1,"Chronicor Severe Illnessor Accident of a Household Member",1,"Severe",0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Very  likely",0
+"33-94-27-06",15,"Large Rise in Prices of Food",3,"Severe",0,1,0,0,0,0,0,0,0,0,2,0,0,0,0,"","Not very likely","Not very likely","Very  likely",0
+"02-07-42-94",15,"Large Rise in Prices of Food",3,"Severe",0,2,0,0,0,0,1,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"68-12-26-88",13,"Loss of Employment",2,"Very severe",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Very  likely","Very  likely","Very  likely",0
+"21-07-91-22",15,"Large Rise in Prices of Food",4,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not at all likely","Not very likely",0
+"59-08-91-97",1,"Chronicor Severe Illnessor Accident of a Household Member",1,"Severe",1,2,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Very  likely",0
+"70-81-99-80",1,"Chronicor Severe Illnessor Accident of a Household Member",1,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not at all likely","Not at all likely",0
+"70-81-99-80",10,"Livestock Disease/Death",2,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not at all likely","Not at all likely","Not at all likely",0
+"70-81-99-80",12,"Household Business Failure(Non-Agricultural)",1,"Very severe",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Not very likely","Not very likely","Not very likely",0
+"70-81-99-80",15,"Large Rise in Prices of Food",3,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not at all likely","Not at all likely","Not at all likely",0
+"70-81-99-80",19,"Ethnic or Clan Clashes",1,"Very severe",0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,"","Not very likely","Very  likely","Very  likely",0
+"70-81-99-80",21,"Fallen Sick of COVID-19",1,"Mild",0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Very  likely","Very  likely","Very  likely",0
+"57-32-99-06",10,"Livestock Disease/Death",1,"Severe",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Very  likely","Very  likely","Not very likely",0
+"57-32-99-06",15,"Large Rise in Prices of Food",3,"Severe",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Very  likely","Very  likely","Not very likely",0
+"60-00-51-13",2,"Death of a Household Member",1,"Severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"03-72-03-14",13,"Loss of Employment",1,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"03-72-03-14",15,"Large Rise in Prices of Food",3,"Very severe",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Not very likely","Not very likely","Not very likely",0
+"32-51-19-72",2,"Death of a Household Member",2,"Severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"95-19-87-73",1,"Chronicor Severe Illnessor Accident of a Household Member",1,"Severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Very  likely","Not very likely","Very  likely",0
+"95-19-87-73",5,"Robbery/Burglary",1,"Severe",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Not at all likely","Very  likely","Very  likely",0
+"95-19-87-73",15,"Large Rise in Prices of Food",4,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Very  likely","Not very likely","Very  likely",0
+"09-07-28-33",15,"Large Rise in Prices of Food",3,"Very severe",0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,"INSTEAD OF USING MONIES FOR OUR PERSONAL CARE WE INVESTED ALL OF IT IN FOOD","Not at all likely","Not at all likely","Not at all likely",0
+"32-84-70-99",6,"Dwelling Damaged",1,"Severe",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Very  likely","Very  likely","Very  likely",0
+"32-84-70-99",13,"Loss of Employment",1,"Very severe",0,2,0,0,0,0,1,0,0,0,0,0,0,0,0,"","Very  likely","Very  likely","Very  likely",0
+"32-84-70-99",15,"Large Rise in Prices of Food",3,"Severe",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Not very likely","Not very likely","Not very likely",0
+"97-60-60-10",12,"Household Business Failure(Non-Agricultural)",1,"Mild",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"97-60-60-10",13,"Loss of Employment",1,"Mild",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Not at all likely","Not at all likely","Not at all likely",0
+"97-60-60-10",15,"Large Rise in Prices of Food",3,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"97-60-60-10",21,"Fallen Sick of COVID-19",3,"Very severe",0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not at all likely","Not at all likely","Not at all likely",0
+"77-34-61-84",1,"Chronicor Severe Illnessor Accident of a Household Member",12,"Very severe",0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not at all likely","Not very likely","Not very likely",0
+"77-34-61-84",15,"Large Rise in Prices of Food",12,"Very severe",0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"51-45-20-69",15,"Large Rise in Prices of Food",3,"Very severe",0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,"","Not at all likely","Not at all likely","Very  likely",1
+"11-13-66-94",15,"Large Rise in Prices of Food",2,"Severe",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Very  likely","Not very likely","Not very likely",0
+"15-09-86-52",1,"Chronicor Severe Illnessor Accident of a Household Member",3,"Mild",0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Very  likely","Very  likely","Not at all likely",0
+"38-98-52-39",2,"Death of a Household Member",1,"Severe",1,0,0,0,0,0,0,2,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"91-79-46-21",1,"Chronicor Severe Illnessor Accident of a Household Member",3,"Mild",0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"91-79-46-21",12,"Household Business Failure(Non-Agricultural)",3,"Severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"91-79-46-21",15,"Large Rise in Prices of Food",2,"Severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"09-72-08-00",13,"Loss of Employment",1,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Very  likely",0
+"09-72-08-00",15,"Large Rise in Prices of Food",2,"Severe",1,0,0,0,0,0,0,0,0,0,0,0,0,2,0,"","Not very likely","Not very likely","Very  likely",0
+"25-52-14-98",10,"Livestock Disease/Death",3,"Very severe",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Very  likely","Very  likely","Very  likely",0
+"25-52-14-98",15,"Large Rise in Prices of Food",4,"Very severe",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Very  likely","Very  likely","Very  likely",0
+"54-44-91-10",15,"Large Rise in Prices of Food",12,"Very severe",0,0,1,0,0,0,0,0,0,0,0,0,0,2,0,"","Not at all likely","Not at all likely","Not very likely",0
+"76-65-29-85",15,"Large Rise in Prices of Food",5,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Very  likely","Very  likely","Very  likely",1
+"76-65-29-85",21,"Fallen Sick of COVID-19",1,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not at all likely","Very  likely","Very  likely",1
+"02-98-88-27",15,"Large Rise in Prices of Food",3,"Very severe",0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,"","Extremely likely","Not at all likely","Not at all likely",1
+"94-29-79-85",2,"Death of a Household Member",1,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not at all likely","Not at all likely",0
+"94-29-79-85",9,"Crop Failure",1,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,2,0,"","Not very likely","Not at all likely","Not very likely",0
+"94-29-79-85",15,"Large Rise in Prices of Food",2,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"73-36-17-40",15,"Large Rise in Prices of Food",3,"Very severe",0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,"TIN COLLECTION AND SELLING","Not very likely","Not very likely","Not at all likely",1
+"73-70-95-80",7,"Drought or Extended Period of No Rain",4,"Severe",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Not very likely","Not very likely","Not very likely",0
+"73-70-95-80",15,"Large Rise in Prices of Food",5,"Very severe",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Not at all likely","Not at all likely","Not very likely",1
+"72-84-79-72",5,"Robbery/Burglary",1,"Severe",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Not very likely","Not very likely","Not very likely",0
+"72-84-79-72",15,"Large Rise in Prices of Food",3,"Severe",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Not very likely","Not very likely","Not very likely",0
+"65-38-87-54",13,"Loss of Employment",1,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"65-38-87-54",15,"Large Rise in Prices of Food",5,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not at all likely","Not at all likely","Not at all likely",0
+"94-91-03-07",15,"Large Rise in Prices of Food",12,"Severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not at all likely","Not at all likely","Extremely likely",0
+"43-00-27-37",15,"Large Rise in Prices of Food",4,"Very severe",1,0,0,0,0,0,2,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"97-63-44-51",10,"Livestock Disease/Death",1,"Very mild",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Not very likely","Not very likely","Not very likely",0
+"13-97-69-06",10,"Livestock Disease/Death",1,"Very mild",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Very  likely","Very  likely","Not very likely",0
+"13-97-69-06",15,"Large Rise in Prices of Food",4,"Very severe",0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Very  likely","Very  likely",0
+"81-33-83-30",9,"Crop Failure",1,"Very severe",0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"81-33-83-30",10,"Livestock Disease/Death",3,"Severe",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Not very likely","Not very likely","Not very likely",0
+"81-33-83-30",15,"Large Rise in Prices of Food",3,"Very severe",0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Extremely likely",0
+"13-49-27-25",15,"Large Rise in Prices of Food",3,"Severe",1,2,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"08-12-43-59",15,"Large Rise in Prices of Food",2,"Severe",1,0,0,0,0,0,0,0,0,0,0,0,0,2,3,"cut budget on luxury items","Not very likely","Not very likely","Very  likely",0
+"82-85-64-69",15,"Large Rise in Prices of Food",2,"Severe",0,0,0,0,2,0,1,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"22-02-04-35",15,"Large Rise in Prices of Food",4,"Very mild",0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"11-05-72-97",15,"Large Rise in Prices of Food",5,"Very severe",1,0,2,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"16-99-02-10",15,"Large Rise in Prices of Food",3,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not at all likely","Not at all likely","Not at all likely",1
+"31-99-53-07",2,"Death of a Household Member",1,"Very severe",1,0,0,0,0,0,0,2,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Very  likely",0
+"31-99-53-07",9,"Crop Failure",1,"Mild",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Not at all likely","Not at all likely","Not very likely",0
+"48-93-31-20",5,"Robbery/Burglary",2,"Very severe",0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,"","Not very likely","Very  likely","Very  likely",0
+"48-93-31-20",10,"Livestock Disease/Death",6,"Very severe",0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,"","Very  likely","Very  likely","Very  likely",0
+"48-93-31-20",14,"Large Fall in Sale Prices for Cropsand or Livestock",5,"Very severe",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Very  likely","Very  likely","Very  likely",0
+"48-93-31-20",15,"Large Rise in Prices of Food",4,"Very severe",0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,"","Very  likely","Very  likely","Very  likely",0
+"87-13-21-98",15,"Large Rise in Prices of Food",3,"Mild",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Very  likely","Very  likely","Not at all likely",1
+"55-27-15-85",1,"Chronicor Severe Illnessor Accident of a Household Member",1,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not at all likely","Not at all likely","Not at all likely",1
+"55-27-15-85",15,"Large Rise in Prices of Food",3,"Very severe",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Not at all likely","Not at all likely","Not at all likely",1
+"59-41-96-68",13,"Loss of Employment",1,"Severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Extremely likely","Extremely likely","Very  likely",0
+"59-41-96-68",15,"Large Rise in Prices of Food",4,"Severe",0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,"","Very  likely","Very  likely","Very  likely",0
+"59-41-96-68",21,"Fallen Sick of COVID-19",1,"Mild",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Very  likely","Very  likely","Very  likely",0
+"22-18-88-41",15,"Large Rise in Prices of Food",3,"Severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not at all likely","Not very likely",0
+"24-64-78-21",10,"Livestock Disease/Death",3,"Very mild",0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,"","Extremely likely","Extremely likely","Not very likely",0
+"24-64-78-21",15,"Large Rise in Prices of Food",12,"Very severe",0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,"","Very  likely","Very  likely","Very  likely",0
+"24-64-78-21",16,"Large Rise in Prices of Agricultural Inputs(E.g.Agrochemicals,Machinery,HiredLabour)",2,"Severe",0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,"","Very  likely","Not very likely","Extremely likely",0
+"86-04-16-80",15,"Large Rise in Prices of Food",2,"Severe",0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,"","Very  likely","Very  likely","Very  likely",1
+"86-04-16-80",21,"Fallen Sick of COVID-19",1,"Mild",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Very  likely","Very  likely",0
+"92-49-74-52",1,"Chronicor Severe Illnessor Accident of a Household Member",2,"Very severe",0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Extremely likely",0
+"92-49-74-52",13,"Loss of Employment",1,"Severe",0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,"Rely on Old age pension for Elizabeth","Not very likely","Not very likely","Not very likely",0
+"92-49-74-52",15,"Large Rise in Prices of Food",2,"Severe",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Not at all likely","Not very likely","Not very likely",0
+"24-72-61-31",1,"Chronicor Severe Illnessor Accident of a Household Member",1,"Severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"24-72-61-31",15,"Large Rise in Prices of Food",4,"Severe",1,0,0,0,0,0,2,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"04-92-41-49",13,"Loss of Employment",1,"Severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"04-92-41-49",16,"Large Rise in Prices of Agricultural Inputs(E.g.Agrochemicals,Machinery,HiredLabour)",3,"Severe",1,0,0,0,2,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"32-83-01-09",7,"Drought or Extended Period of No Rain",4,"Very severe",0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,"","Very  likely","Very  likely","Not very likely",0
+"32-83-01-09",12,"Household Business Failure(Non-Agricultural)",9,"Very severe",0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,"looked for other temporary jobs","Not very likely","Very  likely","Very  likely",0
+"32-83-01-09",15,"Large Rise in Prices of Food",12,"Very severe",0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,"","Very  likely","Very  likely","Very  likely",0
+"79-05-50-27",1,"Chronicor Severe Illnessor Accident of a Household Member",1,"Very severe",1,2,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not at all likely","Not at all likely","Not at all likely",0
+"79-05-50-27",7,"Drought or Extended Period of No Rain",1,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not at all likely","Not at all likely","Not at all likely",0
+"79-05-50-27",13,"Loss of Employment",1,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not at all likely","Not at all likely","Not at all likely",0
+"79-05-50-27",15,"Large Rise in Prices of Food",3,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not at all likely","Not at all likely","Not at all likely",0
+"79-05-50-27",21,"Fallen Sick of COVID-19",1,"Very severe",2,1,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not at all likely","Not at all likely","Not at all likely",0
+"27-16-23-86",10,"Livestock Disease/Death",3,"Severe",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Very  likely","Very  likely","Very  likely",0
+"12-61-67-91",15,"Large Rise in Prices of Food",2,"Severe",0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"58-55-75-07",15,"Large Rise in Prices of Food",12,"Very severe",2,0,1,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Very  likely","Not very likely",0
+"00-06-72-58",15,"Large Rise in Prices of Food",3,"Very severe",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Not at all likely","Not at all likely","Not at all likely",1
+"18-81-00-96",15,"Large Rise in Prices of Food",2,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not at all likely","Not at all likely","Extremely likely",0
+"09-79-14-71",15,"Large Rise in Prices of Food",3,"Severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"71-80-89-34",1,"Chronicor Severe Illnessor Accident of a Household Member",4,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Very  likely","Very  likely","Extremely likely",0
+"71-80-89-34",5,"Robbery/Burglary",1,"Mild",0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,"","Extremely likely","Very  likely","Very  likely",0
+"71-80-89-34",7,"Drought or Extended Period of No Rain",4,"Severe",0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,"","Very  likely","Very  likely","Very  likely",0
+"71-80-89-34",15,"Large Rise in Prices of Food",9,"Severe",0,0,1,2,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Very  likely","Very  likely",0
+"05-16-40-57",15,"Large Rise in Prices of Food",3,"Very severe",1,0,0,0,0,0,2,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"11-65-24-94",13,"Loss of Employment",1,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Very  likely","Very  likely","Very  likely",0
+"11-65-24-94",15,"Large Rise in Prices of Food",8,"Very severe",0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,"rental income","Very  likely","Very  likely","Very  likely",0
+"55-44-38-36",9,"Crop Failure",1,"Severe",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Not at all likely","Not very likely","Not very likely",0
+"55-44-38-36",12,"Household Business Failure(Non-Agricultural)",3,"Very severe",0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,"","Very  likely","Very  likely","Very  likely",0
+"55-44-38-36",15,"Large Rise in Prices of Food",3,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Very  likely","Very  likely","Very  likely",1
+"37-03-14-78",1,"Chronicor Severe Illnessor Accident of a Household Member",2,"Very severe",1,0,2,0,0,0,0,0,0,0,0,0,0,0,0,"","Very  likely","Very  likely","Very  likely",0
+"37-03-14-78",15,"Large Rise in Prices of Food",2,"Very mild",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Not very likely","Not very likely","Not very likely",0
+"77-78-34-26",15,"Large Rise in Prices of Food",4,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Very  likely",1
+"92-09-46-86",15,"Large Rise in Prices of Food",9,"Mild",0,0,0,0,0,0,1,0,0,0,0,0,0,0,2,"Buy in bulk because it seems way cheaper","Extremely likely","Extremely likely","Extremely likely",1
+"27-55-59-32",15,"Large Rise in Prices of Food",3,"Severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"65-23-07-01",1,"Chronicor Severe Illnessor Accident of a Household Member",10,"Very severe",0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Very  likely","Very  likely","Very  likely",1
+"65-23-07-01",13,"Loss of Employment",1,"Very severe",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Not very likely","Not very likely","Extremely likely",1
+"65-23-07-01",15,"Large Rise in Prices of Food",3,"Very severe",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Not very likely","Not very likely","Extremely likely",0
+"79-30-25-19",15,"Large Rise in Prices of Food",3,"Severe",0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Very  likely",1
+"75-18-13-88",15,"Large Rise in Prices of Food",3,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"40-16-04-38",9,"Crop Failure",1,"Severe",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Not very likely","Not at all likely","Not at all likely",0
+"40-16-04-38",15,"Large Rise in Prices of Food",3,"Very severe",0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,"","Not at all likely","Not at all likely","Not at all likely",1
+"49-34-25-75",15,"Large Rise in Prices of Food",3,"Very severe",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Not at all likely","Not at all likely","Not at all likely",1
+"02-31-03-32",15,"Large Rise in Prices of Food",4,"Severe",0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"88-23-45-95",2,"Death of a Household Member",1,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"88-23-45-95",15,"Large Rise in Prices of Food",2,"Mild",0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,"","Very  likely","Very  likely","Not very likely",0
+"92-15-40-92",15,"Large Rise in Prices of Food",1,"Severe",0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"06-55-62-53",15,"Large Rise in Prices of Food",12,"Severe",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Very  likely","Very  likely","Not very likely",0
+"57-74-77-03",13,"Loss of Employment",1,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"57-74-77-03",15,"Large Rise in Prices of Food",3,"Very severe",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Not at all likely","Not at all likely","Not at all likely",0
+"28-44-25-15",1,"Chronicor Severe Illnessor Accident of a Household Member",1,"Severe",1,0,0,0,0,0,0,0,0,0,0,0,2,0,0,"","Not very likely","Not very likely","Not very likely",0
+"28-44-25-15",10,"Livestock Disease/Death",2,"Very severe",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Not very likely","Not very likely","Not very likely",0
+"28-44-25-15",15,"Large Rise in Prices of Food",2,"Severe",1,0,0,0,0,0,0,0,0,0,0,0,0,2,0,"","Not very likely","Not very likely","Not very likely",0
+"90-03-82-22",15,"Large Rise in Prices of Food",4,"Severe",0,0,1,0,0,0,2,0,0,0,0,0,0,3,0,"","Not very likely","Not very likely","Not very likely",0
+"23-30-88-30",15,"Large Rise in Prices of Food",12,"Very severe",0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,"","Not very likely","Not at all likely","Not very likely",0
+"72-38-90-85",2,"Death of a Household Member",1,"Severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"76-02-43-67",1,"Chronicor Severe Illnessor Accident of a Household Member",1,"Severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"76-02-43-67",5,"Robbery/Burglary",1,"Severe",1,0,0,0,0,0,2,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"76-02-43-67",13,"Loss of Employment",1,"Severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"76-02-43-67",15,"Large Rise in Prices of Food",4,"Very severe",1,0,0,0,0,0,2,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"58-63-03-99",1,"Chronicor Severe Illnessor Accident of a Household Member",2,"Mild",0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Very  likely","Very  likely","Extremely likely",1
+"58-63-03-99",15,"Large Rise in Prices of Food",3,"Very severe",0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,"","Very  likely","Very  likely","Extremely likely",0
+"53-04-65-79",15,"Large Rise in Prices of Food",2,"Severe",0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"48-16-15-04",15,"Large Rise in Prices of Food",3,"Severe",0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,"","Not at all likely","Not at all likely","Not at all likely",1
+"08-72-41-04",7,"Drought or Extended Period of No Rain",1,"Mild",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Extremely likely","Very  likely","Very  likely",0
+"08-72-41-04",9,"Crop Failure",1,"Mild",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Very  likely","Very  likely","Very  likely",0
+"08-72-41-04",10,"Livestock Disease/Death",1,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"08-72-41-04",15,"Large Rise in Prices of Food",2,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"08-72-41-04",16,"Large Rise in Prices of Agricultural Inputs(E.g.Agrochemicals,Machinery,HiredLabour)",1,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"48-20-18-94",15,"Large Rise in Prices of Food",3,"Mild",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Very  likely","Very  likely","Not at all likely",0
+"56-53-54-49",5,"Robbery/Burglary",2,"Very severe",0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,"","Very  likely","Very  likely","Very  likely",0
+"56-53-54-49",15,"Large Rise in Prices of Food",3,"Mild",0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,"","Very  likely","Very  likely","Very  likely",0
+"56-53-54-49",16,"Large Rise in Prices of Agricultural Inputs(E.g.Agrochemicals,Machinery,HiredLabour)",2,"Very severe",0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,"","Very  likely","Very  likely","Very  likely",0
+"01-08-40-07",9,"Crop Failure",1,"Very severe",0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,"","Not at all likely","Not at all likely","Extremely likely",0
+"74-08-40-24",15,"Large Rise in Prices of Food",2,"Severe",1,0,2,0,0,0,0,0,0,0,0,0,0,0,0,"","Very  likely","Very  likely","Not at all likely",0
+"14-31-43-40",15,"Large Rise in Prices of Food",4,"Severe",0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,"","Very  likely","Very  likely","Very  likely",0
+"14-31-43-40",16,"Large Rise in Prices of Agricultural Inputs(E.g.Agrochemicals,Machinery,HiredLabour)",4,"Severe",0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,"","Very  likely","Very  likely","Very  likely",0
+"24-80-99-00",13,"Loss of Employment",2,"Very severe",0,0,0,0,0,0,1,0,0,0,0,0,0,2,0,"","Not very likely","Not very likely","Not very likely",0
+"24-80-99-00",15,"Large Rise in Prices of Food",4,"Very severe",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Not at all likely","Not at all likely","Not at all likely",0
+"40-28-46-68",1,"Chronicor Severe Illnessor Accident of a Household Member",1,"Severe",2,1,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"40-28-46-68",15,"Large Rise in Prices of Food",3,"Very severe",1,2,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"37-39-15-65",2,"Death of a Household Member",1,"Severe",1,0,0,0,0,0,0,2,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"45-44-88-31",9,"Crop Failure",2,"Severe",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Very  likely","Very  likely","Not at all likely",1
+"45-44-88-31",15,"Large Rise in Prices of Food",3,"Very severe",0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,"","Not at all likely","Not very likely","Not very likely",1
+"91-91-62-09",5,"Robbery/Burglary",1,"Very severe",0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,"","Not very likely","Not very likely","Not very likely",0
+"91-91-62-09",10,"Livestock Disease/Death",2,"Mild",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Not very likely","Not very likely","Not very likely",0
+"91-91-62-09",15,"Large Rise in Prices of Food",3,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"91-91-62-09",21,"Fallen Sick of COVID-19",3,"Severe",0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Very  likely","Very  likely","Very  likely",0
+"79-34-34-89",9,"Crop Failure",3,"Mild",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"79-34-34-89",15,"Large Rise in Prices of Food",2,"Severe",2,0,0,0,0,0,1,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Very  likely",0
+"07-03-46-78",1,"Chronicor Severe Illnessor Accident of a Household Member",1,"Severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"07-03-46-78",15,"Large Rise in Prices of Food",6,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"52-55-71-22",15,"Large Rise in Prices of Food",3,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Very  likely",1
+"42-79-46-81",15,"Large Rise in Prices of Food",3,"Very severe",0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Extremely likely",0
+"21-92-10-43",1,"Chronicor Severe Illnessor Accident of a Household Member",1,"Very severe",1,2,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not at all likely","Not at all likely","Not at all likely",0
+"21-92-10-43",10,"Livestock Disease/Death",1,"Very severe",0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,"bought vaccines","Not at all likely","Not at all likely","Not at all likely",0
+"21-92-10-43",15,"Large Rise in Prices of Food",2,"Very severe",0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,"Piece jobs","Not at all likely","Not at all likely","Not at all likely",0
+"19-83-50-72",2,"Death of a Household Member",1,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not at all likely","Not at all likely","Not at all likely",0
+"19-83-50-72",15,"Large Rise in Prices of Food",5,"Severe",0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,"","Not at all likely","Not very likely","Not at all likely",0
+"19-83-50-72",21,"Fallen Sick of COVID-19",1,"Severe",0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Very  likely","Very  likely","Very  likely",0
+"58-42-18-32",2,"Death of a Household Member",1,"Very severe",1,0,0,0,0,0,0,2,0,0,0,0,0,0,0,"","Not very likely","Not at all likely","Not at all likely",0
+"48-22-87-49",15,"Large Rise in Prices of Food",3,"Severe",1,0,0,0,0,0,2,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"85-54-41-38",15,"Large Rise in Prices of Food",4,"Very severe",0,0,1,0,0,0,0,0,0,0,0,0,0,2,0,"","Not at all likely","Not at all likely","Not at all likely",0
+"91-10-07-30",10,"Livestock Disease/Death",1,"Severe",1,0,0,0,0,0,0,0,0,0,0,0,2,0,0,"","Very  likely","Very  likely","Not very likely",0
+"12-91-55-52",15,"Large Rise in Prices of Food",3,"Mild",0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,"Piece jobs","Very  likely","Very  likely","Very  likely",0
+"74-40-02-20",15,"Large Rise in Prices of Food",5,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Very  likely","Very  likely","Extremely likely",0
+"09-31-11-33",7,"Drought or Extended Period of No Rain",3,"Very severe",0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not at all likely","Not at all likely","Not very likely",0
+"09-31-11-33",9,"Crop Failure",4,"Very severe",0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not at all likely","Not at all likely","Not at all likely",0
+"09-31-11-33",14,"Large Fall in Sale Prices for Cropsand or Livestock",2,"Very severe",0,1,0,0,0,0,0,0,0,0,0,0,0,0,2,"They avoid selling livestock until this is rectified and they are able to sell at high prices.","Not very likely","Not very likely","Not very likely",0
+"09-31-11-33",15,"Large Rise in Prices of Food",12,"Severe",0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"09-31-11-33",16,"Large Rise in Prices of Agricultural Inputs(E.g.Agrochemicals,Machinery,HiredLabour)",1,"Severe",0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,"","Not very likely","Not at all likely","Not very likely",0
+"87-08-33-34",15,"Large Rise in Prices of Food",2,"Severe",2,0,0,0,1,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"61-84-77-75",15,"Large Rise in Prices of Food",5,"Severe",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Not very likely","Not very likely","Not very likely",0
+"75-58-44-85",15,"Large Rise in Prices of Food",4,"Severe",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Not at all likely","Not at all likely","Not at all likely",0
+"11-16-18-86",12,"Household Business Failure(Non-Agricultural)",2,"Mild",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Very  likely","Very  likely","Very  likely",0
+"11-16-18-86",15,"Large Rise in Prices of Food",2,"Very mild",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Very  likely","Very  likely","Not at all likely",0
+"04-26-72-23",9,"Crop Failure",2,"Severe",0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"23-66-97-33",15,"Large Rise in Prices of Food",4,"Severe",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Not very likely","Not very likely","Not very likely",0
+"06-64-69-84",2,"Death of a Household Member",1,"Severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not at all likely",0
+"56-62-10-52",15,"Large Rise in Prices of Food",2,"Severe",1,0,0,0,0,0,2,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"05-04-82-73",15,"Large Rise in Prices of Food",4,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Very  likely","Very  likely","Very  likely",0
+"03-81-35-88",15,"Large Rise in Prices of Food",2,"Severe",0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,"","Not very likely","Very  likely","Very  likely",0
+"87-65-62-49",12,"Household Business Failure(Non-Agricultural)",1,"Mild",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Extremely likely","Extremely likely","Extremely likely",0
+"87-65-62-49",15,"Large Rise in Prices of Food",5,"Very severe",0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,"get piece jobs","Not very likely","Not very likely","Not very likely",0
+"95-74-95-07",15,"Large Rise in Prices of Food",1,"Severe",1,0,0,0,0,0,0,0,0,0,0,0,2,0,0,"","Not very likely","Not very likely","Not very likely",0
+"51-31-85-01",15,"Large Rise in Prices of Food",12,"Very severe",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Not very likely","Not very likely","Not very likely",0
+"51-50-93-70",2,"Death of a Household Member",1,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not at all likely","Not very likely",0
+"51-50-93-70",15,"Large Rise in Prices of Food",2,"Severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"43-24-35-84",2,"Death of a Household Member",1,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not at all likely","Not at all likely","Not at all likely",0
+"43-24-35-84",15,"Large Rise in Prices of Food",3,"Very severe",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Not at all likely","Not at all likely","Not at all likely",1
+"89-88-34-15",15,"Large Rise in Prices of Food",3,"Very severe",0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,"","Not at all likely","Not at all likely","Not at all likely",1
+"14-85-25-58",15,"Large Rise in Prices of Food",5,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"80-79-44-48",13,"Loss of Employment",1,"Mild",0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,"Do piece jobs","Very  likely","Very  likely","Very  likely",0
+"80-79-44-48",15,"Large Rise in Prices of Food",3,"Very severe",0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"80-79-44-48",21,"Fallen Sick of COVID-19",1,"Mild",0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Very  likely","Very  likely","Very  likely",0
+"86-55-30-87",15,"Large Rise in Prices of Food",4,"Very severe",0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Very  likely",1
+"86-55-30-87",21,"Fallen Sick of COVID-19",1,"Very severe",0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"95-51-95-92",10,"Livestock Disease/Death",1,"Mild",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Very  likely","Very  likely","Very  likely",0
+"95-51-95-92",15,"Large Rise in Prices of Food",4,"Mild",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Very  likely","Very  likely","Very  likely",0
+"89-51-80-40",1,"Chronicor Severe Illnessor Accident of a Household Member",3,"Very severe",1,2,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"89-51-80-40",10,"Livestock Disease/Death",5,"Severe",1,0,0,0,0,0,2,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"89-51-80-40",13,"Loss of Employment",1,"Severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"80-53-41-39",13,"Loss of Employment",1,"Mild",0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",1
+"80-53-41-39",15,"Large Rise in Prices of Food",1,"Mild",0,0,1,0,0,0,2,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"87-22-49-94",5,"Robbery/Burglary",1,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"87-22-49-94",15,"Large Rise in Prices of Food",3,"Severe",1,0,0,0,0,0,2,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"98-98-98-22",15,"Large Rise in Prices of Food",3,"Very severe",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Not at all likely","Not at all likely","Not at all likely",1
+"19-11-80-87",15,"Large Rise in Prices of Food",4,"Very severe",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Not at all likely","Not at all likely","Not at all likely",1
+"02-55-85-64",15,"Large Rise in Prices of Food",5,"Mild",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Very  likely","Very  likely","Very  likely",0
+"61-35-56-51",15,"Large Rise in Prices of Food",1,"Severe",1,0,2,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"61-35-56-51",96,"Other",2,"Severe",1,0,0,0,0,0,0,0,0,0,0,0,0,2,0,"","Not very likely","Not very likely","Not very likely",0
+"57-52-43-19",10,"Livestock Disease/Death",1,"Severe",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Not very likely","Not very likely","Not very likely",0
+"57-52-43-19",11,"Livestock Theft(IncludingRaids)",1,"Severe",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Not very likely","Not very likely","Not very likely",0
+"57-52-43-19",15,"Large Rise in Prices of Food",3,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Very  likely",0
+"39-14-69-76",15,"Large Rise in Prices of Food",3,"Severe",1,0,0,0,0,0,0,0,2,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"72-36-49-36",1,"Chronicor Severe Illnessor Accident of a Household Member",12,"Very severe",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Not at all likely","Not at all likely","Not at all likely",0
+"80-82-49-42",13,"Loss of Employment",1,"Very severe",0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,"Do piece jobs","Not very likely","Not very likely","Not very likely",0
+"80-82-49-42",15,"Large Rise in Prices of Food",2,"Very severe",0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,"Do piece jobs","Not very likely","Not very likely","Not very likely",0
+"47-81-87-67",15,"Large Rise in Prices of Food",12,"Very severe",0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,"","Very  likely","Very  likely","Extremely likely",0
+"55-33-21-42",1,"Chronicor Severe Illnessor Accident of a Household Member",2,"Severe",1,2,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"55-33-21-42",5,"Robbery/Burglary",1,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"55-33-21-42",15,"Large Rise in Prices of Food",2,"Severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"42-50-27-40",13,"Loss of Employment",1,"Severe",1,0,2,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"42-50-27-40",15,"Large Rise in Prices of Food",1,"Very severe",1,0,2,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"74-79-87-37",15,"Large Rise in Prices of Food",4,"Severe",0,0,1,0,0,0,0,0,0,0,0,0,0,2,0,"","Not very likely","Not very likely","Not very likely",0
+"74-79-87-37",16,"Large Rise in Prices of Agricultural Inputs(E.g.Agrochemicals,Machinery,HiredLabour)",4,"Severe",0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"32-64-27-45",9,"Crop Failure",1,"Very severe",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Not at all likely","Not at all likely","Not very likely",0
+"32-64-27-45",10,"Livestock Disease/Death",6,"Very severe",0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not at all likely","Not at all likely","Not at all likely",0
+"32-64-27-45",15,"Large Rise in Prices of Food",3,"Very severe",0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,"","Not at all likely","Not at all likely","Not at all likely",0
+"43-28-98-57",15,"Large Rise in Prices of Food",3,"Very severe",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Not at all likely","Not at all likely","Very  likely",1
+"98-31-37-04",1,"Chronicor Severe Illnessor Accident of a Household Member",3,"Severe",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Not very likely","Not very likely","Very  likely",0
+"98-31-37-04",15,"Large Rise in Prices of Food",6,"Severe",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Very  likely","Very  likely","Very  likely",0
+"50-46-09-53",15,"Large Rise in Prices of Food",3,"Very severe",2,1,3,0,0,0,0,0,0,0,0,0,0,0,0,"","Not at all likely","Not at all likely","Extremely likely",0
+"48-80-48-31",15,"Large Rise in Prices of Food",8,"Severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Very  likely",0
+"59-69-31-11",15,"Large Rise in Prices of Food",5,"Very severe",0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Very  likely",1
+"68-17-57-15",1,"Chronicor Severe Illnessor Accident of a Household Member",1,"Severe",1,0,0,0,0,0,0,0,0,0,0,0,0,2,0,"","Not very likely","Not very likely","Not very likely",0
+"68-17-57-15",2,"Death of a Household Member",1,"Severe",1,0,0,0,0,0,0,0,0,0,0,0,0,2,0,"","Not very likely","Not very likely","Not very likely",0
+"68-17-57-15",15,"Large Rise in Prices of Food",1,"Severe",1,0,2,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"25-90-19-11",2,"Death of a Household Member",1,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"45-83-41-38",1,"Chronicor Severe Illnessor Accident of a Household Member",1,"Severe",1,2,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"45-83-41-38",15,"Large Rise in Prices of Food",3,"Severe",2,1,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"61-12-40-36",15,"Large Rise in Prices of Food",2,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"11-71-40-81",96,"Other",2,"Severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"36-42-18-14",1,"Chronicor Severe Illnessor Accident of a Household Member",1,"Severe",1,0,0,0,0,0,0,0,0,0,0,0,0,2,0,"","Not very likely","Not very likely","Not very likely",0
+"36-42-18-14",2,"Death of a Household Member",1,"Severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Very  likely",0
+"19-03-38-46",15,"Large Rise in Prices of Food",4,"Very severe",0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not at all likely","Not at all likely","Not at all likely",1
+"92-48-70-16",15,"Large Rise in Prices of Food",3,"Very severe",1,0,2,0,0,0,0,0,0,0,0,0,0,0,0,"","Not at all likely","Not at all likely","Not at all likely",1
+"34-14-49-72",1,"Chronicor Severe Illnessor Accident of a Household Member",1,"Severe",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Not very likely","Not very likely","Not very likely",0
+"34-14-49-72",13,"Loss of Employment",1,"Severe",0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"34-14-49-72",15,"Large Rise in Prices of Food",4,"Severe",0,0,1,0,0,0,0,0,0,0,0,0,0,2,0,"","Not very likely","Not very likely","Not at all likely",0
+"22-89-40-33",11,"Livestock Theft(IncludingRaids)",1,"Mild",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Not very likely","Very  likely","Not very likely",0
+"22-89-40-33",15,"Large Rise in Prices of Food",2,"Severe",0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,"","Not very likely","Very  likely","Not very likely",0
+"37-39-45-84",9,"Crop Failure",1,"Very severe",0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,"Continue buying from shops","Extremely likely","Very  likely","Very  likely",0
+"37-39-45-84",15,"Large Rise in Prices of Food",2,"Very severe",0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,"","Very  likely","Not very likely","Very  likely",0
+"98-85-46-77",15,"Large Rise in Prices of Food",3,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"80-21-91-02",15,"Large Rise in Prices of Food",10,"Very severe",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Not very likely","Not very likely","Very  likely",0
+"22-74-67-59",15,"Large Rise in Prices of Food",4,"Very severe",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Not at all likely","Not at all likely","Not at all likely",1
+"88-01-88-32",10,"Livestock Disease/Death",1,"Mild",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Not very likely","Not very likely","Not very likely",0
+"88-01-88-32",15,"Large Rise in Prices of Food",4,"Severe",0,0,1,0,0,0,2,0,0,0,0,0,0,3,0,"","Not very likely","Not very likely","Not very likely",0
+"98-88-56-41",13,"Loss of Employment",1,"Severe",0,0,0,0,0,0,1,0,0,0,0,0,0,2,0,"","Not very likely","Not very likely","Not very likely",0
+"98-88-56-41",15,"Large Rise in Prices of Food",3,"Severe",0,0,1,0,0,0,2,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"26-07-22-36",15,"Large Rise in Prices of Food",4,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not at all likely","Not at all likely","Not at all likely",1
+"55-76-99-68",15,"Large Rise in Prices of Food",4,"Very severe",0,0,1,0,0,0,0,0,0,0,0,0,0,2,0,"","Not very likely","Not very likely","Not very likely",0
+"38-33-66-67",1,"Chronicor Severe Illnessor Accident of a Household Member",1,"Severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"38-33-66-67",15,"Large Rise in Prices of Food",4,"Severe",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Not very likely","Not very likely","Not very likely",0
+"16-65-54-37",13,"Loss of Employment",1,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"16-65-54-37",15,"Large Rise in Prices of Food",2,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,2,"look for piece jobs","Not very likely","Not very likely","Not very likely",0
+"16-65-54-37",21,"Fallen Sick of COVID-19",1,"Mild",0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Very  likely","Very  likely","Very  likely",0
+"20-77-43-56",15,"Large Rise in Prices of Food",4,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not at all likely","Not at all likely","Not at all likely",1
+"08-12-15-69",15,"Large Rise in Prices of Food",4,"Very severe",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Not very likely","Not very likely","Not very likely",0
+"43-73-48-25",15,"Large Rise in Prices of Food",6,"Very severe",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Very  likely","Very  likely","Very  likely",0
+"86-00-77-05",2,"Death of a Household Member",1,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not at all likely","Not at all likely","Not at all likely",0
+"86-00-77-05",12,"Household Business Failure(Non-Agricultural)",1,"Mild",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Very  likely","Very  likely","Very  likely",0
+"86-00-77-05",15,"Large Rise in Prices of Food",1,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"86-00-77-05",19,"Ethnic or Clan Clashes",1,"Mild",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Very  likely","Very  likely",0
+"04-04-14-28",15,"Large Rise in Prices of Food",2,"Mild",0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not at all likely",0
+"06-32-06-25",15,"Large Rise in Prices of Food",3,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"91-35-74-95",15,"Large Rise in Prices of Food",4,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Very  likely",0
+"91-35-74-95",21,"Fallen Sick of COVID-19",1,"Very severe",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Not very likely","Very  likely","Very  likely",1
+"87-84-09-54",13,"Loss of Employment",1,"Mild",1,0,0,0,0,0,0,0,0,0,0,0,0,0,2,"opened a small shop","Not very likely","Not very likely","Not very likely",0
+"62-23-61-37",13,"Loss of Employment",1,"Very severe",1,0,0,0,0,0,2,0,0,0,0,0,0,0,0,"","Not very likely","Not at all likely","Not very likely",0
+"51-67-29-73",1,"Chronicor Severe Illnessor Accident of a Household Member",4,"Severe",1,2,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"51-67-29-73",6,"Dwelling Damaged",1,"Mild",1,0,0,0,0,0,2,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"51-67-29-73",9,"Crop Failure",1,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"51-67-29-73",15,"Large Rise in Prices of Food",3,"Very severe",1,0,0,0,0,0,2,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"51-67-29-73",16,"Large Rise in Prices of Agricultural Inputs(E.g.Agrochemicals,Machinery,HiredLabour)",3,"Severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"93-42-86-13",1,"Chronicor Severe Illnessor Accident of a Household Member",2,"Severe",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Very  likely","Very  likely","Very  likely",0
+"93-42-86-13",3,"Household Member Jailed",1,"Severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Very  likely","Very  likely","Very  likely",0
+"93-42-86-13",15,"Large Rise in Prices of Food",4,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Very  likely","Not very likely","Very  likely",0
+"31-42-54-99",15,"Large Rise in Prices of Food",3,"Severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Very  likely","Very  likely","Very  likely",0
+"40-00-25-74",9,"Crop Failure",1,"Very severe",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Not very likely","Not at all likely","Not at all likely",0
+"32-73-63-74",15,"Large Rise in Prices of Food",2,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Very  likely",0
+"16-86-88-22",1,"Chronicor Severe Illnessor Accident of a Household Member",1,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not at all likely",0
+"64-46-66-46",15,"Large Rise in Prices of Food",3,"Severe",1,0,0,0,0,0,2,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"64-46-66-46",21,"Fallen Sick of COVID-19",1,"Severe",1,2,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Very  likely","Very  likely","Not very likely",0
+"50-30-92-60",9,"Crop Failure",1,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,2,0,"","Not very likely","Not very likely","Not very likely",0
+"50-30-92-60",13,"Loss of Employment",1,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",1
+"24-09-68-36",15,"Large Rise in Prices of Food",2,"Mild",1,0,0,0,0,0,2,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"42-32-41-18",9,"Crop Failure",1,"Mild",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Very  likely","Very  likely","Very  likely",0
+"42-32-41-18",10,"Livestock Disease/Death",1,"Mild",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Very  likely","Very  likely","Very  likely",0
+"29-79-40-11",2,"Death of a Household Member",1,"Severe",1,0,0,0,0,0,2,3,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not at all likely",0
+"60-57-49-31",15,"Large Rise in Prices of Food",8,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Very  likely",0
+"60-10-68-48",8,"Floods",1,"Very severe",0,0,0,0,0,0,0,0,0,0,1,0,2,0,0,"","Not very likely","Not at all likely","Not very likely",0
+"60-10-68-48",9,"Crop Failure",1,"Very severe",0,0,0,0,0,0,0,0,0,0,1,0,2,0,0,"","Not very likely","Not very likely","Not very likely",0
+"60-10-68-48",15,"Large Rise in Prices of Food",5,"Very severe",1,0,0,0,0,0,0,0,0,0,2,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"35-24-82-24",1,"Chronicor Severe Illnessor Accident of a Household Member",1,"Mild",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"35-24-82-24",15,"Large Rise in Prices of Food",5,"Severe",1,0,2,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Very  likely",0
+"94-16-94-83",1,"Chronicor Severe Illnessor Accident of a Household Member",1,"Very severe",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Not very likely","Not very likely","Not very likely",0
+"94-16-94-83",15,"Large Rise in Prices of Food",4,"Very severe",1,0,2,0,0,0,0,0,0,0,0,0,0,3,0,"","Not very likely","Not very likely","Not very likely",0
+"93-01-93-75",15,"Large Rise in Prices of Food",3,"Very severe",0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,"","Not at all likely","Not very likely","Extremely likely",0
+"25-76-97-37",15,"Large Rise in Prices of Food",4,"Very severe",0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,"RELYING ON NEIGHBORS TO FEED US WHEN THERE IS NOTHING TO EAT.","Not at all likely","Not at all likely","Not at all likely",1
+"37-86-89-16",15,"Large Rise in Prices of Food",2,"Severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"59-63-12-34",1,"Chronicor Severe Illnessor Accident of a Household Member",2,"Severe",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Not very likely","Not very likely","Not very likely",0
+"59-63-12-34",15,"Large Rise in Prices of Food",4,"Severe",0,0,1,0,0,0,0,0,0,0,0,0,0,2,0,"","Not very likely","Not very likely","Not very likely",0
+"67-12-10-28",10,"Livestock Disease/Death",5,"Very severe",0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,"","Not at all likely","Very  likely","Not very likely",0
+"67-12-10-28",15,"Large Rise in Prices of Food",12,"Severe",0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,"","Not very likely","Very  likely","Not very likely",1
+"27-19-89-21",10,"Livestock Disease/Death",1,"Severe",1,2,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"03-62-40-58",15,"Large Rise in Prices of Food",2,"Very severe",0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"60-29-48-02",9,"Crop Failure",1,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,2,0,"","Not very likely","Not very likely","Not very likely",0
+"93-40-82-23",15,"Large Rise in Prices of Food",2,"Mild",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Very  likely","Very  likely","Not very likely",0
+"26-16-19-49",2,"Death of a Household Member",1,"Severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"26-16-19-49",4,"Fire on Property",1,"Mild",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"29-68-82-61",1,"Chronicor Severe Illnessor Accident of a Household Member",1,"Mild",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Extremely likely","Very  likely","Not very likely",0
+"29-68-82-61",15,"Large Rise in Prices of Food",12,"Mild",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Extremely likely","Very  likely","Very  likely",0
+"54-48-29-54",9,"Crop Failure",1,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"54-48-29-54",10,"Livestock Disease/Death",1,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"54-48-29-54",15,"Large Rise in Prices of Food",3,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not at all likely","Not very likely","Not at all likely",0
+"29-79-23-67",9,"Crop Failure",1,"Very severe",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Very  likely","Very  likely","Not very likely",0
+"29-79-23-67",10,"Livestock Disease/Death",14,"Very severe",0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,"The remaining were injected with medication","Very  likely","Very  likely","Not at all likely",0
+"29-79-23-67",15,"Large Rise in Prices of Food",2,"Mild",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Very  likely","Very  likely","Not at all likely",0
+"36-91-85-86",9,"Crop Failure",1,"Severe",0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,"Selling food in thr tuckshop","Not very likely","Not very likely","Very  likely",0
+"36-91-85-86",15,"Large Rise in Prices of Food",10,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"33-77-00-47",15,"Large Rise in Prices of Food",4,"Severe",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Not very likely","Not very likely","Extremely likely",0
+"71-23-95-90",1,"Chronicor Severe Illnessor Accident of a Household Member",5,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not at all likely","Very  likely","Very  likely",0
+"71-23-95-90",9,"Crop Failure",2,"Very severe",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Not at all likely","Not very likely","Very  likely",0
+"71-23-95-90",15,"Large Rise in Prices of Food",6,"Very severe",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Not very likely","Not very likely","Very  likely",0
+"77-62-89-56",15,"Large Rise in Prices of Food",12,"Severe",0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,"","Not at all likely","Not at all likely","Very  likely",0
+"93-71-48-41",13,"Loss of Employment",1,"Severe",1,0,0,0,0,0,2,0,0,0,0,0,0,0,0,"","Very  likely","Not very likely","Not very likely",0
+"98-07-17-87",13,"Loss of Employment",1,"Very severe",0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,"","Not very likely","Not at all likely","Not at all likely",0
+"23-98-05-49",15,"Large Rise in Prices of Food",2,"Very severe",0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,"","Not at all likely","Not at all likely","Not very likely",0
+"23-98-05-49",18,"End of Regular Assistance(E.g.Pension,CashTransfer,Remittances)from Outside the Household",5,"Very severe",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Not at all likely","Not at all likely","Not at all likely",0
+"79-97-29-10",10,"Livestock Disease/Death",10,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"79-97-29-10",15,"Large Rise in Prices of Food",3,"Severe",1,0,0,0,0,0,2,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"41-50-66-96",11,"Livestock Theft(IncludingRaids)",1,"Severe",1,0,0,0,0,0,0,0,0,0,2,0,0,0,0,"","Not very likely","Not at all likely","Not very likely",0
+"41-50-66-96",15,"Large Rise in Prices of Food",2,"Mild",1,0,0,0,0,0,2,0,0,0,3,0,0,0,0,"","Not very likely","Not at all likely","Not very likely",0
+"06-31-05-26",15,"Large Rise in Prices of Food",3,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,2,0,"","Not at all likely","Not at all likely","Not at all likely",1
+"25-90-09-86",12,"Household Business Failure(Non-Agricultural)",3,"Very severe",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Not very likely","Not very likely","Very  likely",0
+"25-90-09-86",15,"Large Rise in Prices of Food",12,"Very severe",0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Very  likely",0
+"03-91-71-73",6,"Dwelling Damaged",1,"Severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"03-91-71-73",15,"Large Rise in Prices of Food",3,"Severe",1,0,0,0,0,0,2,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"36-45-13-48",15,"Large Rise in Prices of Food",2,"Severe",0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Very  likely",0
+"63-11-78-96",10,"Livestock Disease/Death",2,"Very severe",0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,"","Not at all likely","Not very likely","Extremely likely",0
+"63-11-78-96",12,"Household Business Failure(Non-Agricultural)",3,"Very severe",0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not at all likely","Not very likely","Very  likely",0
+"63-11-78-96",15,"Large Rise in Prices of Food",12,"Very severe",0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Very  likely",0
+"79-48-70-94",15,"Large Rise in Prices of Food",3,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"01-11-02-57",15,"Large Rise in Prices of Food",3,"Severe",1,0,0,0,0,0,2,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"41-82-62-49",15,"Large Rise in Prices of Food",3,"Very severe",0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,"Does piece jobs","Not very likely","Not at all likely","Not very likely",0
+"57-39-86-38",9,"Crop Failure",1,"Severe",0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,"","Not very likely","Not very likely","Extremely likely",0
+"57-39-86-38",15,"Large Rise in Prices of Food",2,"Mild",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Very  likely","Very  likely","Very  likely",0
+"47-31-29-24",9,"Crop Failure",1,"Very severe",1,0,0,0,0,0,2,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"47-31-29-24",13,"Loss of Employment",1,"Severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"47-31-29-24",15,"Large Rise in Prices of Food",2,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"47-31-29-24",16,"Large Rise in Prices of Agricultural Inputs(E.g.Agrochemicals,Machinery,HiredLabour)",2,"Severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"87-48-42-67",1,"Chronicor Severe Illnessor Accident of a Household Member",5,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"87-48-42-67",15,"Large Rise in Prices of Food",4,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"88-51-36-66",9,"Crop Failure",1,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"88-51-36-66",10,"Livestock Disease/Death",2,"Severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"88-51-36-66",15,"Large Rise in Prices of Food",4,"Very severe",1,0,0,0,0,0,2,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"88-12-77-50",15,"Large Rise in Prices of Food",5,"Very severe",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Very  likely","Very  likely","Very  likely",0
+"17-63-55-71",1,"Chronicor Severe Illnessor Accident of a Household Member",2,"Very severe",0,1,2,0,0,0,0,0,0,0,0,0,0,0,0,"","Not at all likely","Not at all likely","Very  likely",0
+"17-63-55-71",15,"Large Rise in Prices of Food",3,"Very severe",0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,"","Not at all likely","Not at all likely","Extremely likely",0
+"40-29-00-57",15,"Large Rise in Prices of Food",3,"Very severe",0,0,1,0,2,0,0,0,0,0,0,0,0,0,0,"","Not at all likely","Not at all likely","Not at all likely",1
+"86-10-11-11",1,"Chronicor Severe Illnessor Accident of a Household Member",1,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not at all likely","Not at all likely",0
+"86-10-11-11",2,"Death of a Household Member",1,"Very severe",1,0,0,0,0,0,0,2,0,0,0,0,0,0,0,"","Not very likely","Not at all likely","Not very likely",0
+"80-48-57-31",5,"Robbery/Burglary",2,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"80-48-57-31",12,"Household Business Failure(Non-Agricultural)",1,"Severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not at all likely","Not at all likely","Not at all likely",0
+"80-48-57-31",15,"Large Rise in Prices of Food",2,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"80-48-57-31",21,"Fallen Sick of COVID-19",1,"Severe",0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Very  likely","Very  likely","Very  likely",0
+"03-33-65-79",15,"Large Rise in Prices of Food",3,"Very severe",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Not very likely","Not very likely","Not very likely",0
+"86-28-43-28",15,"Large Rise in Prices of Food",3,"Very severe",1,0,2,0,0,0,0,0,0,0,0,0,0,0,0,"","Not at all likely","Not at all likely","Not at all likely",1
+"95-58-64-05",15,"Large Rise in Prices of Food",3,"Very severe",0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",1
+"51-45-88-78",15,"Large Rise in Prices of Food",3,"Very severe",0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,"","Not at all likely","Not at all likely","Not at all likely",1
+"90-62-42-39",15,"Large Rise in Prices of Food",4,"Very severe",0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not at all likely","Not at all likely",0
+"71-64-26-40",15,"Large Rise in Prices of Food",3,"Severe",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Very  likely","Very  likely","Extremely likely",0
+"81-24-00-67",10,"Livestock Disease/Death",2,"Severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"81-24-00-67",15,"Large Rise in Prices of Food",3,"Severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"81-24-00-67",16,"Large Rise in Prices of Agricultural Inputs(E.g.Agrochemicals,Machinery,HiredLabour)",2,"Severe",1,0,0,0,0,0,2,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"12-70-32-30",15,"Large Rise in Prices of Food",2,"Very severe",0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Extremely likely",0
+"62-46-14-70",15,"Large Rise in Prices of Food",4,"Very severe",0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,"","Very  likely","Very  likely","Extremely likely",0
+"71-10-70-44",15,"Large Rise in Prices of Food",1,"Very mild",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Extremely likely","Very  likely","Extremely likely",0
+"13-26-76-47",1,"Chronicor Severe Illnessor Accident of a Household Member",1,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"13-26-76-47",15,"Large Rise in Prices of Food",1,"Severe",1,0,2,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"86-00-13-77",1,"Chronicor Severe Illnessor Accident of a Household Member",1,"Very severe",1,0,2,0,0,0,0,0,0,0,0,0,0,0,0,"","Not at all likely","Not at all likely","Extremely likely",0
+"86-00-13-77",15,"Large Rise in Prices of Food",2,"Very severe",1,0,2,0,0,0,0,0,0,0,0,0,0,0,0,"","Not at all likely","Not at all likely","Extremely likely",0
+"48-57-10-38",15,"Large Rise in Prices of Food",4,"Very severe",0,0,1,0,0,0,0,0,0,0,0,0,0,2,0,"","Not at all likely","Not at all likely","Not at all likely",0
+"69-84-94-36",15,"Large Rise in Prices of Food",3,"Severe",0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,"","Very  likely","Very  likely","Very  likely",1
+"18-54-82-39",13,"Loss of Employment",1,"Very severe",1,0,0,0,2,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"18-54-82-39",15,"Large Rise in Prices of Food",1,"Severe",2,0,1,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"72-38-29-03",10,"Livestock Disease/Death",2,"Severe",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Not very likely","Not very likely","Not very likely",0
+"72-38-29-03",13,"Loss of Employment",5,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",1
+"72-38-29-03",15,"Large Rise in Prices of Food",3,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"80-76-98-64",15,"Large Rise in Prices of Food",3,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"46-71-82-60",13,"Loss of Employment",1,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"24-76-27-27",1,"Chronicor Severe Illnessor Accident of a Household Member",2,"Very severe",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Very  likely","Very  likely","Very  likely",0
+"24-76-27-27",15,"Large Rise in Prices of Food",3,"Very severe",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Very  likely","Very  likely","Very  likely",0
+"85-49-52-94",15,"Large Rise in Prices of Food",3,"Severe",1,0,0,0,0,0,2,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"41-14-53-27",5,"Robbery/Burglary",7,"Severe",0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,"","Very  likely","Very  likely","Very  likely",0
+"41-14-53-27",7,"Drought or Extended Period of No Rain",5,"Severe",0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,"changed businesses","Not very likely","Very  likely","Very  likely",0
+"41-14-53-27",9,"Crop Failure",.a,,.a,.a,.a,.a,.a,.a,.a,.a,.a,.a,.a,.a,.a,.a,.a,"",,,,.a
+"41-14-53-27",10,"Livestock Disease/Death",1,"Severe",.a,.a,.a,.a,.a,.a,.a,.a,.a,.a,.a,.a,.a,.a,.a,"",,,,.a
+"41-14-53-27",11,"Livestock Theft(IncludingRaids)",.a,,.a,.a,.a,.a,.a,.a,.a,.a,.a,.a,.a,.a,.a,.a,.a,"",,,,.a
+"41-14-53-27",12,"Household Business Failure(Non-Agricultural)",.a,,.a,.a,.a,.a,.a,.a,.a,.a,.a,.a,.a,.a,.a,.a,.a,"",,,,.a
+"41-14-53-27",15,"Large Rise in Prices of Food",.a,,.a,.a,.a,.a,.a,.a,.a,.a,.a,.a,.a,.a,.a,.a,.a,"",,,,.a
+"41-14-53-27",16,"Large Rise in Prices of Agricultural Inputs(E.g.Agrochemicals,Machinery,HiredLabour)",.a,,.a,.a,.a,.a,.a,.a,.a,.a,.a,.a,.a,.a,.a,.a,.a,"",,,,.a
+"19-25-83-42",15,"Large Rise in Prices of Food",2,"Mild",1,0,0,0,2,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"52-70-09-40",15,"Large Rise in Prices of Food",3,"Severe",0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,"do piece jobs","Not very likely","Not very likely","Not very likely",0
+"14-14-61-40",1,"Chronicor Severe Illnessor Accident of a Household Member",2,"Very severe",1,0,0,0,0,0,0,0,0,0,0,0,0,2,0,"","Not at all likely","Not at all likely","Not at all likely",0
+"79-24-47-25",15,"Large Rise in Prices of Food",3,"Very severe",0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,"DOING MANY PIECE JOBS ,THAN BEFORE","Not at all likely","Not at all likely","Not at all likely",1
+"45-71-76-98",2,"Death of a Household Member",2,"Very severe",1,0,0,0,0,0,0,2,0,0,0,0,0,0,0,"","Not at all likely","Not at all likely","Not at all likely",0
+"07-23-89-71",15,"Large Rise in Prices of Food",2,"Very mild",0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Very  likely",0
+"05-94-07-12",15,"Large Rise in Prices of Food",4,"Very severe",0,0,1,0,0,0,0,0,0,0,0,0,0,2,0,"","Not at all likely","Not at all likely","Not at all likely",0
+"58-90-20-54",15,"Large Rise in Prices of Food",6,"Severe",0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,"","Not very likely","Not very likely","Not very likely",0
+"62-49-02-44",15,"Large Rise in Prices of Food",1,"Very severe",0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,"","Very  likely","Very  likely","Extremely likely",0
+"75-29-94-40",1,"Chronicor Severe Illnessor Accident of a Household Member",3,"Severe",0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,"","Not at all likely","Not very likely","Not very likely",0
+"75-29-94-40",12,"Household Business Failure(Non-Agricultural)",3,"Mild",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Not very likely","Not very likely","Extremely likely",0
+"75-29-94-40",15,"Large Rise in Prices of Food",1,"Mild",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,"","Not very likely","Very  likely","Very  likely",0
