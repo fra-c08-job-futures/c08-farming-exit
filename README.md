@@ -11,7 +11,7 @@ c08-farming-exit/
 │       ├── __init__.py
 │       ├── config.py           ← paths, constants, parameters
 │       ├── data_cleaning.py    ← cleaning functions/classes
-│       ├── features.py         ← feature engineering
+│       ├── features.py         ← feature list
 │       ├── visuals.py          ← plotting helpers
 │       └── stata_utils.py      ← pystata init
 ├── notebooks/
