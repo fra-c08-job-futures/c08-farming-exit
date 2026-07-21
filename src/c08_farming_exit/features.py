@@ -1,291 +1,323 @@
-"""Relevant features."""
+"""Relevant features.
 
-#HOUSEHOLD-LEVEL FEATURES
+Each dictionary maps: {original_col_name: (new_name, dtype, fill_value)}
+    - new_name:   the desired name for the column.
+    - dtype:      the desired datatype for the column.
+    - fill_value: how to fill missing values. Options are:
+                      - None:      skip missing-value replacement
+                      - a literal: e.g. 0
+                      - "mean":    mean value (numerical columns)
+                      - "median":  median value (numerical columns)
+                      - "missing": fills in "missing" (categorical columns)
+"""
+
+# ============================================================
+# HOUSEHOLD-LEVEL FEATURES
+# ============================================================
+
 IDENTIFYING_INFO_2023 = {
-    "ctry":           "country",
-    "interview__key": "interview_key",
-    #"hhid":           "hhid",
-    "ea":             "enumeration_area",
-    "dist":           "district",
-    "region":         "region",
-    "res_rel":        "respondant_relation_to_head",
+    "ctry":           ("country",                       "object",   None),
+    "interview__key": ("interview_key",                 "object",   None),
+    #"hhid":          ("hhid",                          "object",   "missing"),
+    "ea":             ("enumeration_area",              "object",   None),
+    "dist":           ("district",                      "object",   None),
+    "region":         ("region",                        "object",   None),
+    # "res_rel":      ("respondant_relation_to_head",   "object",   "missing"), #dropped: 50-70% missings
 }
 
 LAND_OWNERSHIP_ACCESS_2023 = {
-    "interview__key":  "interview_key",
-    # "lnd_mes":         "land_measurement",
-    # "lnd_mes_1":       "land_measurement_other",
-    # "lnd01":           "land_size_cropland",
-    # "lnd02":           "land_size_fallow",
-    # "lnd03":           "land_size_agroforestry_forestry",
-    # "lnd04":           "land_size_pasture",
-    # "lnd08":           "land_size_residential",
-    # "lnd09":           "land_size_lodge_camp",
-    # "lnd06":           "land_size_other",
-    "lnd_ten01":       "land_cropland_ownership_status",
-    # "lnd_ten02":       "land_fallow_ownership_status",
-    # "lnd_ten03":       "land_agroforestry_forestry_ownership_status",
-    # "lnd_ten04":       "land_pasture_ownership_status",
-    # "lnd_ten08":       "land_residential_ownership_status",
-    # "lnd_ten09":       "land_lodge_camp_ownership_status",
-    # "lnd_ten06":       "land_other_ownership_status",
-    # "lnd_16":          "land_used_as_collateral",
-    # "num_plots":       "land_number_of_plots",
+    "interview__key":  ("interview_key",                            "object",       None),
+    "lnd_mes":         ("land_measurement",                         "object",       "missing"),
+    # "lnd_mes_1":     ("land_measurement_other",                   "object",       "missing"),
+    "lnd01":           ("land_size_cropland",                       "float32",      0),
+    "lnd02":           ("land_size_fallow",                         "float32",      0),
+    "lnd03":           ("land_size_agroforestry_forestry",          "float32",      0),
+    "lnd04":           ("land_size_pasture",                        "float32",      0),
+    "lnd08":           ("land_size_residential",                    "float32",      0),
+    "lnd09":           ("land_size_lodge_camp",                     "float32",      0),
+    # "lnd06":         ("land_size_other",                          "float32",      0),
+    "lnd_ten01":       ("land_cropland_ownership_status",           "object",       "missing"),
+    # "lnd_ten02":     ("land_fallow_ownership_status",              "object",      "missing"), #dropped: 60-90% missings
+    # "lnd_ten03":     ("land_agroforestry_forestry_ownership_status", "object",    "missing"), #dropped: >90% missings
+    # "lnd_ten04":     ("land_pasture_ownership_status",             "object",      "missing"), #dropped: >90% missings
+    "lnd_ten08":       ("land_residential_ownership_status",        "object",       "missing"),
+    # "lnd_ten09":     ("land_lodge_camp_ownership_status",          "object",      "missing"), #dropped: 100% missings
+    # "lnd_ten06":     ("land_other_ownership_status",               "object",      "missing"),
+    "lnd_16":          ("land_used_as_collateral",                  "object",       "missing"),
+    "num_plots":       ("land_number_of_plots",                     "float32",      0),
 }
 
-PARCEL_INFORMATION_2023 = {
-    "interview__key":    "interview_key",
-    "num_plots":         "parcel_number_owned", # is it the same as in LAND_OWNERSHIP_ACCESS_2023?
+LAND_OWNERSHIP_ACCESS_2023 = {
+    "interview__key":  ("interview_key",                                    "object",   None),
+    "lnd_mes":         ("land_measurement",                                 "object",   None),
+    # "lnd_mes_1":       ("land_measurement_other",                         "object",   "missing"),
+    "lnd01":           ("land_size_cropland",                               "float32",  0),
+    "lnd02":           ("land_size_fallow",                                 "float32",  0),
+    "lnd03":           ("land_size_agroforestry_forestry",                  "float32",  0),
+    "lnd04":           ("land_size_pasture",                                "float32",  0),
+    "lnd08":           ("land_size_residential",                            "float32",  0),
+    "lnd09":           ("land_size_lodge_camp",                             "float32",  0),
+    # "lnd06":           ("land_size_other",                                "float32",  0),
+    "lnd_ten01":       ("land_cropland_ownership_status",                   "object",   "missing"),
+    # "lnd_ten02":       ("land_fallow_ownership_status",                   "object",   "missing"), #dropped: 60-90% missings
+    # "lnd_ten03":       ("land_agroforestry_forestry_ownership_status",    "object",   "missing"), #dropped: >90% missings
+    # "lnd_ten04":       ("land_pasture_ownership_status",                  "object",   "missing"), #dropped: >90% missings
+    "lnd_ten08":       ("land_residential_ownership_status",                "object",   "missing"),
+    # "lnd_ten09":       ("land_lodge_camp_ownership_status",               "object",   "missing"), #dropped: 100% missings
+    # "lnd_ten06":       ("land_other_ownership_status",                    "object",   "missing"),
+    "lnd_16":          ("land_used_as_collateral",                          "object",   "missing"), #could also be a boolean
+    "num_plots":       ("land_number_of_plots",                             "float32",  0),
 }
 
 CROP_PRODUCTION_2023 = {
-    "interview__key":     "interview_key",
-    "r_crop__id":         "crop_type",
-    "crop_harvest":       "crop_harvested",
-    # "crop_output":        "crop_output",
-    # "crop_unit":          "crop_unit",
-    # "crop_unit_1":        "crop_unit_other",
-    # "crop_sales":         "crop_sale",
-    # "crop_saleamt":       "crop_sale_amount",
-    # "crop_slunits":       "crop_sale_unit",
-    # "crop_slunits_1":     "crop_sale_unit_other",
-    # "crop_price":         "crop_sale_price_per_unit",
-    # "crop_buyer__1":      "crop_buyer_market",
-    # "crop_buyer__2":      "crop_buyer_trader",
-    # "crop_buyer__3":      "crop_buyer_cooperative",
-    # "crop_buyer__4":      "crop_buyer_commercial_farm", 
-    # "crop_buyer__5":      "crop_buyer_hospitality",
-    # "crop_buyer__6":      "crop_buyer_government",
-    # "crop_buyer_other":   "crop_buyer_other",
-    # "crop_homecons":      "crop_home_consumption",
-    # "crop_clunits":       "crop_home_consumption_unit",
-    # "crop_cunits_1":      "crop_home_consumption_unit_other",
-    "cp_stor":            "crop_storage",
-    # "cpamt":              "crop_storage_amount",
-    # "cpunits2":           "crop_storage_unit",
-    # "cpunits2_other":     "crop_storage_unit_other",
-    "cp07":               "crop_organic_fertilizer",
-    "cp08":               "crop_inorganic_fertilizer",
-    "cp09":               "crop_pesticides",
-    "cp11":               "crop_tractor",
+    "interview__key":     ("interview_key",                    "object",  None),
+    "r_crop__id":         ("crop_type",                        "object",  "missing"),
+    "crop_harvest":       ("crop_harvested",                   "object",  "missing"),
+    "crop_output":        ("crop_output",                      "float32", 0),
+    "crop_unit":          ("crop_unit",                        "object",  "missing"),
+    # "crop_unit_1":      ("crop_unit_other",                  "object",  "missing"),
+    "crop_sales":         ("crop_sale",                        "object",  None),
+    "crop_saleamt":       ("crop_sale_amount",                 "float32", 0),
+    "crop_slunits":       ("crop_sale_unit",                   "object",  None),
+    # "crop_slunits_1":   ("crop_sale_unit_other",             "object",  None),
+    "crop_price":         ("crop_sale_price_per_unit",         "float32", 0),
+    "crop_buyer__1":      ("crop_buyer_market",                "object",  None),
+    "crop_buyer__2":      ("crop_buyer_trader",                "object",  None),
+    "crop_buyer__3":      ("crop_buyer_cooperative",           "object",  None),
+    "crop_buyer__4":      ("crop_buyer_commercial_farm",       "object",  None),
+    "crop_buyer__5":      ("crop_buyer_hospitality",           "object",  None),
+    "crop_buyer__6":      ("crop_buyer_government",            "object",  None),
+    # "crop_buyer_other": ("crop_buyer_other",                 "object",  None),
+    "crop_homecons":      ("crop_home_consumption",            "float32", 0),
+    "crop_clunits":       ("crop_home_consumption_unit",       "object",  None),
+    # "crop_cunits_1":    ("crop_home_consumption_unit_other", "object",  None),
+    "cp_stor":            ("crop_storage",                     "object",  None),
+    "cpamt":              ("crop_storage_amount",               "float32", 0),
+    "cpunits2":           ("crop_storage_unit",                "object",  None),
+    # "cpunits2_other":   ("crop_storage_unit_other",          "object",  None),
+    "cp07":               ("crop_organic_fertilizer",          "object",  None),
+    "cp08":               ("crop_inorganic_fertilizer",        "object",  None),
+    "cp09":               ("crop_pesticides",                  "object",  None),
+    "cp11":               ("crop_tractor",                     "object",  None),
 }
 
 CROP_EXPENDITURE_2023 = {
-    "interview__key":      "interview_key",
-    "crp_ip1_exp":         "crop_exp_seeds_last_12_months",
-    "crp_ip3_exp":         "crop_exp_fertilizer_last_12_months",
-    "crp_ip5_exp":         "crop_exp_pesticide_last_12_months",
-    "crp_ip6_exp":         "crop_exp_machinery_last_12_months",
-    "crp_ip7_exp":         "crop_exp_hired_labor_last_12_months",
-    "crp_ip8_exp":         "crop_exp_land_rental_last_12_months",
-    "crp_ip9_exp":         "crop_exp_transport_last_12_months",
-    "crp_ip10_exp":        "crop_exp_other_last_12_months",
+    "interview__key":   ("interview_key",                       "object",   None),
+    "crp_ip1_exp":      ("crop_exp_seeds_last_12_months",       "float32",  0),
+    "crp_ip3_exp":      ("crop_exp_fertilizer_last_12_months",  "float32",  0),
+    "crp_ip5_exp":      ("crop_exp_pesticide_last_12_months",   "float32",  0),
+    "crp_ip6_exp":      ("crop_exp_machinery_last_12_months",   "float32",  0),
+    "crp_ip7_exp":      ("crop_exp_hired_labor_last_12_months", "float32",  0),
+    "crp_ip8_exp":      ("crop_exp_land_rental_last_12_months", "float32",  0),
+    "crp_ip9_exp":      ("crop_exp_transport_last_12_months",   "float32",  0),
+    "crp_ip10_exp":     ("crop_exp_other_last_12_months",       "float32",  0),
 }
 
 MARKET_ACCESS_2023 = {
-    "interview__key":        "interview_key",
-    "markt_output_dist":     "market_output_distance_in_km",
-    # "markt_input_dist":      "market_input_distance_in_km",
-    # "markt_buyer":           "market_type",
-    # "markt_buyer_oth":       "market_type_other",
-    "crop_contract":         "crop_contract",
-    # "contract_crop":         "crop_contract_crop_type",
-    "input_access_subsidy":  "subsidy",
-    # "subsidy_type__1":       "subsidy_type_seeds",
-    # "subsidy_type__2":       "subsidy_type_fertilizer",
-    # "subsidy_type__3":       "subsidy_type_agro_chemicals",
-    # "subsidy_type__4":       "subsidy_type_interest_free_loan",
-    # "subsidy_supplier__1":   "subsidy_supplier_government",
-    # "subsidy_supplier__2":   "subsidy_supplier_ngos",
-    # "subsidy_supplier__3":   "subsidy_supplier_company",
-    # "subsidy_supplier_oth":  "subsidy_supplier_other",
+    "interview__key":        ("interview_key",                    "object",  None),
+    "markt_output_dist":     ("market_output_distance_in_km",     "float32", 0),
+    "markt_input_dist":      ("market_input_distance_in_km",      "float32", 0),
+    "markt_buyer":           ("market_type",                      "object",  None),
+    # "markt_buyer_oth":     ("market_type_other",                "object",  None),
+    "crop_contract":         ("crop_contract",                    "object",  None),
+    "contract_crop":         ("crop_contract_crop_type",          "object",  None),
+    "input_access_subsidy":  ("subsidy",                          "object",  None),
+    "subsidy_type__1":       ("subsidy_type_seeds",               "object",  None),
+    "subsidy_type__2":       ("subsidy_type_fertilizer",          "object",  None),
+    "subsidy_type__3":       ("subsidy_type_agro_chemicals",      "object",  None),
+    "subsidy_type__4":       ("subsidy_type_interest_free_loan",  "object",  None),
+    "subsidy_supplier__1":   ("subsidy_supplier_government",      "object",  None),
+    "subsidy_supplier__2":   ("subsidy_supplier_ngos",            "object",  None),
+    "subsidy_supplier__3":   ("subsidy_supplier_company",         "object",  None),
+    # "subsidy_supplier_oth": ("subsidy_supplier_other",          "object",  None),
 }
 
 LIVESTOCK_OWNERSHIP_2023 = {
-    "interview__key":        "interview_key",
-    # "r_livestock__id":       "livestock_type",
-    "lv02":                  "livestock_owned",
-    # "lv07":                  "livestock_number_sold",
-    # "lv06":                  "livestock_number_lost_disease_theft",
-    # "lv07":                  "livestock_number_lost_wildlife_attack",
-    # "lv08":                  "livestock_price_head_sold",
+    "interview__key":        ("interview_key",                              "object",  None),
+    "r_livestock__id":       ("livestock_type",                             "object",  None),
+    "lv02":                  ("livestock_owned",                            "float32", 0),
+    "lv07":                  ("livestock_number_sold",                      "float32", 0),
+    "lv06":                  ("livestock_number_lost_disease_theft",        "float32", 0),
+    "lv07":                  ("livestock_number_lost_wildlife_attack",      "float32", 0), ##TODO: this is twice in here!
+    "lv08":                  ("livestock_price_head_sold",                  "float32", 0),
 }
 
 LIFESTOCK_GRAZING_2023 = {
-    "interview__key":           "interview_key",
-    "grazing_dist":             "grazing_distance_in_min",
-    # "grazing_days":             "grazing_time_in_min",
-    "grazing_hour":             "grazing_time_hours_per_day",
-    "grazing_ownership":        "grazing_land_ownership_status",
-    # "grazing_sharing":          "grazing_land_number_hh_sharing",
-    # "grazing_permit":           "grazing_land_permit",
-    # "grazing_permit_price":     "grazing_land_permit_price",
-    "grazing_years":            "grazing_land_use_duration_in_years",
-    "grazing_challenges__1":    "grazing_land_challenges_1", # what is it?
-    "grazing_challenges__2":    "grazing_land_challenges_2", # what is it?
-    "grazing_challenges__3":    "grazing_land_challenges_3", # what is it?
-    "grazing_challenges__4":    "grazing_land_challenges_4", # what is it?
-    "grazing_challenges__5":    "grazing_land_challenges_5", # what is it?
-    "grazing_challenges__6":    "grazing_land_challenges_6", # what is it?
-    "grazing_challenges__7":    "grazing_land_challenges_7", # what is it?
-    "grazing_challenges__8":    "grazing_land_challenges_8", # what is it?
-    "grazing_challenges__9":    "grazing_land_challenges_9", # what is it?
-    "grazing_challenges__10":   "grazing_land_challenges_10", # what is it?
-    "grazing_challenges__11":   "grazing_land_challenges_11", # what is it?
-    # "grazing_challenge_other":  "grazing_land_challenges_other",
+    "interview__key":           ("interview_key",                           "object",  None),
+    "grazing_dist":              ("grazing_distance_in_min",                "float32", 0),
+    "grazing_days":               ("grazing_time_in_min",                   "float32", 0),
+    "grazing_hour":              ("grazing_time_hours_per_day",             "float32", 0),
+    "grazing_ownership":         ("grazing_land_ownership_status",          "object",  None),
+    "grazing_sharing":           ("grazing_land_number_hh_sharing",         "float32", 0),
+    "grazing_permit":            ("grazing_land_permit",                    "object",  None),
+    "grazing_permit_price":      ("grazing_land_permit_price",              "float32", 0),
+    "grazing_years":             ("grazing_land_use_duration_in_years",     "float32", 0),
+    "grazing_challenges__1":     ("grazing_land_challenges_1",              "object",  None), # what is it?
+    "grazing_challenges__2":     ("grazing_land_challenges_2",              "object",  None), # what is it?
+    "grazing_challenges__3":     ("grazing_land_challenges_3",              "object",  None), # what is it?
+    "grazing_challenges__4":     ("grazing_land_challenges_4",              "object",  None), # what is it?
+    "grazing_challenges__5":     ("grazing_land_challenges_5",              "object",  None), # what is it?
+    "grazing_challenges__6":     ("grazing_land_challenges_6",              "object",  None), # what is it?
+    "grazing_challenges__7":     ("grazing_land_challenges_7",              "object",  None), # what is it?
+    "grazing_challenges__8":     ("grazing_land_challenges_8",              "object",  None), # what is it?
+    "grazing_challenges__9":     ("grazing_land_challenges_9",              "object",  None), # what is it?
+    "grazing_challenges__10":    ("grazing_land_challenges_10",             "object",  None), # what is it?
+    "grazing_challenges__11":    ("grazing_land_challenges_11",             "object",  None), # what is it?
+    # "grazing_challenge_other": ("grazing_land_challenges_other",          "object",  None),
 }
 
 LIFESTOCK_INCOME_2023 = {
-    "interview__key":       "interview_key",
-    "liv_pdtsal":           "livestock_products_sold_last_12_months",
-    # "which_liv_pdts__1":    "livestock_products_sold_meat",
-    # "which_liv_pdts__2":    "livestock_products_sold_milk",
-    # "which_liv_pdts__3":    "livestock_products_sold_cheese",
-    # "which_liv_pdts__4":    "livestock_products_sold_yogurt",
-    # "which_liv_pdts__5":    "livestock_products_sold_wool",
-    # "which_liv_pdts__6":    "livestock_products_sold_honey_wax",
-    # "which_liv_pdts__7":    "livestock_products_sold_eggs",
-    # "which_liv_pdts_oth":   "livestock_products_sold_other",
-    "liv_buyer":            "livestock_products_buyer",
-    # "liv_buyer_oth":        "livestock_products_buyer_other",
-    "liv_buyer_where":      "livestock_products_market_type",
-    "livmkt_dist":          "livestock_market_distance_in_km",
-    "liv_pdt_inc":          "livestock_income_last_12_months",
-    # "liv_contract":         "livestock_contract",
+    "interview__key":       ("interview_key",                                "object",  None),
+    "liv_pdtsal":           ("livestock_products_sold_last_12_months",       "object",  None),
+    "which_liv_pdts__1":    ("livestock_products_sold_meat",                 "object",  None),
+    "which_liv_pdts__2":    ("livestock_products_sold_milk",                 "object",  None),
+    "which_liv_pdts__3":    ("livestock_products_sold_cheese",               "object",  None),
+    "which_liv_pdts__4":    ("livestock_products_sold_yogurt",               "object",  None),
+    "which_liv_pdts__5":    ("livestock_products_sold_wool",                 "object",  None),
+    "which_liv_pdts__6":    ("livestock_products_sold_honey_wax",            "object",  None),
+    "which_liv_pdts__7":    ("livestock_products_sold_eggs",                 "object",  None),
+    # "which_liv_pdts_oth": ("livestock_products_sold_other",                "object",  None),
+    "liv_buyer":            ("livestock_products_buyer",                     "object",  None),
+    # "liv_buyer_oth":       ("livestock_products_buyer_other",               "object",  None),
+    "liv_buyer_where":      ("livestock_products_market_type",               "object",  None),
+    "livmkt_dist":          ("livestock_market_distance_in_km",              "float32", 0),
+    "liv_pdt_inc":          ("livestock_income_last_12_months",              "float32", 0),
+    "liv_contract":         ("livestock_contract",                           "object",  None),
 }
 
 LIFESTOCK_EXPENDITURE_2023 = {
-    "interview__key":     "interview_key",
-    "vexp01_11":          "livestock_exp_feed_fodder",
-    "lvexp02_12":         "livestock_exp_rent_gazing_land",
-    "lvexp03_13":         "livestock_exp_veterinary_services",
-    "lvexp04_14":         "livestock_exp_shelter",
-    "lvexp05_15":         "livestock_exp_hired_labor",
-    # "lvexp06_16":         "livestock_exp_other",
+    "interview__key":     ("interview_key",                     "object",  None),
+    "vexp01_11":          ("livestock_exp_feed_fodder",         "float32", 0),
+    "lvexp02_12":         ("livestock_exp_rent_gazing_land",    "float32", 0),
+    "lvexp03_13":         ("livestock_exp_veterinary_services", "float32", 0),
+    "lvexp04_14":         ("livestock_exp_shelter",             "float32", 0),
+    "lvexp05_15":         ("livestock_exp_hired_labor",         "float32", 0),
+    # "lvexp06_16":       ("livestock_exp_other",                "float32", 0),
 }
 
 HOUSING_CONDITIONS_2023 = {
-    "interview__key":    "interview_key",
-    "h02":               "house_room_number",
-    "h03":               "house_roof_material",
-    # "h03_oth":           "house_roof_material_other",
-    # "h04":               "house_wall_material",
-    # "h04_oth":           "house_wall_material_other",
-    # "h05":               "house_floor_material",
-    # "h05_oth":           "house_floor_material_other",
-    "h06":               "house_water_source",
-    # "h06_oth":           "house_water_source_other",
-    "h07":               "house_toilet_type",
-    # "h07_oth":           "house_toilet_type_other",
+    "interview__key":    ("interview_key",                  "object",  None),
+    "h02":               ("house_room_number",              "float32", 0),
+    "h03":               ("house_roof_material",            "object",  None),
+    # "h03_oth":         ("house_roof_material_other",      "object",  None),
+    "h04":               ("house_wall_material",            "object",  None),
+    # "h04_oth":         ("house_wall_material_other",      "object",  None),
+    "h05":               ("house_floor_material",           "object",  None),
+    # "h05_oth":         ("house_floor_material_other",     "object",  None),
+    "h06":               ("house_water_source",             "object",  None),
+    # "h06_oth":         ("house_water_source_other",       "object",  None),
+    "h07":               ("house_toilet_type",              "object",  None),
+    # "h07_oth":         ("house_toilet_type_other",        "object",  None),
 }
 
 ENERGY_ACCESS_2023 = {
-    "interview__key":    "interview_key",
-    "h09":               "house_energy_source",
-    # "h09_oth":           "house_energy_source_other",
-    # "h10":               "house_energy_source_for_cooking",
-    # "h10_1":             "house_energy_source_for_cooking_other",
-    # "h11":               "house_energy_source_for_lighting",
-    # "h11_1":             "house_energy_source_for_lighting_other",
+    "interview__key":    ("interview_key",                              "object", None),
+    "h09":               ("house_energy_source",                        "object", None),
+    # "h09_oth":         ("house_energy_source_other",                  "object", None),
+    "h10":               ("house_energy_source_for_cooking",            "object", None),
+    # "h10_1":           ("house_energy_source_for_cooking_other",      "object", None),
+    "h11":               ("house_energy_source_for_lighting",           "object", None),
+    # "h11_1":           ("house_energy_source_for_lighting_other",     "object", None),
 }
 
 ASSETS_OWNED_2023 = {
-    "interview__key":    "interview_key",
-    "r_asset_own__id":   "asset_type",
-    # "ha0_1":             "asset_number_owned",
+    "interview__key":    ("interview_key",          "object",  None),
+    "r_asset_own__id":   ("asset_type",             "object",  None),
+    "ha0_1":             ("asset_number_owned",     "float32", 0),
 }
 
 INTERNET_ACCESS_2023 = {
-    "interview__key":    "interview_key",
-    "access_internet":   "internet_access",
-    # "internet_home":     "internet_access_at_home",
-    # "distance_internet": "internet_access_distance_in_meters",
+    "interview__key":    ("interview_key",                          "object",  None),
+    "access_internet":   ("internet_access",                        "object",  None),
+    "internet_home":     ("internet_access_at_home",                "object",  None),
+    "distance_internet": ("internet_access_distance_in_meters",     "float32", 0),
     #ToDo: What Types of Online Activities Do you Engage in when using the Internet? Available
 }
 
 SHOCKS_AND_COPING_2023 = {
-    "interview__key":   "interview_key",
-    # "r_shocks__id":     "shock_id",
-    "r_shocks":         "shock_type_affected_last_12_months",
-    # "sh_1":             "shock_frequency_last_12_months",
-    # "sh_2":             "shock_severity_last_12_months",
+    "interview__key":   ("interview_key",                                       "object",  None),
+    # "r_shocks__id":   ("shock_id",                                            "object",  None),
+    "r_shocks":         ("shock_type_affected_last_12_months",                  "object",  None),
+    "sh_1":             ("shock_frequency_last_12_months",                      "float32", 0),
+    "sh_2":             ("shock_severity_last_12_months",                       "object",  None),
 
     #COPING
-    # "sh_3__1":           "shock_coping_strategy_relatives",
-    # "sh_3__2":           "shock_coping_strategy_government",
-    # "sh_3__3":           "shock_coping_strategy_food_reduction", 
-    # "sh_3__4":           "shock_coping_strategy_changed_cropping_practices",
-    # "sh_3__5":           "shock_coping_strategy_off_farm_empl", #ToDo: Check if its true
-    # "sh_3__6":           "shock_coping_strategy_hh_member_migration",
-    # "sh_3__7":           "shock_coping_strategy_savings",
-    # "sh_3__8":           "shock_coping_strategy_insurance",
-    # "sh_3__9":           "shock_coping_strategy_credit",
-    # "sh_3__10":          "shock_coping_strategy_sold_hh_assets",
-    # "sh_3__11":          "shock_coping_strategy_sold_livestock",
-    # "sh_3__12":          "shock_coping_strategy_migration",
-    # "sh_3__13":          "shock_coping_strategy_police_report",
-    # "sh_3__14":          "shock_coping_strategy_nothing",
-    # "sh_3_oth":          "shock_coping_strategy_other",
-    
-    # "sh_4":              "shock_future_likelihood_1", #what is it?
-    # "sh_5":              "shock_future_likelihood_2", #what is it?
-    # "sh_6":              "shock_future_likelihood_3", #what is it?
+    "sh_3__1":           ("shock_coping_strategy_relatives",                    "object",  None),
+    "sh_3__2":           ("shock_coping_strategy_government",                   "object",  None),
+    "sh_3__3":           ("shock_coping_strategy_food_reduction",               "object",  None),
+    "sh_3__4":           ("shock_coping_strategy_changed_cropping_practices",   "object",  None),
+    "sh_3__5":           ("shock_coping_strategy_off_farm_empl",                "object",  None), #ToDo: Check if its true
+    "sh_3__6":           ("shock_coping_strategy_hh_member_migration",          "object",  None),
+    "sh_3__7":           ("shock_coping_strategy_savings",                      "object",  None),
+    "sh_3__8":           ("shock_coping_strategy_insurance",                    "object",  None),
+    "sh_3__9":           ("shock_coping_strategy_credit",                       "object",  None),
+    "sh_3__10":          ("shock_coping_strategy_sold_hh_assets",               "object",  None),
+    "sh_3__11":          ("shock_coping_strategy_sold_livestock",               "object",  None),
+    "sh_3__12":          ("shock_coping_strategy_migration",                    "object",  None),
+    "sh_3__13":          ("shock_coping_strategy_police_report",                "object",  None),
+    "sh_3__14":          ("shock_coping_strategy_nothing",                      "object",  None),
+    # "sh_3_oth":        ("shock_coping_strategy_other",                        "object",  None),
+
+    "sh_4":              ("shock_future_likelihood_1",                          "object",  None), #what is it?
+    "sh_5":              ("shock_future_likelihood_2",                          "object",  None), #what is it?
+    "sh_6":              ("shock_future_likelihood_3",                          "object",  None), #what is it?
 }
 
 SOCIAL_NETWORK_2023 = {
-    "interview__key":   "interview_key",
-    "as19":             "mobile_money_access",
-    # "as18__1":          "membership_farmers_group",
-    # "as18__2":          "membership_agricultural_cooperative",
+    "interview__key":   ("interview_key",                           "object", None),
+    "as19":             ("mobile_money_access",                     "object", None),
+    "as18__1":          ("membership_farmers_group",                "object", None),
+    "as18__2":          ("membership_agricultural_cooperative",     "object", None),
 }
 
 SOCIAL_EMBEDDEDNESS_2023 = {
-    # ONYL RESPONDAND ASEKD:CAN BE USED AS A PROXY FOR THE OPTIMISM OF THE HH
-    "interview__key":   "interview_key",
-    "as_loc01_in":      "my_life_course_depends_on_me",
-    "as_loc02_in":      "success_is_hard_work",
-    "as_loc03_in":      "ability_is_more_important_than_effort",
-    "as_loc04_in":      "my_plans_will_work",
-    "as_loc06_in":      "I_can_shape_my_future_positively",
-    "as_loc12_in":      "I_am_optimistic_about_my_future",
-    "as_loc13_in":      "I_am_optimistic_about_my_familys_future",
-    "exp_ev1_01":       "worry_about_job_loss_or_economic_livelihood"
+    # ONLY RESPONDAND ASEKD:CAN BE USED AS A PROXY FOR THE OPTIMISM OF THE HH
+    "interview__key":   ("interview_key",                                "object", None),
+    "as_loc01_in":      ("my_life_course_depends_on_me",                 "object", None),
+    "as_loc02_in":      ("success_is_hard_work",                         "object", None),
+    "as_loc03_in":      ("ability_is_more_important_than_effort",        "object", None),
+    "as_loc04_in":      ("my_plans_will_work",                           "object", None),
+    "as_loc06_in":      ("I_can_shape_my_future_positively",             "object", None),
+    "as_loc12_in":      ("I_am_optimistic_about_my_future",              "object", None),
+    "as_loc13_in":      ("I_am_optimistic_about_my_familys_future",      "object", None),
+    "exp_ev1_01":       ("worry_about_job_loss_or_economic_livelihood",  "object", None),
 }
 
 FOOD_INSECURITY_2023 = {
-    "interview__key":       "interview_key",
-    "food_sufficent":       "sufficent_food_number_of_month"
+    "interview__key":       ("interview_key",                    "object",      None),
+    "food_sufficent":       ("sufficent_food_number_of_month",   "float32",     0),
     #ToDo: During the Last 12 Months, Was There a Time When, Because of Lack of Money or Ot... available!
 }
 
 OTHER_INCOME_SOURCES_2023 = {
-    "interview__key":       "interview_key",
-    # "r_otherincome__id":    "other_income_source",
-    "inc_oth_amt":          "other_income_amount",
-    # "nt_oth_income":        "other_income_frequency"
+    "interview__key":       ("interview_key",           "object",  None),
+    "r_otherincome__id":    ("other_income_source",     "object",  None),
+    "inc_oth_amt":          ("other_income_amount",     "float32", 0),
+    "nt_oth_income":        ("other_income_frequency",  "object",  None),
 }
 
 ROAD_CONNECTIVITY_2023 = {
-    "interview__key":       "interview_key",
-    "road_1":               "road_type",
-    "road_2":               "road_condition",
-    "road_6":               "road_distance_in_minutes"
+    "interview__key":       ("interview_key",               "object",  None),
+    "road_1":               ("road_type",                   "object",  None),
+    "road_2":               ("road_condition",              "object",  None),
+    "road_6":               ("road_distance_in_minutes",    "float32", 0),
 }
 
+# ============================================================
+# INDIVIDUAL-LEVEL FEATURES
+# ============================================================
 
-
-#INDIVIDUAL-LEVEL FEATURES
 HH_MEMBERS_2023 = {
-    "interview__key":   "interview_key",
-    "r_members__id":    "members_id", 
-    "ha03":             "gender",
-    "ha_rel":           "relation_to_head",
-    "age":              "age",
-    # "ha07":             "ethnic_group",
-    # "ha07_other":       "ethnic_group_new",
-    # "religio":          "religion",
-    # "religio_1":        "religion_other",
-    "educ1":            "education_level",
+    "interview__key":   ("interview_key",        "object",  None),
+    "r_members__id":    ("members_id",           "object",  None),
+    "ha03":             ("gender",               "object",  "missing"),
+    "ha_rel":           ("relation_to_head",     "object",  "missing"),
+    "age":              ("age",                  "float32", "mean"),
+    "ha07":             ("ethnic_group",         "object",  "missing"),
+    # "ha07_other":     ("ethnic_group_new",     "object",  "missing"),
+    "religio":          ("religion",             "object",  "missing"),
+    # "religio_1":      ("religion_other",       "object",  "missing"),
+    "educ1":            ("education_level",      "object",  "missing"),
 }
 
 OFF_FARM_EMPLOYMENT_2023 = {
