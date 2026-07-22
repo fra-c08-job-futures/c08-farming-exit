@@ -71,11 +71,14 @@ def enforce_dtypes(df, mapping):
     -------
     pd.DataFrame
     """
-    for col, (_, dtype, _) in mapping.items():
+    for col, (_, dtype, fill_value) in mapping.items():
         
-        #There is Stata extended missing-value codes (., .a, .b, ... .z) in the data.
-        #It can fuck up the dtype conversion, we need to enforce conversion for numeric features as a workaround. 
-        if dtype.startswith("float"):
+        #Before enforcing dtypes we need 2 pre-processing steps
+        #1. yes/no features need to be converted into 1/0 
+        if isinstance(fill_value, str) and fill_value.startswith("dummy"):
+            df[col] = df[col].map({'Yes': 1.0, 'No': 0.0})
+        #2. Stata extended missing-value codes (., .a, .b, ... .z) exist, so we need to enforce numeric conversion 
+        if isinstance(dtype, str) and dtype.startswith("float"):
             df[col] = pd.to_numeric(df[col], errors="coerce")
 
         if col in df.columns:
@@ -108,6 +111,8 @@ def fill_missings(df, mapping):
             df[col] = df[col].fillna(df[col].median())
         elif fill_value == "missing":
             df[col] = df[col].fillna("missing")
+        elif fill_value == "dummy":
+            df[col] = df[col].fillna(0.0)
         else:
             df[col] = df[col].fillna(fill_value)
 
@@ -191,5 +196,50 @@ def convert_land_sizes_to_acres(df, country, measurement_col='land_measurement')
 
     return df
 
+def resolve_duplicates(df, key_col, sort_col=None, ascending=True):
+    """
+    Resolve duplicate rows in key_col by sorting and keeping the first
+    row per key.
+    Only use this function when there are very little duplicates and you
+    know what you are doing!
 
+    Parameters
+    ----------
+    df : pd.DataFrame
+    key_col : str
+        Rows sharing the same value here are considered duplicates.
+    sort_col : str
+        Secondary column used to decide which duplicate to keep
+    ascending : bool or list of bool
+        Sort order.
 
+    Returns
+    -------
+    pd.DataFrame
+    """
+    sorted_df = df.sort_values(by=[key_col, sort_col], ascending=ascending)
+    return sorted_df.drop_duplicates(subset=key_col, keep="first")
+
+def add_missing_indicators(df, columns, sentinel=99999, suffix='_missing'):
+    """
+    Add a binary indicator column for each given column, flagging rows
+    that are missing. 
+    Only use this after filling missing values with a sentinel=99999!
+
+    Parameters
+    ----------
+    df : pd.DataFrame
+    columns : list of str
+        Columns to check for the sentinel value.
+    sentinel : int or float
+        Placeholder value used for missing data, set to 99999.
+    suffix : str
+        Suffix appended to column name for the new indicator column.
+
+    Returns
+    -------
+    pd.DataFrame
+    """
+    for col in columns:
+        df[f"{col}{suffix}"] = (df[col] == sentinel).astype(int)
+    return df
