@@ -60,3 +60,46 @@ education_mapping = {
     "University level":                 {"years_of_schooling": 15, "education_level": "University"},
     "Post graduate university level":   {"years_of_schooling": 16, "education_level": "Postgraduate (university)"},
 }
+
+#WHERE TO USE: LIVESTOCK + CROPS SOLD + ASSET VALUE
+eur_exchange_rates = {
+    "Botswana": 0.069,   # BWP -> EUR
+    "Kenya": 0.0071,     # KES -> EUR
+    "Namibia": 0.049,    # NAD -> EUR
+    "Tanzania": 0.00034, # TZS -> EUR
+    "Zambia": 0.033,     # ZMW -> EUR
+}
+    
+acres_conversion_factors = {
+    'Acres': 1.0,
+    'Hectares': 2.471,
+    'Lima': 0.6175, #Zambia measurements
+}
+
+livestock_conversion_factors = {
+    "Cows/Heifers":                   0.70,
+    "Bulls/Oxen/Steers":              0.70,
+    "Calves - Males/Females":         0.20,
+    "Goats - He/She/Kids":            0.10,
+    "Sheep - Rams/Ewes/Lambs":        0.10,
+    "Pigs - Boar/Sows/Piglets":       0.20,
+    "Chicken - Cocks/Broilers":       0.01,
+    "Chicken - Hens/Layers":          0.01,
+    "Ducks":                          0.01,
+    "Dove /Pigeon":                   0.01,
+    "Guinea Fowls":                   0.01,
+    "Horses":                         0.80,
+    "Mules/Donkey":                   0.50,
+    "Camel":                          1.00,
+    "Beehive":                        0.00,  # not a standard TLU category
+    "Insects (Bees/Crickets/Etc.)":   0.00,  # not a standard TLU category
+    "Other➡️specify":                0.00,  # unknown animal, can't assign a factor
+}
+
+income_frequency = {
+    "Monthly": 12.0,
+    "Every three months": 4.0,
+    "Every 6 months": 2.0,
+    "Every year": 1.0,
+    "Lump sum (single payment)": 1.0,   
+}

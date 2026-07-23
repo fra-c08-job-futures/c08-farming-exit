@@ -10,7 +10,7 @@ from c08_farming_exit import features, mappings
 # ============================================================
 
 def load_and_preprocess(base_path, filename, mapping):
-    """Load a CSV, then select, cast, fill, and rename columns per the mapping. 
+    """Load a CSV, then select, cast, fill, and rename columns. 
 
     All steps are performed according to `mapping`. Missing values are
     filled using `fill_missings()`, and casting is enforced using
@@ -48,9 +48,9 @@ def load_and_preprocess(base_path, filename, mapping):
     #Select columns
     df = df[list(available.keys())]
     #Define datatypes
-    df = enforce_dtypes(df, mapping)
+    df = enforce_dtypes(df, available)
     #Take care of missings
-    df = fill_missings(df, mapping)
+    df = fill_missings(df, available)
     #Rename
     rename_map = {k: v[0] for k, v in available.items() if k != v[0]}
     df = df.rename(columns=rename_map)
@@ -152,7 +152,7 @@ def add_years_of_schooling(df, education_mapping):
 
     return df
 
-def convert_land_sizes_to_acres(df, country, measurement_col='land_measurement'):
+def convert_land_sizes_to_acres(df, country, measurement_col, acres_conversion_factors):
     """
     Converts all land_size_ columns in df to acres, based on the per-row unit given in `measurement_col`.
 
@@ -178,15 +178,8 @@ def convert_land_sizes_to_acres(df, country, measurement_col='land_measurement')
     #Overwrite any "Other.." with "Lima"
     df[measurement_col] = np.where(df[measurement_col].str.startswith('Other'), 'Lima', df[measurement_col])
 
-    # Conversion factors to acres
-    conv_factor = {
-        'Acres': 1.0,
-        'Hectares': 2.471,
-        'Lima': 0.6175, #Zambia measurements
-    }
-
     #Create pandas series: one value per row containing the factor
-    factors = df[measurement_col].map(conv_factor)
+    factors = df[measurement_col].map(acres_conversion_factors)
 
     for col in land_size_cols:
         df[col] = pd.to_numeric(df[col], errors='coerce') * factors
@@ -243,3 +236,123 @@ def add_missing_indicators(df, columns, sentinel=99999, suffix='_missing'):
     for col in columns:
         df[f"{col}{suffix}"] = (df[col] == sentinel).astype(int)
     return df
+
+def crop_production_manual_cleaning(df, key_col):
+    """
+    Collapses crop production data to one row per household by deleting the dimension of crop types.    
+    This is a manual function that cannot be reused for any other table. 
+    
+    Parameters
+    ----------
+    df : pd.DataFrame
+    key_col : str
+        Column to group by and collapse to one row per key.
+    exchange_rates : dict
+
+    Returns
+    -------
+    pd.DataFrame
+    """
+    df = df.copy()
+
+    #If there is a true value for any crop, set 1 for the entire household
+    reduction_list = ["crop_harvested", 
+                      "crop_sale", 
+                      "crop_storage", 
+                      "crop_buyer_market", 
+                      "crop_buyer_trader", 
+                      "crop_buyer_cooperative", 
+                      "crop_buyer_commercial_farm", 
+                      "crop_buyer_hospitality", 
+                      "crop_buyer_government", 
+                      "crop_organic_fertilizer", 
+                      "crop_inorganic_fertilizer", 
+                      "crop_pesticides", 
+                      "crop_tractor"]
+    df[reduction_list] = df.groupby(key_col)[reduction_list].transform('max')
+
+    #If there is home consumption for any crop, set 1 for the entire household
+    df[["crop_home_consumption_amount"]] = (
+        df[["crop_home_consumption_amount"]] != 0
+    ).groupby(df[key_col]).transform("any").astype(int)
+
+    #Calculate the total sale revenues of crop production per hh (in local currency)
+    df["crop_sale_revenue"] = df["crop_sale_amount"] * df["crop_sale_price_per_unit"]
+    df["crop_sale_revenue_total"] = df.groupby("interview_key")["crop_sale_revenue"].transform("sum")
+    df = df.drop(columns=["crop_sale_amount", "crop_sale_price_per_unit", "crop_sale_revenue"])
+
+    return df.drop_duplicates(subset=key_col).reset_index(drop=True)
+
+def conversion(df, type_col, number_cols, conversion_factors, suffix):
+    """
+    Conversion of a column based on the conversion_factor mapping. 
+
+    Parameters
+    ----------
+    df : pd.DataFrame
+    type_col : str
+        Column name indicating the categories used for conversion.
+    number_col : list of str
+        Column name(s) with numeric value to be converted.
+    conversion_factors : dict
+        Mapping stating the conversion categories and the respective conversion factors. 
+    suffix: str
+
+    Returns
+    -------
+    pd.DataFrame
+    """
+    df = df.copy()
+    factor = df[type_col].map(conversion_factors)
+
+    for col in number_cols:
+        df[f"{col}_{suffix}"] = df[col] * factor
+
+    df = df.drop(columns=number_cols)
+
+    return df
+
+def calculate_revenue(df, number_col, price_col, new_col_name):
+    """
+    Calculate the revenue of a sold product (e.g. crop/animal)
+
+    Parameters
+    ----------
+    df : pd.DataFrame
+    number_col : int
+    price_col : int
+    new_col_name: str
+        name of new column, e.g. livestock_revenue_sold/crop_revenue_sold
+
+    Returns
+    -------
+    pd.DataFrame
+    """
+    df = df.copy()
+    df[new_col_name] = df[number_col] * df[price_col]
+    df = df.drop(columns=[number_col, price_col])
+
+    return df
+
+def aggregate_by_hh(df, dimension_col):
+    """
+    Groups a DataFrame by 'country' and 'interview_key', summing all
+    other numeric columns (collapsing across 'dimension_col' categories).
+    
+    Parameters
+    ----------
+    df : pd.DataFrame
+        containing various rows per hh
+    dimension_col: list
+        dimension columns to be dropped when collapsing
+
+    Returns
+    -------
+    pd.DataFrame
+        only containing one row per hh
+    """
+    df = df.drop(columns=dimension_col, errors="ignore")
+
+    result = df.groupby(["interview_key"], as_index=False).sum()
+
+    return result

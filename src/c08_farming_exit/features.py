@@ -17,73 +17,67 @@ Each dictionary maps: {original_col_name: (new_name, dtype, fill_value)}
 # ============================================================
 
 IDENTIFYING_INFO_2023 = {
-    "ctry":           ("country",                       "object",   None),
-    "interview__key": ("interview_key",                 "object",   None),
-    #"hhid":          ("hhid",                          "object",   "missing"),
-    "ea":             ("enumeration_area",              "object",   None),
-    "dist":           ("district",                      "object",   None),
-    "region":         ("region",                        "object",   None),
-    # "res_rel":      ("respondant_relation_to_head",   "object",   "missing"), #dropped: 50-70% missings
+    "ctry":           ("country",                       "object",   None        ),
+    "interview__key": ("interview_key",                 "object",   None        ),
+    #"hhid":          ("hhid",                          "object",   "missing"   ),
+    "ea":             ("enumeration_area",              "object",   None        ),
+    "dist":           ("district",                      "object",   None        ),
+    "region":         ("region",                        "object",   None        ),
+    # "res_rel":      ("respondant_relation_to_head",   "object",   "missing"   ), #dropped: 50-70% missings
 }
 
 LAND_OWNERSHIP_ACCESS_2023 = {
-    "interview__key":  ("interview_key",                                    "object",   None),
-    "lnd_mes":         ("land_measurement",                                 "object",   None),
-    # "lnd_mes_1":       ("land_measurement_other",                         "object",   "missing"),
-    "lnd01":           ("land_size_cropland",                               "float32",  0),
-    "lnd02":           ("land_size_fallow",                                 "float32",  0),
-    "lnd03":           ("land_size_agroforestry_forestry",                  "float32",  0),
-    "lnd04":           ("land_size_pasture",                                "float32",  0),
-    "lnd08":           ("land_size_residential",                            "float32",  0),
-    "lnd09":           ("land_size_lodge_camp",                             "float32",  0),
-    # "lnd06":           ("land_size_other",                                "float32",  0),
-    "lnd_ten01":       ("land_cropland_ownership_status",                   "object",   "missing"),
-    # "lnd_ten02":       ("land_fallow_ownership_status",                   "object",   "missing"), #dropped: 60-90% missings
-    # "lnd_ten03":       ("land_agroforestry_forestry_ownership_status",    "object",   "missing"), #dropped: >90% missings
-    # "lnd_ten04":       ("land_pasture_ownership_status",                  "object",   "missing"), #dropped: >90% missings
-    "lnd_ten08":       ("land_residential_ownership_status",                "object",   "missing"),
-    # "lnd_ten09":       ("land_lodge_camp_ownership_status",               "object",   "missing"), #dropped: 100% missings
-    # "lnd_ten06":       ("land_other_ownership_status",                    "object",   "missing"),
-    "lnd_16":          ("land_used_as_collateral",                          "object",   "missing"), #is yes/no, could be 1/0
-    "num_plots":       ("land_number_of_plots",                             "float32",  0),
+    "interview__key":  ("interview_key",                                    "object",   None        ),
+    "lnd_mes":         ("land_measurement",                                 "object",   None        ),
+    # "lnd_mes_1":     ("land_measurement_other",                           "object",   "missing"   ),
+    "lnd01":           ("land_size_cropland",                               "float32",  0           ),
+    "lnd02":           ("land_size_fallow",                                 "float32",  0           ),
+    "lnd03":           ("land_size_agroforestry_forestry",                  "float32",  0           ),
+    "lnd04":           ("land_size_pasture",                                "float32",  0           ),
+    "lnd08":           ("land_size_residential",                            "float32",  0           ),
+    "lnd09":           ("land_size_lodge_camp",                             "float32",  0           ),
+    # "lnd06":         ("land_size_other",                                  "float32",  0           ),
+    "lnd_ten01":       ("land_cropland_ownership_status",                   "object",   "missing"   ),
+    # "lnd_ten02":     ("land_fallow_ownership_status",                     "object",   "missing"   ), #dropped: 60-90% missings
+    # "lnd_ten03":     ("land_agroforestry_forestry_ownership_status",      "object",   "missing"   ), #dropped: >90% missings
+    # "lnd_ten04":     ("land_pasture_ownership_status",                    "object",   "missing"   ), #dropped: >90% missings
+    "lnd_ten08":       ("land_residential_ownership_status",                "object",   "missing"   ),
+    # "lnd_ten09":     ("land_lodge_camp_ownership_status",                 "object",   "missing"   ), #dropped: 100% missings
+    # "lnd_ten06":      ("land_other_ownership_status",                     "object",   "missing"   ),
+    "lnd_16":          ("land_used_as_collateral",                          "object",   "missing"   ), #is yes/no, could be 1/0
+    "num_plots":       ("land_number_of_plots",                             "float32",  0           ),
 }
 
 CROP_PRODUCTION_2023 = {
-    "interview__key":     ("interview_key",                    "object",  None),
-    "r_crop__id":         ("crop_type",                        "object",  None),
-
-    "crop_harvest":       ("crop_harvested",                   "object",  None),
-    "crop_output":        ("crop_output",                      "float32", None),
-    "crop_unit":          ("crop_unit",                        "object",  None),
-    # "crop_unit_1":      ("crop_unit_other",                  "object",  None),
-
-    "crop_sale":          ("crop_sale",                        "object",  None),
-    "crop_saleamt":       ("crop_sale_amount",                 "float32", None),
-    "crop_slunits":       ("crop_sale_unit",                   "object",  None),
-    # "crop_slunits_1":   ("crop_sale_unit_other",             "object",  None),
-    "crop_price":         ("crop_sale_price_per_unit",         "float32", None),
-
-    "crop_homecons":      ("crop_home_consumption",            "float32", None),
-    "crop_clunits":       ("crop_home_consumption_unit",       "object",  None),
-    # "crop_cunits_1":    ("crop_home_consumption_unit_other", "object",  None),
-    
-    "cp_stor":            ("crop_storage",                     "object",  None),
-    "cpamt":              ("crop_storage_amount",               "float32", None),
-    "cpunits2":           ("crop_storage_unit",                "object",  None),
-    # "cpunits2_other":   ("crop_storage_unit_other",          "object",  None),
-
-    "crop_buyer__1":      ("crop_buyer_market",                "object",  None),
-    "crop_buyer__2":      ("crop_buyer_trader",                "object",  None),
-    "crop_buyer__3":      ("crop_buyer_cooperative",           "object",  None),
-    "crop_buyer__4":      ("crop_buyer_commercial_farm",       "object",  None),
-    "crop_buyer__5":      ("crop_buyer_hospitality",           "object",  None),
-    "crop_buyer__6":      ("crop_buyer_government",            "object",  None),
-    # "crop_buyer_other": ("crop_buyer_other",                 "object",  None),
-
-    "cp07":               ("crop_organic_fertilizer",          "object",  None),
-    "cp08":               ("crop_inorganic_fertilizer",        "object",  None),
-    "cp09":               ("crop_pesticides",                  "object",  None),
-    "cp11":               ("crop_tractor",                     "object",  None),
+    "interview__key":     ("interview_key",                    "object",  None        ),
+    # "r_crop__id":       ("crop_type",                        "object",  "missing"   ),#not necessary to know the specific crop
+    "crop_harvest":       ("crop_harvested",                   "float32", "dummy"     ),
+    # "crop_output":      ("crop_harvest_amount",              "float32", 0           ),
+    # "crop_unit":        ("crop_harvest_unit",                "object",  "missing"   ),
+    # "crop_unit_1":      ("crop_harvest_unit_other",          "object",  None        ),
+    "crop_sale":          ("crop_sale",                        "float32", "dummy"     ),
+    "crop_saleamt":       ("crop_sale_amount",                 "float32", 0           ),
+    # "crop_slunits":     ("crop_sale_unit",                   "object",  "missing"   ),
+    # "crop_slunits_1":   ("crop_sale_unit_other",             "object",  None        ),
+    "crop_price":         ("crop_sale_price_per_unit",         "float32", 0           ),
+    "crop_homecons":      ("crop_home_consumption_amount",     "float32", 0           ),
+    # "crop_clunits":     ("crop_home_consumption_unit",       "object",  "missing"   ),
+    # "crop_cunits_1":    ("crop_home_consumption_unit_other", "object",  None        ),
+    "cp_stor":            ("crop_storage",                     "float32", "dummy"     ),
+    # "cpamt":            ("crop_storage_amount",              "float32", 0           ),
+    # "cpunits2":         ("crop_storage_unit",                "object",  "missing"   ),
+    # "cpunits2_other":   ("crop_storage_unit_other",          "object",  None        ),
+    "crop_buyer__1":      ("crop_buyer_market",                "float32", "dummy"     ),
+    "crop_buyer__2":      ("crop_buyer_trader",                "float32", "dummy"     ),
+    "crop_buyer__3":      ("crop_buyer_cooperative",           "float32", "dummy"     ),
+    "crop_buyer__4":      ("crop_buyer_commercial_farm",       "float32", "dummy"     ),
+    "crop_buyer__5":      ("crop_buyer_hospitality",           "float32", "dummy"     ),
+    "crop_buyer__6":      ("crop_buyer_government",            "float32", "dummy"     ),
+    # "crop_buyer_other": ("crop_buyer_other",                 "object",  None        ),
+    "cp07":               ("crop_organic_fertilizer",          "float32", "dummy"     ),
+    "cp08":               ("crop_inorganic_fertilizer",        "float32", "dummy"     ),
+    "cp09":               ("crop_pesticides",                  "float32", "dummy"     ),
+    "cp11":               ("crop_tractor",                     "float32", "dummy"     ),
 }
 
 CROP_EXPENDITURE_2023 = {
@@ -119,11 +113,11 @@ MARKET_ACCESS_2023 = {
 
 LIVESTOCK_OWNERSHIP_2023 = {
     "interview__key":        ("interview_key",                              "object",  None),
-    "r_livestock__id":       ("livestock_type",                             "object",  None),
-    "lv02":                  ("livestock_owned",                            "float32", 0),
-    "lv07":                  ("livestock_number_sold",                      "float32", 0),
+    "r_livestock__id":       ("livestock_type",                             "object",  "missing"),
+    "lv02":                  ("livestock_number_owned",                     "float32", 0),
+    "lv03":                  ("livestock_number_sold",                      "float32", 0),
     "lv06":                  ("livestock_number_lost_disease_theft",        "float32", 0),
-    "lv07":                  ("livestock_number_lost_wildlife_attack",      "float32", 0), ##TODO: this is twice in here!
+    "lv07":                  ("livestock_number_lost_wildlife_attack",      "float32", 0),
     "lv08":                  ("livestock_price_head_sold",                  "float32", 0),
 }
 
@@ -207,8 +201,9 @@ ENERGY_ACCESS_2023 = {
 
 ASSETS_OWNED_2023 = {
     "interview__key":    ("interview_key",          "object",  None),
-    "r_asset_own__id":   ("asset_type",             "object",  None),
+    "r_asset_own__id":   ("asset_type",             "object",  "missing"),
     "ha0_1":             ("asset_number_owned",     "float32", 0),
+    "ha0_4":             ("asset_price_per_unit",   "float32", 0), #TODO: using mean per asset_type would be better!
 }
 
 INTERNET_ACCESS_2023 = {
@@ -223,7 +218,7 @@ SHOCKS_AND_COPING_2023 = {
     "interview__key":   ("interview_key",                                       "object",  None),
     # "r_shocks__id":   ("shock_id",                                            "object",  None),
     "r_shocks":         ("shock_type_affected_last_12_months",                  "object",  None),
-    "sh_1":             ("shock_frequency_last_12_months",                      "float32", 0),
+    "sh_1":             ("shock_frequency_last_12_months",                      "float32", None),
     "sh_2":             ("shock_severity_last_12_months",                       "object",  None),
 
     #COPING
@@ -276,9 +271,9 @@ FOOD_INSECURITY_2023 = {
 
 OTHER_INCOME_SOURCES_2023 = {
     "interview__key":       ("interview_key",           "object",  None),
-    "r_otherincome__id":    ("other_income_source",     "object",  None),
-    "inc_oth_amt":          ("other_income_amount",     "float32", 0),
-    "nt_oth_income":        ("other_income_frequency",  "object",  None),
+    "r_otherincome__id":    ("other_income_source",     "object",  "missing"),
+    "inc_oth_amt":          ("other_income_amount",     "float32", "mean"), #TODO: using mean per income source would be better!
+    "int_oth_income":       ("other_income_frequency",  "object",  "missing"),
 }
 
 ROAD_CONNECTIVITY_2023 = {
