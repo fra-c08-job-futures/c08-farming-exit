@@ -61,7 +61,7 @@ education_mapping = {
     "Post graduate university level":   {"years_of_schooling": 16, "education_level": "Postgraduate (university)"},
 }
 
-#WHERE TO USE: LIVESTOCK + CROPS SOLD + ASSET VALUE
+#WHERE TO USE: LIVESTOCK + CROPS SOLD + ASSET VALUE + OTHER INCOME
 eur_exchange_rates = {
     "Botswana": 0.069,   # BWP -> EUR
     "Kenya": 0.0071,     # KES -> EUR
