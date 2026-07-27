@@ -93,7 +93,7 @@ livestock_conversion_factors = {
     "Camel":                          1.00,
     "Beehive":                        0.00,  # not a standard TLU category
     "Insects (Bees/Crickets/Etc.)":   0.00,  # not a standard TLU category
-    "Other➡️specify":                0.00,  # unknown animal, can't assign a factor
+    "Other➡️specify":                 0.00,  # unknown animal, can't assign a factor
 }
 
 income_frequency = {
@@ -102,4 +102,36 @@ income_frequency = {
     "Every 6 months": 2.0,
     "Every year": 1.0,
     "Lump sum (single payment)": 1.0,   
+}
+
+shock_categories = {
+    "Large Rise in Prices of Food":                                                                       "price_shock",
+    "Drought or Extended Period of No Rain":                                                              "drought",
+    "Crop Failure":                                                                                       "crop_failure",
+    "Chronicor Severe Illnessor Accident of a Household Member":                                          "illness_death",
+    "Livestock Disease/Death":                                                                            "livestock_loss",
+    "Large Rise in Prices of Agricultural Inputs(E.g.Agrochemicals,Machinery,HiredLabour)":               "price_shock",
+    "Death of a Household Member":                                                                        "illness_death",
+    "Large Fall in Sale Prices for Cropsand or Livestock":                                                "price_shock",
+    "Floods":                                                                                             "floods",
+    "Robbery/Burglary":                                                                                   "other",
+    "Livestock Theft(IncludingRaids)":                                                                    "livestock_loss",
+    "Loss of Employment":                                                                                 "other",
+    "Dwelling Damaged":                                                                                   "other",
+    "Household Business Failure(Non-Agricultural)":                                                       "other",
+    "Fire on Property":                                                                                   "other",
+    "Ethnic or Clan Clashes":                                                                             "other",
+    "Household Member Jailed":                                                                            "other",
+    "Fallen Sick of COVID-19":                                                                            "illness_death",
+    "End of Regular Assistance(E.g.Pension,CashTransfer,Remittances)from Outside the Household":          "other",
+    "Other":                                                                                              "other",
+    "Loss of Land":                                                                                       "other",
+    "Household Memeber Died of COVID-19":                                                                 "illness_death",
+}
+
+likelihood = {
+    "Extremely likely": 1, 
+    "Very  likely": 1,
+    "Not very likely": 0, 
+    "Not at all likely": 0,     
 }

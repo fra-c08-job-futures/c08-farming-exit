@@ -6,7 +6,7 @@ from pathlib import Path
 from c08_farming_exit import features, mappings
 
 # ============================================================
-# STANDALONE DATA CLEANING TASKS
+# STANDALONE DATA CLEANING FUNCTION
 # ============================================================
 
 def load_csv(base_path, filename):
@@ -39,18 +39,18 @@ def enforce_dtypes(df, feature_dict):
     Parameters
     ----------
     df : pd.DataFrame
-    mapping : dict
-        Dict of {original_col_name: (new_name, dtype, fill_value)}
+    feature_dict : dict
+        Dict of {original_col_name: (new_name, dtype, dummy, mapping)}
 
     Returns
     -------
     pd.DataFrame
     """
-    for col, (_, dtype, fill_value, _) in feature_dict.items():
+    for col, (_, dtype, dummy, _) in feature_dict.items():
         
         #Before enforcing dtypes we need 2 pre-processing steps
         #1. yes/no features need to be converted into 1/0 
-        if isinstance(fill_value, str) and fill_value.startswith("dummy"):
+        if isinstance(dummy, str) and dummy.startswith("dummy"):
             df[col] = df[col].map({'Yes': 1.0, 'No': 0.0})
         #2. Stata extended missing-value codes (., .a, .b, ... .z) exist, so we need to enforce numeric conversion 
         if isinstance(dtype, str) and dtype.startswith("float"):
@@ -61,41 +61,11 @@ def enforce_dtypes(df, feature_dict):
 
     return df
 
-def fill_missings(df, feature_dict):
-    """
-    Fills missing values in df's columns based on mapping.
-
-    Parameters
-    ----------
-    df : pd.DataFrame
-    mapping : dict
-        Dict of {original_col_name: (new_name, dtype, fill_value)}.
-        fill_value can be None (skip), 0 (or any literal), "mean",
-        "median", or "missing".
-
-    Returns
-    -------
-    pd.DataFrame
-    """
-    for col, (_, _, fill_value, _) in feature_dict.items():
-        if fill_value is None:
-            continue
-        if fill_value == "mean":
-            df[col] = df[col].fillna(df[col].mean())
-        elif fill_value == "median":
-            df[col] = df[col].fillna(df[col].median())
-        elif fill_value == "missing":
-            df[col] = df[col].fillna("missing")
-        elif fill_value == "dummy":
-            df[col] = df[col].fillna(0.0)
-        else:
-            df[col] = df[col].fillna(fill_value)
-
-    return df
-
-def mapping(df, category_col, mapping, new_col, field=None):
+def mapping(df, country, category_col, mapping, new_col, field=None):
     """
     Map a category column through a dict to create/overwrite a new column.
+    TODO: silently produces None for missing categories, so the dicctionary must be complete!
+
     Works for simple and complex mappings.
     Simple (e.g. mappings.acres_conversion_factors): 
         Donnot provide 'field' and the value under the key is extracted. 
@@ -123,6 +93,12 @@ def mapping(df, category_col, mapping, new_col, field=None):
     df = df.copy() 
     lookup = (lambda k: mapping.get(k, {}).get(field)) if field else mapping.get
     df[new_col] = df[category_col].map(lookup)
+
+    #print message in case NaNs are silently dropped
+    n_missing = df[new_col].isna().sum()
+    if n_missing > 0:
+        print(f"mapping: {country} - Mapping dictionary of '{category_col}' is incomplete: Dropped {n_missing} rows with NaN in '{new_col}'.")
+
     return df
 
 def apply_factor(df, factor_col, number_cols, suffix):
@@ -188,7 +164,8 @@ def aggregate_by_hh(df, dimension_col):
     """
     df = df.drop(columns=dimension_col, errors="ignore")
 
-    result = df.groupby(["interview_key"], as_index=False).sum()
+    #makes sure that a hh with all NaNs will aggreagate to NaNs also
+    result = df.groupby(["interview_key"], as_index=False).sum(min_count=1)
 
     return result
 
@@ -216,39 +193,91 @@ def resolve_duplicates(df, key_col, sort_col=None, ascending=True):
     sorted_df = df.sort_values(by=[key_col, sort_col], ascending=ascending)
     return sorted_df.drop_duplicates(subset=key_col, keep="first")
 
-def add_missing_indicators(df, columns, sentinel=99999, suffix='_missing'):
+def make_pivot_table(df, index, category_columns, aggfunc='size', values=None):
     """
-    Add a binary indicator column for each given column, flagging rows
-    that are missing. 
-    Only use this after filling missing values with a sentinel=99999!
+    Pivot a long-format dataframe into a wide-format pivot table.
+    #TODO: Watch out! Pandas silently drops NaN rows. 
 
     Parameters
     ----------
-    df : pd.DataFrame
-    columns : list of str
-        Columns to check for the sentinel value.
-    sentinel : int or float
-        Placeholder value used for missing data, set to 99999.
-    suffix : str
-        Suffix appended to column name for the new indicator column.
+    df : pd.DataFrame (long format)
+    index : str or list of str
+        e.g. "interview_key" or "personal_id"
+    category_columns : str
+        Column to spread into new columns. 
+    values : str, optional
+        Column with category-specific values. If None, categorical dummies are created. 
+    aggfunc : str or callable, default 'count'
+        e.g. 'sum', 'mean', 'first'. Only used when `values` is provided.
 
     Returns
     -------
-    pd.DataFrame
+    pd.DataFrame (wide-format dataframe)
+        
+    Examples
+    --------
+    >>> df = pd.DataFrame({
+    ...     'id': [1, 1, 2, 2],
+    ...     'category': ['A', np.nan, 'A', 'B'],
+    ...     'amount': [10, 20, 5, 15]
+    ... })
+    >>> make_pivot_table(df, index='id', category_columns='category') #if only interested in categorical dummies
+    >>> make_pivot_table(df, index='id', category_columns='category', aggfunc='sum', values='amount') #if interested in category-specific values
     """
-    for col in columns:
-        df[f"{col}{suffix}"] = (df[col] == sentinel).astype(int)
+    df = df.copy()
+ 
+    if values is None:
+        pivoted = pd.pivot_table(
+            df,
+            index=index,
+            columns=category_columns,
+            aggfunc='size'
+        )
+        pivoted = (pivoted > 0).astype(int)
+    else:
+        pivoted = pd.pivot_table(
+            df,
+            index=index,
+            columns=category_columns,
+            values=values,
+            aggfunc=aggfunc
+        )
+
+    pivoted.columns = [f"{category_columns}_{col}" for col in pivoted.columns]
+    pivoted.columns.name = None  # remove leftover columns-index label
+    
+    return pivoted.reset_index()
+
+def flag_group_if_any_true(df, key_col, flag_cols):
+    """
+    For each column in flag_cols, if any row within a group (grouped by
+    key_col) has a truthy value ((non-zero/True), set that value to 1 
+    for all rows in that group; otherwise 0.
+
+    Parameters
+    ----------
+    df : pandas.DataFrame
+    key_col : str or list
+        The name of the column to group by.
+    flag_cols : list of str
+        List of column names containing binary/boolean flag values.
+
+    Returns
+    -------
+    pandas.DataFrame
+    """
+    df[flag_cols] = df.groupby(key_col)[flag_cols].transform(lambda x: int(x.any()))
     return df
 
+
 # ============================================================
-# WRAPPER DATA CLEANING TASKS
+# WRAPPER DATA CLEANING FUNCTIONS
 # ============================================================
 
 def load_and_preprocess(base_path, filename, feature_dict):
-    """Load a CSV, then select, cast, fill, and rename columns. 
+    """Load a CSV, then select, cast, and rename columns. 
 
-    Thin wrapper around `load_csv()`, `fill_missings()`, 
-    and `enforce_dtypes()`.
+    Thin wrapper around `load_csv()`, and `enforce_dtypes()`.
     
     Parameters
     ----------
@@ -257,7 +286,7 @@ def load_and_preprocess(base_path, filename, feature_dict):
     filename : str
         Name of the CSV file, e.g. "Zambia_expenditure_on_crops.csv".
     feature_dict : dict
-        Dict of {original_col_name: (new_name, dtype, fill_value, mapping)}.
+        Dict of {original_col_name: (new_name, dtype, dummy, mapping)}.
 
     Returns
     -------
@@ -276,15 +305,13 @@ def load_and_preprocess(base_path, filename, feature_dict):
     df = df[list(available.keys())]
     #Define datatypes
     df = enforce_dtypes(df, available)
-    #Take care of missings
-    df = fill_missings(df, available)
     #Rename
     rename_map = {k: v[0] for k, v in available.items() if k != v[0]}
     df = df.rename(columns=rename_map)
 
     return df
 
-def create_education_features(df, category_col='education_level', edu_mapping=mappings.education_mapping):
+def create_education_features(df, country, category_col='education_level', edu_mapping=mappings.education_mapping):
     """
     Clean 'education_level' and add a 'years_of_schooling' column.
 
@@ -304,8 +331,8 @@ def create_education_features(df, category_col='education_level', edu_mapping=ma
     -------
     pd.DataFrame
     """
-    df = mapping(df, category_col, edu_mapping, 'years_of_schooling', field='years_of_schooling')
-    df = mapping(df, category_col, edu_mapping, category_col,         field=category_col)
+    df = mapping(df, country, category_col, edu_mapping, 'years_of_schooling', field='years_of_schooling')
+    df = mapping(df, country, category_col, edu_mapping, category_col,         field=category_col)
 
     return df
 
@@ -340,9 +367,9 @@ def convert_land_sizes_to_acres(df, country, measurement_col, acres_conversion_f
     df[measurement_col] = np.where(df[measurement_col].str.startswith('Other'), 'Lima', df[measurement_col])
 
     #Add the acres conversion factors
-    df =  mapping(df, measurement_col, acres_conversion_factors, "factor", field=None)
+    df =  mapping(df, country, measurement_col, acres_conversion_factors, "factor", field=None)
     #Apply the conversion factors
-    df = apply_factor(df, "factor", land_size_cols, "")
+    df = apply_factor(df, "factor", land_size_cols, "acres")
 
     # Overwrite all non-NaN measurement labels to 'Acres'
     df[measurement_col] = np.where(df[measurement_col].notna(), 'Acres', df[measurement_col])
@@ -354,7 +381,8 @@ def crop_production_manual_cleaning(df, key_col):
     Collapses crop production data to one row per household by deleting the dimension of crop types.    
     This is a manual function that cannot be reused for any other table.
     
-    Sales revenues are calculated using `calculate_revenue()`, 
+    Sales revenues are calculated using `calculate_revenue()`.
+    True values in a group are identified using `flag_group_if_any_true()`.
     
     Parameters
     ----------
@@ -383,7 +411,7 @@ def crop_production_manual_cleaning(df, key_col):
                       "crop_inorganic_fertilizer", 
                       "crop_pesticides", 
                       "crop_tractor"]
-    df[reduction_list] = df.groupby(key_col)[reduction_list].transform('max')
+    df = flag_group_if_any_true(df, key_col, reduction_list)
 
     #If there is home consumption for any crop, set 1 for the entire household
     df[["crop_home_consumption"]] = (
@@ -397,7 +425,7 @@ def crop_production_manual_cleaning(df, key_col):
 
     return df.drop_duplicates(subset=key_col).reset_index(drop=True)
 
-def create_livestock_features(df, category_col='livestock_type', conversion_factors=mappings.livestock_conversion_factors):
+def create_livestock_features(df, country, category_col='livestock_type', conversion_factors=mappings.livestock_conversion_factors):
     """
     Clean livestock ownership data and collapse to one row per household.
 
@@ -419,7 +447,7 @@ def create_livestock_features(df, category_col='livestock_type', conversion_fact
     """
     number_cols = ["livestock_number_owned", "livestock_number_lost_disease_theft", "livestock_number_lost_wildlife_attack"]
 
-    df = mapping(df, category_col, conversion_factors, "factor", field=None)
+    df = mapping(df, country,  category_col, conversion_factors, "factor", field=None)
     df = apply_factor(df, "factor", number_cols, "tlu")
     df = calculate_revenue(df, "livestock_number_sold", "livestock_price_head_sold", "livestock_revenue_sold")
     df = aggregate_by_hh(df, [category_col])
@@ -450,7 +478,7 @@ def create_asset_features(df, category_col='asset_type'):
 
     return df
 
-def create_other_income_features(df, frequency_col='other_income_frequency', source_col='other_income_source', frequency_mapping=mappings.income_frequency):
+def create_other_income_features(df, country, frequency_col='other_income_frequency', source_col='other_income_source', frequency_mapping=mappings.income_frequency):
     """
     Clean other income data and collapse to one row per household.
 
@@ -475,11 +503,70 @@ def create_other_income_features(df, frequency_col='other_income_frequency', sou
     pd.DataFrame
     """
     df = df[df[frequency_col].isin(frequency_mapping.keys())]
-    df = mapping(df, frequency_col, frequency_mapping, "factor", field=None)
+    df = mapping(df, country, frequency_col, frequency_mapping, "factor", field=None)
     df = apply_factor(df, "factor", ["other_income_amount"], "yearly")
     df = aggregate_by_hh(df, [source_col, frequency_col])
 
     return df
+
+def create_shock_features(df, country, category_col, mapping_dict, index, field=None):
+    """
+    Map a category column through a dict, then pivot the result into a wide-format dataframe. 
+    Combines `mapping()` + `make_pivot_table()`.
+
+    Parameters
+    ----------
+    df : pd.DataFrame
+    category_col : str
+        Column containing the raw categories to be mapped.
+    mapping : dict
+    index : str or list of str
+        Grouping key(s) for the pivot, e.g. "interview_key".
+    field : str, optional
+        Only for complex mappings — see `mapping()` docstring.
+
+    Returns
+    -------
+    pd.DataFrame (wide-format dataframe)
+
+    """
+
+    df = mapping(df, country, category_col=category_col, mapping=mapping_dict, new_col=category_col)
+    df = make_pivot_table(df, index=index, category_columns=category_col)
+    return df
+
+def create_coping_features(df, country, mappings, likelihood_col="shock_future_likelihood_change_income_source", key_col="interview_key"):
+    """
+    Create coping features out of the shocks_and_coping dataframe. 
+
+    Uses `mapping()` + `flag_group_if_any_true()`.
+  
+    Parameters
+    ----------
+    df : pd.DataFrame
+    mappings : dict
+        Module containing the `likelihood` mapping dict.
+    likelihood_col : str
+        Name of the column to map and include in the flag columns.
+    key_col : str
+        Column to group by for flagging (default "interview_key").
+    coping_prefix : str
+        Prefix used to identify shock-coping columns (default "shock_coping").
+
+    Returns
+    -------
+    pd.DataFrame
+    """
+
+    # Map the future-likelihood column through mappings.likelihood.
+    df = mapping(df, country, likelihood_col, mappings, likelihood_col)
+
+    # Flag a group as 1 if any is true
+    cols = [c for c in df.columns if c.startswith("shock_coping")] + [likelihood_col]
+    df = flag_group_if_any_true(df, key_col, cols)
+    df = df[[key_col] + cols]
+
+    return df.drop_duplicates(subset=key_col).reset_index(drop=True)
 
 # ============================================================
 # EDA STUFF
@@ -490,3 +577,64 @@ def most_common_or_nan(x):
     if counts.empty:
         return pd.NA
     return counts.idxmax()
+
+
+
+
+# def fill_missings(df, feature_dict):
+#     """
+#     Fills missing values in df's columns based on mapping.
+
+#     Parameters
+#     ----------
+#     df : pd.DataFrame
+#     mapping : dict
+#         Dict of {original_col_name: (new_name, dtype, fill_value)}.
+#         fill_value can be None (skip), 0 (or any literal), "mean",
+#         "median", or "missing".
+
+#     Returns
+#     -------
+#     pd.DataFrame
+#     """
+#     for col, (_, _, fill_value, _) in feature_dict.items():
+#         if fill_value is None:
+#             continue
+#         if fill_value == "mean":
+#             df[col] = df[col].fillna(df[col].mean())
+#         elif fill_value == "median":
+#             df[col] = df[col].fillna(df[col].median())
+#         elif fill_value == "missing":
+#             df[col] = df[col].fillna("missing")
+#         elif fill_value == "dummy":
+#             df[col] = df[col].fillna(0.0)
+#         else:
+#             df[col] = df[col].fillna(fill_value)
+
+#     return df
+
+
+
+# def add_missing_indicators(df, columns, sentinel=99999, suffix='_missing'):
+#     """
+#     Add a binary indicator column for each given column, flagging rows
+#     that are missing. 
+#     Only use this after filling missing values with a sentinel=99999!
+
+#     Parameters
+#     ----------
+#     df : pd.DataFrame
+#     columns : list of str
+#         Columns to check for the sentinel value.
+#     sentinel : int or float
+#         Placeholder value used for missing data, set to 99999.
+#     suffix : str
+#         Suffix appended to column name for the new indicator column.
+
+#     Returns
+#     -------
+#     pd.DataFrame
+#     """
+#     for col in columns:
+#         df[f"{col}{suffix}"] = (df[col] == sentinel).astype(int)
+#     return df
