@@ -1,9 +1,9 @@
 """FEATURE DICTIONARIES.
 
-Each dictionary maps: {original_col_name: (new_name, dtype, fill_value, mapping)}
+Each dictionary maps: {original_col_name: (new_name, dtype, dummy, mapping)}
     - new_name:   the desired name for the column.
     - dtype:      the desired datatype for the column.
-    - dummy:      set to "dummy" if a Yes/No answer should be converted into a dummy of 1/0, otherwise None.  
+    - dummy:      set to "dummy" if a Yes/No answer should be converted into a dummy of 1/0, otherwise None; ONLY COMBINE IT WITH dtype = "float32"!
     - mapping:    how to convert the values based on a pre-defined mapping (None for no mapping)
 """
 from c08_farming_exit import mappings
@@ -15,11 +15,11 @@ from c08_farming_exit import mappings
 IDENTIFYING_INFO_2023 = {
     "ctry":           ("country",                       "object",   None,        None),
     "interview__key": ("interview_key",                 "object",   None,        None),
-    #"hhid":          ("hhid",                          "object",   "missing",   None),
+    #"hhid":          ("hhid",                          "object",   None,        None),
     "ea":             ("enumeration_area",              "object",   None,        None),
     "dist":           ("district",                      "object",   None,        None),
     "region":         ("region",                        "object",   None,        None),
-    # "res_rel":      ("respondant_relation_to_head",   "object",   "missing",   None), #dropped: 50-70% missings
+    # "res_rel":      ("respondant_relation_to_head",   "object",   None,        None), #dropped: 50-70% missings
 }
 
 LAND_OWNERSHIP_ACCESS_2023 = {
@@ -41,7 +41,7 @@ LAND_OWNERSHIP_ACCESS_2023 = {
     # "lnd_ten09":     ("land_lodge_camp_ownership_status",                 "object",   None,           None                               ), #dropped: 100% missings
     # "lnd_ten06":      ("land_other_ownership_status",                     "object",   None,           None                               ),
     "lnd_16":          ("land_used_as_collateral",                          "float32",  "dummy",        None                               ),
-    "num_plots":       ("land_number_of_plots",                             "float32",  0,              None                               ),
+    "num_plots":       ("land_number_of_plots",                             "float32",  None,           None                               ),
 }
 
 CROP_PRODUCTION_2023 = {
@@ -211,32 +211,32 @@ INTERNET_ACCESS_2023 = {
 }
 
 SHOCKS_AND_COPING_2023 = {
-    "interview__key":   ("interview_key",                                       "object",  None,        None),
-    # "r_shocks__id":   ("shock_id",                                            "object",  None,        None),
-    "r_shocks":         ("shock_type_affected_last_12_months",                  "object",  None,        mappings.shock_categories),
-    # "sh_1":           ("shock_frequency_last_12_months",                      "float32", None,        None), #kicked out for now to keep it simple
-    # "sh_2":           ("shock_severity_last_12_months",                       "object",  None,        None), #kicked out for now to keep it simple
+    "interview__key":   ("interview_key",                                       "object",  None,     None),
+    # "r_shocks__id":   ("shock_id",                                            "object",  None,     None),
+    "r_shocks":         ("shock_type_affected_last_12_months",                  "object",  None,     mappings.shock_categories),
+    # "sh_1":           ("shock_frequency_last_12_months",                      "float32", None,     None), #kicked out for now to keep it simple
+    # "sh_2":           ("shock_severity_last_12_months",                       "object",  None,     None), #kicked out for now to keep it simple
 
     #COPING
-    "sh_3__1":           ("shock_coping_strategy_relatives_friends",            "float32", None,     None),
-    "sh_3__2":           ("shock_coping_strategy_government",                   "float32", None,     None),
-    "sh_3__3":           ("shock_coping_strategy_food_reduction",               "float32", None,     None),
-    "sh_3__4":           ("shock_coping_strategy_changed_cropping_practices",   "float32", None,     None),
-    "sh_3__5":           ("shock_coping_strategy_more_employment",              "float32", None,     None),
-    "sh_3__6":           ("shock_coping_strategy_hh_member_migration",          "float32", None,     None),
-    "sh_3__7":           ("shock_coping_strategy_savings",                      "float32", None,     None),
-    "sh_3__8":           ("shock_coping_strategy_insurance",                    "float32", None,     None),
-    "sh_3__9":           ("shock_coping_strategy_credit",                       "float32", None,     None),
-    "sh_3__10":          ("shock_coping_strategy_sold_hh_assets",               "float32", None,     None),
-    "sh_3__11":          ("shock_coping_strategy_sold_livestock",               "float32", None,     None),
-    "sh_3__12":          ("shock_coping_strategy_migration",                    "float32", None,     None),
-    # "sh_3__13":        ("shock_coping_strategy_police_report",                "float32", None,        None), #kicked out for now to keep it simple
-    # "sh_3__14":        ("shock_coping_strategy_nothing",                      "float32", None,        None), #kicked out for now to keep it simple
-    # "sh_3_oth":        ("shock_coping_strategy_other",                        "float32", None,        None),
+    "sh_3__1":          ("shock_coping_strategy_relatives_friends",             "float32", None,     None),
+    "sh_3__2":          ("shock_coping_strategy_government",                    "float32", None,     None),
+    "sh_3__3":          ("shock_coping_strategy_food_reduction",                "float32", None,     None),
+    "sh_3__4":          ("shock_coping_strategy_changed_cropping_practices",    "float32", None,     None),
+    "sh_3__5":          ("shock_coping_strategy_more_employment",               "float32", None,     None),
+    "sh_3__6":          ("shock_coping_strategy_hh_member_migration",           "float32", None,     None),
+    "sh_3__7":          ("shock_coping_strategy_savings",                       "float32", None,     None),
+    "sh_3__8":          ("shock_coping_strategy_insurance",                     "float32", None,     None),
+    "sh_3__9":          ("shock_coping_strategy_credit",                        "float32", None,     None),
+    "sh_3__10":         ("shock_coping_strategy_sold_hh_assets",                "float32", None,     None),
+    "sh_3__11":         ("shock_coping_strategy_sold_livestock",                "float32", None,     None),
+    "sh_3__12":         ("shock_coping_strategy_migration",                     "float32", None,     None),
+    # "sh_3__13":       ("shock_coping_strategy_police_report",                 "float32", None,     None), #kicked out for now to keep it simple
+    # "sh_3__14":       ("shock_coping_strategy_nothing",                       "float32", None,     None), #kicked out for now to keep it simple
+    # "sh_3_oth":       ("shock_coping_strategy_other",                         "float32", None,     None),
 
-    # "sh_4":            ("shock_future_likelihood_well_prepared",              "object",  None,        None), #kicked out for now to keep it simple
-    # "sh_5":            ("shock_future_likelihood_recover_fully",              "object",  None,        None), #kicked out for now to keep it simple
-    "sh_6":              ("shock_future_likelihood_change_income_source",       "object",  None,        mappings.shock_categories),
+    # "sh_4":           ("shock_future_likelihood_well_prepared",               "object",  None,     None), #kicked out for now to keep it simple
+    # "sh_5":           ("shock_future_likelihood_recover_fully",               "object",  None,     None), #kicked out for now to keep it simple
+    "sh_6":             ("shock_future_likelihood_change_income_source",        "object",  None,     mappings.likelihood),
 }
 
 SOCIAL_NETWORK_2023 = {
@@ -290,98 +290,138 @@ HH_MEMBERS_2023 = {
     "ha_rel":           ("relation_to_head",     "object",  None,       None                        ),
     "age":              ("age",                  "float32", None,       None                        ),
     "ha07":             ("ethnic_group",         "object",  None,       None                        ),
-    # "ha07_other":     ("ethnic_group_new",     "object",  "None,      None                        ),
+    # "ha07_other":     ("ethnic_group_new",     "object",  None,       None                        ),
     "religio":          ("religion",             "object",  None,       None                        ),
     # "religio_1":      ("religion_other",       "object",  None,       None                        ),
-    "educ1":            ("education_level",      "object",  None,       mappings.education_mapping  ),
+    "educ1":            ("years_of_schooling",   "object",  None,       mappings.years_of_schooling ),
 }
 
 OFF_FARM_EMPLOYMENT_2023 = {
-    "interview__key":           ("interview_key",                                   None, None, None),
-    "r_members__id":            ("members_id",                                      None, None, None),
-    "lbr3_1":                   ("sector_off_farm_empl_last_12_months",             None, None, None),
-    # "lbr3_1_oth":             ("sector_off_farm_empl_last_12_months_other",       None, None, None),
-    "emp_form":                 ("empl_type",                                       None, None, None),
+    "interview__key":           ("interview_key",                                               "object",   None,   None),
+    "r_members__id":            ("members_id",                                                  "object",   None,   None),
+    "lbr3_1":                   ("sector_off_farm_empl_last_12_months",                         "object",   None,   mappings.employment_sector),
+    # "lbr3_1_oth":             ("sector_off_farm_empl_last_12_months_other",                   "object",   None,   None),
+    "emp_form":                 ("empl_type",                                                   "object",   None,   None),
 
     #SELF-EMPLOYMENT / OWN BUSINESS
-    "bus_yr":                   ("self_empl_duration_in_months",                    None, None, None),
-    # "bus_dry":                ("self_empl_duration_dry_season_in_months",         None, None, None),
-    # "bus_rain":               ("self_empl_duration_rainy_season_in_months",       None, None, None),
-    "bus_days_wk":              ("self_empl_days_per_week",                         None, None, None),
-    "bus_hrs":                  ("self_empl_hours_per_day",                         None, None, None),
-    # "bus_sales":              ("self_empl_sales",                                 None, None, None), #per week? per months?
-    # "bus_main_use__1":        ("self_empl_main_use_invest_in_own_business",       None, None, None),
-    # "bus_input":              ("self_empl_input_costs",                           None, None, None), #per week? per months?
-    # "bus_labor":              ("self_empl_labor_costs",                           None, None, None), #per week? per months?
-    # "bus_capital":            ("self_empl_capital_costs",                         None, None, None), #Machinery Maintenance, Rent #per week? per months?
-    # "bus_reg":                ("self_empl_registered",                            None, None, None),
-    # "bus_loc":                ("self_empl_location",                              None, None, None),
-    # "bus_employees":          ("self_empl_number_of_employees",                   None, None, None),
-    # "tourism_motivate__1":    ("self_empl_motivation_previous_experience",        None, None, None),
-    "tourism_motivate__2":      ("self_empl_motivation_others_success",             None, None, None),
-    # "tourism_motivate__3":    ("self_empl_motivation_unclear",                    None, None, None),  #what dis this "Figure that this Kind.."?
-    "tourism_motivate__4":      ("self_empl_motivation_unemployment",               None, None, None),
-    "tourism_motivate__5":      ("self_empl_motivation_insufficient_income_1",      None, None, None), # from what? agriculture?
-    "tourism_motivate__6":      ("self_empl_motivation_insufficient_income_2",      None, None, None), # from what? agriculture?
-    "tourism_motivate__7":      ("self_empl_motivation_insufficient_income_3",      None, None, None), # from what? agriculture?
-    "tourism_motivate__8":      ("self_empl_motivation_inherited_business",         None, None, None),
-    # "tourism_motivate_oth":   ("self_empl_motivation_other",                      None, None, None),
-    "years_exp_agri":           ("self_empl_years_experience_in_years",             None, None, None),
-    # "business_obstacle__1":   ("self_empl_obstacle_1",                            None, None, None), # what is it?
-    # "business_obstacle__2":   ("self_empl_obstacle_2",                            None, None, None), # what is it?
-    # "business_obstacle__3":   ("self_empl_obstacle_3",                            None, None, None), # what is it?
-    # "business_obstacle__4":   ("self_empl_obstacle_4",                            None, None, None), # what is it?
-    # "business_obstacle__5":   ("self_empl_obstacle_5",                            None, None, None), # what is it?
-    # "business_obstacle__6":   ("self_empl_obstacle_6",                            None, None, None), # what is it?
-    # "business_obstacle__7":   ("self_empl_obstacle_7",                            None, None, None), # what is it?
-    # "business_obstacle__8":   ("self_empl_obstacle_8",                            None, None, None), # what is it?
-    # "business_obstacle__9":   ("self_empl_obstacle_9",                            None, None, None), # what is it?
-    # "business_obstacle__10":  ("self_empl_obstacle_10",                           None, None, None), # what is it?
-    # "business_obstacle__11":  ("self_empl_obstacle_11",                           None, None, None), # what is it?
-    # "business_obs_other":     ("self_empl_obstacle_other",                        None, None, None),
-    # "business_financing__1":  ("self_empl_three_main_financing_contraints_1",     None, None, None), # what is it?
-    # "business_financing__2":  ("self_empl_three_main_financing_contraints_2",     None, None, None), # what is it?
-    # "business_financing__3":  ("self_empl_three_main_financing_contraints_3",     None, None, None), # what is it?
-    # "business_financing__4":  ("self_empl_three_main_financing_contraints_4",     None, None, None), # what is it?
-    # "business_financing__5":  ("self_empl_three_main_financing_contraints_5",     None, None, None), # what is it?
-    # "business_financing__6":  ("self_empl_three_main_financing_contraints_6",     None, None, None), # what is it?
-    # "business_financing__7":  ("self_empl_three_main_financing_contraints_7",     None, None, None), # what is it?
-    # "business_financing__8":  ("self_empl_three_main_financing_contraints_8",     None, None, None), # what is it?
-    # "business_financing__9":  ("self_empl_three_main_financing_contraints_9",     None, None, None), # what is it?
-    # "business_financing__10": ("self_empl_three_main_financing_contraints_10",    None, None, None), # what is it?
-    # "business_financing__11": ("self_empl_three_main_financing_contraints_11",    None, None, None), # what is it?
-    # "business_financing__12": ("self_empl_three_main_financing_contraints_12",    None, None, None), # what is it?
-    # "business_financing_oth": ("self_empl_three_main_financing_contraints_other", None, None, None),
-    # "business_finance__1":    ("self_empl_loan_source_1",                         None, None, None), # what is it?
-    # "business_finance__2":    ("self_empl_loan_source_2",                         None, None, None), # what is it?
-    # "business_finance__3":    ("self_empl_loan_source_3",                         None, None, None), # what is it?
-    # "business_finance__4":    ("self_empl_loan_source_4",                         None, None, None), # what is it?
-    # "business_finance__5":    ("self_empl_loan_source_5",                         None, None, None), # what is it?
-    # "business_finance__6":    ("self_empl_loan_source_6",                         None, None, None), # what is it?
-    # "business_finance__7":    ("self_empl_loan_source_7",                         None, None, None), # what is it?
-    # "business_finance__8":    ("self_empl_loan_source_8",                         None, None, None), # what is it?
-    # "business_finance_oth":   ("self_empl_loan_source_other",                     None, None, None),
+    "bus_yr":                   ("self_empl_duration_in_months_last_12_months",                 "float32",  None,   None),
+    "bus_dry":                  ("self_empl_duration_dry_season_in_months_last_12_months",      "float32",  None,   None), #drop to keep it simple
+    "bus_rain":                 ("self_empl_duration_rainy_season_in_months_last_12_months",    "float32",  None,   None), #drop to keep it simple
+    "bus_days_wk":              ("self_empl_days_per_week",                                     "float32",  None,   None),
+    "bus_hrs":                  ("self_empl_hours_per_day",                                     "float32",  None,   None),
+    "bus_sales":                ("self_empl_sales_last_30_days",                                "float32",  None,   None),
+    "bus_main_use__1":          ("self_empl_main_use_invest_in_own_business",                   "float32",  None,   None),
+    "bus_main_use__2":          ("self_empl_main_use_food",                                     "float32",  None,   None),
+    "bus_main_use__3":          ("self_empl_main_use_education",                                "float32",  None,   None),
+    "bus_main_use__4":          ("self_empl_main_use_health",                                   "float32",  None,   None),
+    "bus_main_use__5":          ("self_empl_main_use_housing_furniture",                        "float32",  None,   None),
+    "bus_main_use__6":          ("self_empl_main_use_transportation",                           "float32",  None,   None),
+    "bus_main_use__7":          ("self_empl_main_use_entertainment",                            "float32",  None,   None),
+    "bus_main_use_others":      ("self_empl_main_use_other",                                    "object",   None,   None),
+    "bus_input":                ("self_empl_input_costs_last_30_days",                          "float32",  None,   None),
+    "bus_labor":                ("self_empl_labor_costs_last_30_days",                          "float32",  None,   None), 
+    "bus_capital":              ("self_empl_capital_costs_last_30_days",                        "float32",  None,   None), #Machinery Maintenance, Rent 
+    "bus_reg":                  ("self_empl_registered",                                        "float32", "dummy", None),
+    "bus_loc":                  ("self_empl_location",                                          "object",   None,   None),
+    "bus_employees":            ("self_empl_number_of_employees",                               "float32",  None,   None),
+    "years_exp_agri":           ("self_empl_years_experience_in_years",                         "float32",  None,   None),
+    "tourism_motivate__1":      ("self_empl_motiv_previous_experience",                         "float32", "dummy", None),
+    "tourism_motivate__2":      ("self_empl_motiv_others_are_successful",                       "float32", "dummy", None),
+    "tourism_motivate__3":      ("self_empl_motiv_believe_in_success",                          "float32", "dummy", None),
+    "tourism_motivate__4":      ("self_empl_motiv_unemployment",                                "float32", "dummy", None),
+    "tourism_motivate__5":      ("self_empl_motiv_insuff_income_from_farming",                  "float32", "dummy", None),
+    "tourism_motivate__6":      ("self_empl_motiv_insuff_income_from_agr_job",                  "float32", "dummy", None),
+    "tourism_motivate__7":      ("self_empl_motiv_insuff_income_from_non_agr_job",              "float32", "dummy", None),
+    "tourism_motivate__8":      ("self_empl_motiv_inherited_business",                          "float32", "dummy", None),
+    # "tourism_motivate_oth":   ("self_empl_motivation_other",                                  "object",   None,   None),
+    "business_obstacle__1":     ("self_empl_obstacle_taxes_regulation",                         "float32", "dummy", None), 
+    "business_obstacle__2":     ("self_empl_obstacle_financing",                                "float32", "dummy", None), 
+    "business_obstacle__3":     ("self_empl_obstacle_political_instability",                    "float32", "dummy", None), 
+    "business_obstacle__4":     ("self_empl_obstacle_inflation",                                "float32", "dummy", None), 
+    "business_obstacle__5":     ("self_empl_obstacle_infrastructure",                           "float32", "dummy", None), 
+    "business_obstacle__6":     ("self_empl_obstacle_organised_crime",                          "float32", "dummy", None), 
+    "business_obstacle__7":     ("self_empl_obstacle_street_crime",                             "float32", "dummy", None), 
+    "business_obstacle__8":     ("self_empl_obstacle_corruption",                               "float32", "dummy", None), 
+    "business_obstacle__9":     ("self_empl_obstacle_no_purchasing_power",                      "float32", "dummy", None), 
+    "business_obstacle__10":    ("self_empl_obstacle_racial_discrimination",                    "float32", "dummy", None), 
+    "business_obstacle__11":    ("self_empl_obstacle_no_land_access",                           "float32", "dummy", None), 
+    # "business_obs_other":     ("self_empl_obstacle_other",                                    "object",   None,   None),
+    "business_financing__1":    ("self_empl_three_main_finance_constr_high_int_rate",           "float32", "dummy", None), 
+    "business_financing__2":    ("self_empl_three_main_finance_constr_no_long_term_loan",       "float32", "dummy", None), 
+    "business_financing__3":    ("self_empl_three_main_finance_constr_no_collateral",           "float32", "dummy", None),
+    "business_financing__4":    ("self_empl_three_main_finance_constr_paperwork",               "float32", "dummy", None),
+    "business_financing__5":    ("self_empl_three_main_finance_constr_credit_info",             "float32", "dummy", None),
+    "business_financing__6":    ("self_empl_three_main_finance_constr_connections",             "float32", "dummy", None),
+    "business_financing__7":    ("self_empl_three_main_finance_constr_bank_lacks_money",        "float32", "dummy", None),
+    "business_financing__8":    ("self_empl_three_main_finance_constr_no_export_finance",       "float32", "dummy", None),
+    "business_financing__9":    ("self_empl_three_main_finance_constr_no_equity",               "float32", "dummy", None),
+    "business_financing__10":   ("self_empl_three_main_finance_constr_no_leasing",              "float32", "dummy", None),
+    "business_financing__11":   ("self_empl_three_main_finance_constr_no_foreign_banks",        "float32", "dummy", None),
+    "business_financing__12":   ("self_empl_three_main_finance_constr_corruption",              "float32", "dummy", None),
+    # "business_financing_oth": ("self_empl_three_main_finance_constr_other",                   "object",   None,   None),
+    "business_finance__1":     ("self_empl_loan_source_retained_earnings",                      "float32", "dummy", None),
+    "business_finance__2":     ("self_empl_loan_source_local_banks",                            "float32", "dummy", None),
+    "business_finance__3":     ("self_empl_loan_source_family_friends",                         "float32", "dummy", None),
+    "business_finance__4":     ("self_empl_loan_source_supplier_credit",                        "float32", "dummy", None),
+    "business_finance__5":     ("self_empl_loan_source_sale_of_stock",                          "float32", "dummy", None),
+    "business_finance__6":     ("self_empl_loan_source_foreign_banks",                          "float32", "dummy", None),
+    "business_finance__7":     ("self_empl_loan_source_develop_finance",                        "float32", "dummy", None),
+    "business_finance__8":     ("self_empl_loan_source_moneylenders",                           "float32", "dummy", None),
+    # "business_finance_oth":  ("self_empl_loan_source_other",                                  "object",   None,   None),
+    "support_local_gov":       ("self_empl_supported_by_governance",                            "float32", "dummy", None), #there is more info on what kind of support!
     
     #WAGE EMPLOYMENT
-    # "lbr3_2":                 ("wage_empl_company_name",                          None, None, None),
-    "lbr3_3":                   ("wage_empl_location",                              None, None, None),
-    "lbr3_4":                   ("wage_empl_type",                                  None, None, None),
-    "lbr3_5":                   ("wage_empl_permament_wage_per_month",              None, None, None),
-    "lbr3_6":                   ("wage_empl_permament_days_per_week",               None, None, None),
-    "lbr3_7":                   ("wage_empl_permament_hours_per_day",               None, None, None),
-    # "lbr3_8":                 ("wage_empl_seasonal_payment_frequency",            None, None, None),
-    "lbr3_9":                   ("wage_empl_seasonal_wage",                         None, None, None),
-    # "lbr3_10":                ("wage_empl_seasonal_duration_in_months_1",         None, None, None), # what is this?
-    # "lbr3_11":                ("wage_empl_seasonal_duration_in_months_2",         None, None, None), # what is this?
-    "lbr3_12":                  ("wage_empl_seasonal_duration_days_per_week",       None, None, None),
-    "lbr3_13":                  ("wage_empl_seasonal_duration_hours_per_day",       None, None, None),
-    
-    "lbr10":                    ("wage_empl_contract_status",                       None, None, None),
-    # "lbr10_1":                ("wage_empl_contract_status_other",                 None, None, None),
-    # "job_search":             ("wage_empl_job_search",                            None, None, None),
-    # "job_search_oth":         ("wage_empl_job_search_other",                      None, None, None),
-    # "lbr09":                  ("wage_empl_training_received",                     None, None, None),
-    # "emp_years":              ("wage_empl_duration_in_years",                     None, None, None),
+    # "lbr3_2":                 ("wage_empl_company_name",                                                      "object",  None,   None),
+    "lbr3_3":                   ("wage_empl_location",                                                          "object",  None,   None),
+    "lbr3_4":                   ("wage_empl_type",                                                              "object",  None,   None), #permanent or seasonal?
+
+    #permanent
+    "lbr3_5":                   ("wage_empl_permament_wage_per_month",                                          "float32", None,   None),
+    "lbr3_5_1__1":              ("wage_empl_permament_main_use_invest_in_own_business",                         "float32", None,   None),
+    "lbr3_5_1__2":              ("wage_empl_permament_main_use_food",                                           "float32", None,   None),
+    "lbr3_5_1__3":              ("wage_empl_permament_main_use_education",                                      "float32", None,   None),
+    "lbr3_5_1__4":              ("wage_empl_permament_main_use_health",                                         "float32", None,   None),
+    "lbr3_5_1__5":              ("wage_empl_permament_main_use_housing_furniture",                              "float32", None,   None),
+    "lbr3_5_1__6":              ("wage_empl_permament_main_use_transportation",                                 "float32", None,   None),
+    "lbr3_5_1__7":              ("wage_empl_permament_main_use_entertainment",                                  "float32", None,   None),
+    # "lbr3_5_1_oth":           ("wage_empl_permament_main_use_other",                                          "object",  None,   None),
+    "lbr3_6":                   ("wage_empl_permament_days_per_week",                                           "float32", None,   None),
+    "lbr3_7":                   ("wage_empl_permament_hours_per_day",                                           "float32", None,   None),
+
+    #seasonal/casual
+    "lbr3_8":                   ("wage_empl_seasonal_casual_payment_frequency",                                 "object",  None,   None),
+    "lbr3_9":                   ("wage_empl_seasonal_casual_wage_per_interval",                                 "float32", None,   None),
+    "lbr3_9_1__1":              ("wage_empl_seasonal_casual_main_use_invest_in_own_business",                   "float32", None,   None),
+    "lbr3_9_1__2":              ("wage_empl_seasonal_casual_main_use_food",                                     "float32", None,   None),
+    "lbr3_9_1__3":              ("wage_empl_seasonal_casual_main_use_education",                                "float32", None,   None),
+    "lbr3_9_1__4":              ("wage_empl_seasonal_casual_main_use_health",                                   "float32", None,   None),
+    "lbr3_9_1__5":              ("wage_empl_seasonal_casual_main_use_housing_furniture",                        "float32", None,   None),
+    "lbr3_9_1__6":              ("wage_empl_seasonal_casual_main_use_transportation",                           "float32", None,   None),
+    "lbr3_9_1__7":              ("wage_empl_seasonal_casual_main_use_entertainment",                            "float32", None,   None),
+    # "lbr3_9_1_oth":           ("wage_empl_seasonal_casual_main_use_other",                                    "object",  None,   None),
+    "lbr3_10":                  ("wage_empl_seasonal_casual_rainy_season_duration_in_months_last_12_months",    "float32", None,   None), 
+    "lbr3_11":                  ("wage_empl_seasonal_casual_dry_season_duration_in_months_last_12_months",      "float32", None,   None), 
+    "lbr3_12":                  ("wage_empl_seasonal_casual_duration_days_per_week",                            "float32", None,   None),
+    "lbr3_13":                  ("wage_empl_seasonal_casual_duration_hours_per_day",                            "float32", None,   None),
+
+    #GENERAL
+    "Ibr3_14__1":               ("benefits_housing",                                                            "float32", "dummy", None),
+    "Ibr3_14__2":               ("benefits_meals",                                                              "float32", "dummy", None),
+    "Ibr3_14__3":               ("benefits_transportation",                                                     "float32", "dummy", None),
+    "Ibr3_15":                  ("uncompensated_work",                                                          "float32", "dummy", None),
+    "Ibr3_16":                  ("work_accident",                                                               "float32", "dummy", None),
+    "Ibr3_17":                  ("paternity_maternity_leave",                                                   "float32", "dummy", None),
+    "Ibr3_18":                  ("health_insurance",                                                            "float32", "dummy", None),
+    "Ibr3_19":                  ("unprotected_dangerous_products",                                              "float32", "dummy", None),
+    "leave":                    ("paid_annual_leave",                                                           "float32", "dummy", None),
+    "sick_leave":               ("paid_sick_leave",                                                             "float32", "dummy", None),
+    "lbr10":                    ("contract_status",                                                             "object",   None,   None),
+    # "lbr10_1":                ("contract_status_other",                                                       "object",   None,   None),
+    "job_search":               ("job_search",                                                                  "object",   None,   None),
+    # "job_search_oth":         ("job_search_other",                                                            "object",   None,   None),
+    "lbr09":                    ("training_received",                                                           "float32", "dummy", None),
+    "emp_years":                ("duration_in_years",                                                           "float32",  None,   None),
+    "lbr11":                    ("job_satisfaction",                                                            "object",   None,   None), 
 }
 
 ON_FARM_EMPLOYMENT_2023 = {

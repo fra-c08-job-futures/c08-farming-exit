@@ -61,43 +61,25 @@ def enforce_dtypes(df, feature_dict):
 
     return df
 
-def mapping(df, country, category_col, mapping, new_col, field=None):
+def mapping(df, feature_dict):
     """
-    Map a category column through a dict to create/overwrite a new column.
-    TODO: silently produces None for missing categories, so the dicctionary must be complete!
+    Apply value mappings defined in feature_dict to create/overwrite columns.
 
-    Works for simple and complex mappings.
-    Simple (e.g. mappings.acres_conversion_factors): 
-        Donnot provide 'field' and the value under the key is extracted. 
-    Complex (e.g. mappings.education_mapping): 
-        The mapping values are expected to be dicts. 
-        Set 'field' to the key of interest and the value stored under that key is extracted.
-    
     Parameters
     ----------
     df : pd.DataFrame
-    category_col : str
-        Column containing the mapping categories.
-    mapping: dict
-        Mapping stating the mapping rules.
-    new_col: str
-        Columns name for the mapped output column.
-    filed : str
-        Only to be filled for complex mappings (see above)
-    suffix: str
+    feature_dict : dict
+        Dict of {source_col: (new_col, dtype, default, value_map)}.
 
     Returns
     -------
     pd.DataFrame
     """
-    df = df.copy() 
-    lookup = (lambda k: mapping.get(k, {}).get(field)) if field else mapping.get
-    df[new_col] = df[category_col].map(lookup)
+    df = df.copy()
 
-    #print message in case NaNs are silently dropped
-    n_missing = df[new_col].isna().sum()
-    if n_missing > 0:
-        print(f"mapping: {country} - Mapping dictionary of '{category_col}' is incomplete: Dropped {n_missing} rows with NaN in '{new_col}'.")
+    for col, (_, _, _, value_map) in feature_dict.items():
+        if value_map is not None:
+            df[col] = df[col].map(value_map)
 
     return df
 
@@ -147,8 +129,8 @@ def calculate_revenue(df, number_col, price_col, new_col_name):
 
 def aggregate_by_hh(df, dimension_col):
     """
-    Groups a DataFrame by 'country' and 'interview_key', summing all
-    other numeric columns (collapsing across 'dimension_col' categories).
+    Groups a DataFrame by 'interview_key', summing all other numeric 
+    columns (collapsing across 'dimension_col' categories).
     
     Parameters
     ----------
@@ -193,7 +175,7 @@ def resolve_duplicates(df, key_col, sort_col=None, ascending=True):
     sorted_df = df.sort_values(by=[key_col, sort_col], ascending=ascending)
     return sorted_df.drop_duplicates(subset=key_col, keep="first")
 
-def make_pivot_table(df, index, category_columns, aggfunc='size', values=None):
+def make_pivot_table(df, category_columns, index,  aggfunc='size', values=None):
     """
     Pivot a long-format dataframe into a wide-format pivot table.
     #TODO: Watch out! Pandas silently drops NaN rows. 
@@ -201,14 +183,14 @@ def make_pivot_table(df, index, category_columns, aggfunc='size', values=None):
     Parameters
     ----------
     df : pd.DataFrame (long format)
-    index : str or list of str
-        e.g. "interview_key" or "personal_id"
     category_columns : str
         Column to spread into new columns. 
-    values : str, optional
-        Column with category-specific values. If None, categorical dummies are created. 
+    index : str or list of str
+        e.g. "interview_key" or "personal_id"
     aggfunc : str or callable, default 'count'
         e.g. 'sum', 'mean', 'first'. Only used when `values` is provided.
+    values : str, optional
+        Column with category-specific values. If None, categorical dummies are created. 
 
     Returns
     -------
@@ -305,48 +287,24 @@ def load_and_preprocess(base_path, filename, feature_dict):
     df = df[list(available.keys())]
     #Define datatypes
     df = enforce_dtypes(df, available)
+    #Apply mapping 
+    df = mapping(df, available)
     #Rename
     rename_map = {k: v[0] for k, v in available.items() if k != v[0]}
     df = df.rename(columns=rename_map)
 
     return df
 
-def create_education_features(df, country, category_col='education_level', edu_mapping=mappings.education_mapping):
-    """
-    Clean 'education_level' and add a 'years_of_schooling' column.
-
-    Thin wrapper around `mapping()` that applies the education mapping twice:
-    once to derive years of schooling, once to clean the education_level labels.
-
-    Parameters
-    ----------
-    df : pd.DataFrame
-    category_col : str, default 'education_level'
-        Column containing the raw education categories.
-    edu_mapping : dict, optional
-        Complex mapping dict (see `mapping()` docstring) with per-category
-        'years_of_schooling' and 'education_level' keys.
-
-    Returns
-    -------
-    pd.DataFrame
-    """
-    df = mapping(df, country, category_col, edu_mapping, 'years_of_schooling', field='years_of_schooling')
-    df = mapping(df, country, category_col, edu_mapping, category_col,         field=category_col)
-
-    return df
-
-def convert_land_sizes_to_acres(df, country, measurement_col, acres_conversion_factors):
+def convert_land_sizes_to_acres(df, country):
     """
     Converts all land_size_ columns in df to acres, based on the per-row unit given in `measurement_col`.
-    
-    Conversion factors are added to the df with `mapping()`, 
     Conversion factors are applied to the respective columns with `apply_factor()`.
 
     Parameters
     ----------
     df : pd.DataFrame
-    measurement_col : str
+    country : str
+        Only used for print message
 
     Returns
     -------
@@ -358,38 +316,29 @@ def convert_land_sizes_to_acres(df, country, measurement_col, acres_conversion_f
 
     #Dropping NaN rows
     n_before = len(df)
-    df = df.dropna(subset=['land_measurement'])
+    df = df.dropna(subset=["land_measurement"])
     n_dropped = n_before - len(df)
     if n_dropped > 0:
         print(f"convert_land_sizes_to_acres: {country} - Dropped {n_dropped} rows with NaN in 'land_measurement'")
 
-    #Overwrite any "Other.." with "Lima"
-    df[measurement_col] = np.where(df[measurement_col].str.startswith('Other'), 'Lima', df[measurement_col])
-
-    #Add the acres conversion factors
-    df =  mapping(df, country, measurement_col, acres_conversion_factors, "factor", field=None)
     #Apply the conversion factors
-    df = apply_factor(df, "factor", land_size_cols, "acres")
-
-    # Overwrite all non-NaN measurement labels to 'Acres'
-    df[measurement_col] = np.where(df[measurement_col].notna(), 'Acres', df[measurement_col])
+    df = apply_factor(df, "land_measurement", land_size_cols, "acres")
 
     return df
 
-def crop_production_manual_cleaning(df, key_col):
+def create_crop_production_features(df, key_col="interview_key"):
     """
     Collapses crop production data to one row per household by deleting the dimension of crop types.    
     This is a manual function that cannot be reused for any other table.
     
-    Sales revenues are calculated using `calculate_revenue()`.
     True values in a group are identified using `flag_group_if_any_true()`.
+    Sales revenues are calculated using `calculate_revenue()`.
     
     Parameters
     ----------
     df : pd.DataFrame
     key_col : str
         Column to group by and collapse to one row per key.
-    exchange_rates : dict
 
     Returns
     -------
@@ -425,11 +374,11 @@ def crop_production_manual_cleaning(df, key_col):
 
     return df.drop_duplicates(subset=key_col).reset_index(drop=True)
 
-def create_livestock_features(df, country, category_col='livestock_type', conversion_factors=mappings.livestock_conversion_factors):
+def create_livestock_features(df, category_col='livestock_type'):
     """
     Clean livestock ownership data and collapse to one row per household.
 
-    Thin wrapper around `mapping()`, `apply_factor()`, `calculate_revenue()`,
+    Thin wrapper around `apply_factor()`, `calculate_revenue()`,
     and `aggregate_by_hh()` that converts livestock counts to TLU, computes
     sale revenue, and aggregates across animal types to the household level.
 
@@ -447,8 +396,7 @@ def create_livestock_features(df, country, category_col='livestock_type', conver
     """
     number_cols = ["livestock_number_owned", "livestock_number_lost_disease_theft", "livestock_number_lost_wildlife_attack"]
 
-    df = mapping(df, country,  category_col, conversion_factors, "factor", field=None)
-    df = apply_factor(df, "factor", number_cols, "tlu")
+    df = apply_factor(df, "livestock_type", number_cols, "tlu")
     df = calculate_revenue(df, "livestock_number_sold", "livestock_price_head_sold", "livestock_revenue_sold")
     df = aggregate_by_hh(df, [category_col])
 
@@ -478,38 +426,44 @@ def create_asset_features(df, category_col='asset_type'):
 
     return df
 
-def create_other_income_features(df, country, frequency_col='other_income_frequency', source_col='other_income_source', frequency_mapping=mappings.income_frequency):
+def create_other_income_features(df, country, frequency_col='other_income_frequency', source_col='other_income_source'):
     """
     Clean other income data and collapse to one row per household.
 
     Filters out rows with an unrecognized income frequency, annualizes
-    the income amount using `mapping()` and `apply_factor()`, then
-    aggregates across income sources/frequencies to the household level.
+    the income amount using `apply_factor()`, then aggregates across 
+    income sources/frequencies to the household level using `aggregate_by_hh()`.
 
     Parameters
     ----------
     df : pd.DataFrame
+    country: str
+        Just used for printing message. 
     frequency_col : str, default 'other_income_frequency'
         Column containing the income frequency categories (e.g. weekly,
         monthly, yearly), used to look up the annualization factor.
     source_col : str, default 'other_income_source'
         Column identifying the income source; dropped during aggregation
         along with `frequency_col`.
-    frequency_mapping : dict, optional
-        Mapping of frequency label -> annualization factor.
 
     Returns
     -------
     pd.DataFrame
     """
-    df = df[df[frequency_col].isin(frequency_mapping.keys())]
-    df = mapping(df, country, frequency_col, frequency_mapping, "factor", field=None)
-    df = apply_factor(df, "factor", ["other_income_amount"], "yearly")
+
+    #Dropping NaN rows
+    n_before = len(df)
+    df = df.dropna(subset=[frequency_col])
+    n_dropped = n_before - len(df)
+    if n_dropped > 0:
+        print(f"create_other_income_features: {country} - Dropped {n_dropped} rows with NaN in '{frequency_col}'")
+
+    df = apply_factor(df, frequency_col, ["other_income_amount"], "yearly")
     df = aggregate_by_hh(df, [source_col, frequency_col])
 
     return df
 
-def create_shock_features(df, country, category_col, mapping_dict, index, field=None):
+def create_shock_features(df, category_col="shock_type_affected_last_12_months", index="interview_key"):
     """
     Map a category column through a dict, then pivot the result into a wide-format dataframe. 
     Combines `mapping()` + `make_pivot_table()`.
@@ -519,11 +473,9 @@ def create_shock_features(df, country, category_col, mapping_dict, index, field=
     df : pd.DataFrame
     category_col : str
         Column containing the raw categories to be mapped.
-    mapping : dict
     index : str or list of str
         Grouping key(s) for the pivot, e.g. "interview_key".
-    field : str, optional
-        Only for complex mappings — see `mapping()` docstring.
+
 
     Returns
     -------
@@ -531,11 +483,12 @@ def create_shock_features(df, country, category_col, mapping_dict, index, field=
 
     """
 
-    df = mapping(df, country, category_col=category_col, mapping=mapping_dict, new_col=category_col)
+    #
+    # df = mapping(df, country, category_col=category_col, mapping=mapping_dict, new_col=category_col)
     df = make_pivot_table(df, index=index, category_columns=category_col)
     return df
 
-def create_coping_features(df, country, mappings, likelihood_col="shock_future_likelihood_change_income_source", key_col="interview_key"):
+def create_coping_features(df, likelihood_col="shock_future_likelihood_change_income_source", key_col="interview_key"):
     """
     Create coping features out of the shocks_and_coping dataframe. 
 
@@ -544,22 +497,15 @@ def create_coping_features(df, country, mappings, likelihood_col="shock_future_l
     Parameters
     ----------
     df : pd.DataFrame
-    mappings : dict
-        Module containing the `likelihood` mapping dict.
     likelihood_col : str
         Name of the column to map and include in the flag columns.
     key_col : str
         Column to group by for flagging (default "interview_key").
-    coping_prefix : str
-        Prefix used to identify shock-coping columns (default "shock_coping").
 
     Returns
     -------
     pd.DataFrame
     """
-
-    # Map the future-likelihood column through mappings.likelihood.
-    df = mapping(df, country, likelihood_col, mappings, likelihood_col)
 
     # Flag a group as 1 if any is true
     cols = [c for c in df.columns if c.startswith("shock_coping")] + [likelihood_col]
