@@ -1,4 +1,8 @@
-"""Mappings used for data cleaning."""
+"""Mappings."""
+
+# ============================================================
+# DATA CLEANING MAPPINGS
+# ============================================================
 
 years_of_schooling = {
     # No education 
@@ -61,7 +65,7 @@ years_of_schooling = {
     "Post graduate university level":   16,
 }
 
-#WHERE TO USE: LIVESTOCK + CROPS SOLD + ASSET VALUE + OTHER INCOME
+#WHERE TO USE: LIVESTOCK + CROPS SOLD + ASSET VALUE + OTHER INCOME + WAGES + YIELDS
 eur_exchange_rates = {
     "Botswana": 0.069,   # BWP -> EUR
     "Kenya": 0.0071,     # KES -> EUR
@@ -97,12 +101,12 @@ livestock_conversion_factors = {
     "Other➡️specify":                 0.00,  # unknown animal, can't assign a factor
 }
 
-income_frequency = {
-    "Monthly": 12.0,
-    "Every three months": 4.0,
-    "Every 6 months": 2.0,
-    "Every year": 1.0,
-    "Lump sum (single payment)": 1.0,   
+other_income_frequency = {
+    "Monthly": 1.0,
+    "Every three months": 1/3,
+    "Every 6 months": 1/6,
+    "Every year": 1/12,
+    "Lump sum (single payment)": 1/12,   
 }
 
 shock_categories = {
@@ -139,54 +143,105 @@ likelihood = {
 
 employment_sector = {
     #Primary Sector: creating raw materials
-    "Small-scale farm":                                 "Agriculture",
-    "Large-scale farm":                                 "Agriculture",
+    "Small-scale farm":                                 "agriculture",
+    "Large-scale farm":                                 "agriculture",
 
     #Secondary Sector: turning raw materials into goods -- NONE
 
     #Tertiary Sector: Services (no production)
-    "Retail trade":                                     "Private Service",
-    "Beauty industry (hair, skin etc)":                 "Private Service",
-    "Food industry":                                    "Private Service",
-    "Security services":                                "Private Service",
-    "Transport":                                        "Private Service",
-    "Hospitality (e.g., Accommodation & Lodging )":     "Private Service",
-    "Domestic/household helper":                        "Private Service",
-    "Travel and Tourism":                               "Private Service",
-    "Recreation & Events":                              "Private Service",
-    "Education (teacher etc)":                          "Public Service",
-    "Health (nurse, doctor etc)":                       "Public Service",
-    "Other public sector":                              "Public Service",
+    "Retail trade":                                     "private_service",
+    "Beauty industry (hair, skin etc)":                 "private_service",
+    "Food industry":                                    "private_service",
+    "Security services":                                "private_service",
+    "Transport":                                        "private_service",
+    "Hospitality (e.g., Accommodation & Lodging )":     "private_service",
+    "Domestic/household helper":                        "private_service",
+    "Travel and Tourism":                               "private_service",
+    "Recreation & Events":                              "private_service",
+    "Education (teacher etc)":                          "public_service",
+    "Health (nurse, doctor etc)":                       "public_service",
+    "Other public sector":                              "public_service",
 
     #Other/Unclear
-    "Others, specify":                                  "Other/Unclear",
-    "I don't know":                                     "Other/Unclear",
+    "Others, specify":                                  "other_unclear",
+    "I don't know":                                     "other_unclear",
 }
 
 aspired_occupation = {
     #Primary Sector: creating raw materials
-    "Crop farming/cultivation":                                                                 "Agriculture",
-    "Both crop and livestock/fish farming":                                                     "Agriculture",
-    "Livestock keeping/raising":                                                                "Agriculture",
-    "Fishing":                                                                                  "Agriculture",
-    "Agricultural wage labour (hired agricultural labour)":                                     "Agriculture",
-    "Self-employed agribusiness/agrienterprise":                                                "Agriculture",
+    "Crop farming/cultivation":                                                                 "agriculture",
+    "Both crop and livestock/fish farming":                                                     "agriculture",
+    "Livestock keeping/raising":                                                                "agriculture",
+    "Fishing":                                                                                  "agriculture",
+    "Agricultural wage labour (hired agricultural labour)":                                     "agriculture",
+    "Self-employed agribusiness/agrienterprise":                                                "agriculture",
 
     #Secondary Sector: turning raw materials into goods
-    "Factory worker/manufacturing jobs":                                                        "Manufacturing",
-    "Construction labour":                                                                      "Manufacturing",
+    "Factory worker/manufacturing jobs":                                                        "manufacturing",
+    "Construction labour":                                                                      "manufacturing",
     
     #Tertiary Sector: Services (no production)
-    "Self-employed non-agribusiness (wholesale/retail trade, etc.)":                            "Private Service",
-    "Other service sector jobs (worker in hotels, restaurants, shops, security guards, etc.)":  "Private Service",
-    "Domestic/household helper":                                                                "Private Service",
-    "Driver/transport":                                                                         "Private Service",
-    "Government officers/employees/ civil servant":                                             "Public Service",
-    "Teacher/education":                                                                        "Public Service",
+    "Self-employed non-agribusiness (wholesale/retail trade, etc.)":                            "private_service",
+    "Other service sector jobs (worker in hotels, restaurants, shops, security guards, etc.)":  "private_service",
+    "Domestic/household helper":                                                                "private_service",
+    "Driver/transport":                                                                         "private_service",
+    "Government officers/employees/ civil servant":                                             "public_service",
+    "Teacher/education":                                                                        "public_service",
 
     #Other/Unclear
-    "Charcoal burning, production, and selling":                                                "Charcoal",
-    "None/No employment":                                                                       "Other/Unclear",
-    "Retired/Pensioner":                                                                        "Other/Unclear",
+    "Charcoal burning, production, and selling":                                                "charcoal",
+    "None/No employment":                                                                       "other_unclear",
+    "Retired/Pensioner":                                                                        "other_unclear",
 }
 
+self_employment_location = {
+    "Village in region":        "in_region",
+    "Town in region":           "in_region",
+    "village outside region":   "outside_region",
+    "Other, Specify":           None,
+    "Town outside region":      "outside_region",
+    "Outside the country":      "outside_region",   
+}
+
+wage_employment_location = {
+    "In this village":                                      "in_region",
+    "Town or city within this district/region":             "in_region",
+    "In other rural area within or outside this district":  "outside_region",
+    "Town or city in another district/region":              "outside_region",
+    "Outside the country":                                  "outside_region",
+}
+
+contract_status = {
+    "Long term permanent contract":     "long_term",
+    "Daily wage labourer":              "daily",
+    "Fixed term permanent contract":    "fixed_term",
+    "Part-time contract":               "part_time",
+    "No contract (informal)":           None,   
+    "Volunteering":                     None, 
+    "Other (specify)":                  None, 
+    "Self-employed/ own firm":          None, 
+    "Refuse to answer":                 None,
+}
+
+job_search = { #how did you find the job? The answers donnot make sense!
+    "Public employment/recruitment agency":             "public_employment",
+    "From neighbors or friends":                        "family_friends",
+    "From family and relatives":                        "family_friends",
+    "Private employment/recruitment agency":            "private_employment",
+    "Online postings":                                  "online",   
+    "Farmer or producer organizations or cooperatives": "organizations_cooperatives", 
+    "Others, specify":                                  None, 
+    "Vocational training centres":                      "training_center",
+}
+
+job_satisfaction = { #ordinal encoding
+    "Very dissatisfied":  0,
+    "Dissatisfied":       1,
+    "Neither":            2,
+    "Satisfied":          3,
+    "Very satisfied":     4,
+}
+
+# ============================================================
+# FEATURE ENGINEERING MAPPINGS
+# ============================================================

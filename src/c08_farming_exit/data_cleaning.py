@@ -161,8 +161,8 @@ def resolve_duplicates(df, key_col, sort_col=None, ascending=True):
     Parameters
     ----------
     df : pd.DataFrame
-    key_col : str
-        Rows sharing the same value here are considered duplicates.
+    key_col : str or list of str
+        Rows sharing the same value(s) here are considered duplicates.
     sort_col : str
         Secondary column used to decide which duplicate to keep
     ascending : bool or list of bool
@@ -172,8 +172,9 @@ def resolve_duplicates(df, key_col, sort_col=None, ascending=True):
     -------
     pd.DataFrame
     """
-    sorted_df = df.sort_values(by=[key_col, sort_col], ascending=ascending)
-    return sorted_df.drop_duplicates(subset=key_col, keep="first")
+    key_cols = [key_col] if isinstance(key_col, str) else list(key_col)
+    sorted_df = df.sort_values(by=key_cols + [sort_col], ascending=ascending)
+    return sorted_df.drop_duplicates(subset=key_cols, keep="first")
 
 def make_pivot_table(df, category_columns, index,  aggfunc='size', values=None):
     """
@@ -233,7 +234,7 @@ def make_pivot_table(df, category_columns, index,  aggfunc='size', values=None):
 def flag_group_if_any_true(df, key_col, flag_cols):
     """
     For each column in flag_cols, if any row within a group (grouped by
-    key_col) has a truthy value ((non-zero/True), set that value to 1 
+    key_col) has a truthy value (non-zero/True), set that value to 1 
     for all rows in that group; otherwise 0.
 
     Parameters
@@ -250,7 +251,6 @@ def flag_group_if_any_true(df, key_col, flag_cols):
     """
     df[flag_cols] = df.groupby(key_col)[flag_cols].transform(lambda x: int(x.any()))
     return df
-
 
 # ============================================================
 # WRAPPER DATA CLEANING FUNCTIONS
@@ -359,14 +359,10 @@ def create_crop_production_features(df, key_col="interview_key"):
                       "crop_organic_fertilizer", 
                       "crop_inorganic_fertilizer", 
                       "crop_pesticides", 
-                      "crop_tractor"]
+                      "crop_tractor",
+                      "crop_home_consumption_amount"]
     df = flag_group_if_any_true(df, key_col, reduction_list)
-
-    #If there is home consumption for any crop, set 1 for the entire household
-    df[["crop_home_consumption"]] = (
-        df[["crop_home_consumption_amount"]] != 0
-    ).groupby(df[key_col]).transform("any").astype(int)
-    df = df.drop(columns=["crop_home_consumption_amount"])
+    df = df.rename(columns={'crop_home_consumption_amount': 'crop_home_consumption'})
 
     #Calculate the total sale revenues of crop production per hh (in local currency)
     df = calculate_revenue(df, "crop_sale_amount", "crop_sale_price_per_unit", "crop_sale_revenue")
@@ -458,7 +454,7 @@ def create_other_income_features(df, country, frequency_col='other_income_freque
     if n_dropped > 0:
         print(f"create_other_income_features: {country} - Dropped {n_dropped} rows with NaN in '{frequency_col}'")
 
-    df = apply_factor(df, frequency_col, ["other_income_amount"], "yearly")
+    df = apply_factor(df, frequency_col, ["other_income_amount"], "monthly")
     df = aggregate_by_hh(df, [source_col, frequency_col])
 
     return df
@@ -513,6 +509,30 @@ def create_coping_features(df, likelihood_col="shock_future_likelihood_change_in
     df = df[[key_col] + cols]
 
     return df.drop_duplicates(subset=key_col).reset_index(drop=True)
+
+def create_off_farm_employment_features(df):
+    """
+    Clean off-farm employment data by resolving duplicate member-level
+    records and flagging shared household-level attributes.
+
+    Thin wrapper around `resolve_duplicates()` and `flag_group_if_any_true()`.
+    Parameters
+    ----------
+    df : pd.DataFrame
+
+    Returns
+    -------
+    pd.DataFrame
+    """
+    key_col = ["interview_key", "members_id"]
+
+    df = resolve_duplicates(df, key_col=key_col, sort_col="empl_type", ascending=True)
+
+    #Create a dummy out of all "main_use" columns
+    flag_cols = [c for c in df.columns if "main_use" in c]
+    df = flag_group_if_any_true(df, key_col=key_col, flag_cols=flag_cols)
+
+    return df
 
 # ============================================================
 # EDA STUFF

@@ -266,10 +266,10 @@ FOOD_INSECURITY_2023 = {
 }
 
 OTHER_INCOME_SOURCES_2023 = {
-    "interview__key":       ("interview_key",           "object",  None,        None                      ),
-    "r_otherincome__id":    ("other_income_source",     "object",  None,        None                      ),
-    "inc_oth_amt":          ("other_income_amount",     "float32", None,        None                      ), #TODO: using mean per income source would be good!
-    "int_oth_income":       ("other_income_frequency",  "object",  None,        mappings.income_frequency ),
+    "interview__key":       ("interview_key",           "object",  None,        None                            ),
+    "r_otherincome__id":    ("other_income_source",     "object",  None,        None                            ),
+    "inc_oth_amt":          ("other_income_amount",     "float32", None,        None                            ), #TODO: using mean per income source would be good!
+    "int_oth_income":       ("other_income_frequency",  "object",  None,        mappings.other_income_frequency ),
 }
 
 ROAD_CONNECTIVITY_2023 = {
@@ -317,13 +317,13 @@ OFF_FARM_EMPLOYMENT_2023 = {
     "bus_main_use__5":          ("self_empl_main_use_housing_furniture",                        "float32",  None,   None),
     "bus_main_use__6":          ("self_empl_main_use_transportation",                           "float32",  None,   None),
     "bus_main_use__7":          ("self_empl_main_use_entertainment",                            "float32",  None,   None),
-    "bus_main_use_others":      ("self_empl_main_use_other",                                    "object",   None,   None),
+    # "bus_main_use_others":    ("self_empl_main_use_other",                                    "object",   None,   None),
     "bus_input":                ("self_empl_input_costs_last_30_days",                          "float32",  None,   None),
     "bus_labor":                ("self_empl_labor_costs_last_30_days",                          "float32",  None,   None), 
     "bus_capital":              ("self_empl_capital_costs_last_30_days",                        "float32",  None,   None), #Machinery Maintenance, Rent 
     "bus_reg":                  ("self_empl_registered",                                        "float32", "dummy", None),
-    "bus_loc":                  ("self_empl_location",                                          "object",   None,   None),
-    "bus_employees":            ("self_empl_number_of_employees",                               "float32",  None,   None),
+    "bus_loc":                  ("self_empl_location",                                          "object",   None,   mappings.self_employment_location),
+    "bus_employe":              ("self_empl_number_of_employees",                               "float32",  None,   None),
     "years_exp_agri":           ("self_empl_years_experience_in_years",                         "float32",  None,   None),
     "tourism_motivate__1":      ("self_empl_motiv_previous_experience",                         "float32", "dummy", None),
     "tourism_motivate__2":      ("self_empl_motiv_others_are_successful",                       "float32", "dummy", None),
@@ -372,7 +372,7 @@ OFF_FARM_EMPLOYMENT_2023 = {
     
     #WAGE EMPLOYMENT
     # "lbr3_2":                 ("wage_empl_company_name",                                                      "object",  None,   None),
-    "lbr3_3":                   ("wage_empl_location",                                                          "object",  None,   None),
+    "lbr3_3":                   ("wage_empl_location",                                                          "object",  None,   mappings.wage_employment_location),
     "lbr3_4":                   ("wage_empl_type",                                                              "object",  None,   None), #permanent or seasonal?
 
     #permanent
@@ -415,13 +415,13 @@ OFF_FARM_EMPLOYMENT_2023 = {
     "Ibr3_19":                  ("unprotected_dangerous_products",                                              "float32", "dummy", None),
     "leave":                    ("paid_annual_leave",                                                           "float32", "dummy", None),
     "sick_leave":               ("paid_sick_leave",                                                             "float32", "dummy", None),
-    "lbr10":                    ("contract_status",                                                             "object",   None,   None),
+    "lbr10":                    ("contract_status",                                                             "object",   None,   mappings.contract_status),
     # "lbr10_1":                ("contract_status_other",                                                       "object",   None,   None),
-    "job_search":               ("job_search",                                                                  "object",   None,   None),
+    "job_search":               ("job_search",                                                                  "object",   None,   mappings.job_search),
     # "job_search_oth":         ("job_search_other",                                                            "object",   None,   None),
     "lbr09":                    ("training_received",                                                           "float32", "dummy", None),
     "emp_years":                ("duration_in_years",                                                           "float32",  None,   None),
-    "lbr11":                    ("job_satisfaction",                                                            "object",   None,   None), 
+    "lbr11":                    ("job_satisfaction",                                                            "object",   None,   mappings.job_satisfaction), 
 }
 
 ON_FARM_EMPLOYMENT_2023 = {
