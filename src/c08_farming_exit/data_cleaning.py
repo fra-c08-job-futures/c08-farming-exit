@@ -1,4 +1,4 @@
-"""Data cleaning functions and classes."""
+"""Data cleaning functions."""
 
 import pandas as pd
 import numpy as np 
@@ -252,6 +252,25 @@ def flag_group_if_any_true(df, key_col, flag_cols):
     df[flag_cols] = df.groupby(key_col)[flag_cols].transform(lambda x: int(x.any()))
     return df
 
+def group_by_and_average(df, key_col, avg_cols):
+    """
+    For each column in avg_cols, calculate the mean per key_col.
+
+    Parameters
+    ----------
+    df : pandas.DataFrame
+    key_col : str or list
+        The name of the column to group by.
+    avg_cols : list of str
+        List of column names containing integers to be averaged.
+
+    Returns
+    -------
+    pandas.DataFrame
+    """
+    df = df.groupby(key_col)[avg_cols].mean().reset_index()
+    return df
+
 # ============================================================
 # WRAPPER DATA CLEANING FUNCTIONS
 # ============================================================
@@ -368,6 +387,10 @@ def create_crop_production_features(df, key_col="interview_key"):
     df = calculate_revenue(df, "crop_sale_amount", "crop_sale_price_per_unit", "crop_sale_revenue")
     df["crop_sale_revenue"] = df.groupby("interview_key")["crop_sale_revenue"].transform("sum")
 
+    #Calculcate unique crop types per hh
+    df["crop_type_diversity"] = df.groupby("interview_key")["crop_type"].transform("nunique")
+    df = df.drop(columns=["crop_type"])
+
     return df.drop_duplicates(subset=key_col).reset_index(drop=True)
 
 def create_livestock_features(df, category_col='livestock_type'):
@@ -376,7 +399,8 @@ def create_livestock_features(df, category_col='livestock_type'):
 
     Thin wrapper around `apply_factor()`, `calculate_revenue()`,
     and `aggregate_by_hh()` that converts livestock counts to TLU, computes
-    sale revenue, and aggregates across animal types to the household level.
+    sale revenue, adds livestock diversity and aggregates across animal types 
+    to the household level.
 
     Parameters
     ----------
@@ -394,6 +418,7 @@ def create_livestock_features(df, category_col='livestock_type'):
 
     df = apply_factor(df, "livestock_type", number_cols, "tlu")
     df = calculate_revenue(df, "livestock_number_sold", "livestock_price_head_sold", "livestock_revenue_sold")
+    df["livestock_diversity"] = 1
     df = aggregate_by_hh(df, [category_col])
 
     return df
@@ -403,8 +428,8 @@ def create_asset_features(df, category_col='asset_type'):
     Clean assets owned data and collapse to one row per household.
 
     Thin wrapper around `calculate_revenue()` and `aggregate_by_hh()` that
-    computes the value of owned assets and aggregates across asset types
-    to the household level.
+    computes the value of owned assets, adds asset diversity and aggregates 
+    across asset types to the household level.
 
     Parameters
     ----------
@@ -418,6 +443,7 @@ def create_asset_features(df, category_col='asset_type'):
     pd.DataFrame
     """
     df = calculate_revenue(df, "asset_number_owned", "asset_price_per_unit", "asset_value")
+    df["asset_diversity"] = 1
     df = aggregate_by_hh(df, [category_col])
 
     return df
@@ -534,6 +560,27 @@ def create_off_farm_employment_features(df):
 
     return df
 
+def create_time_allocation_features(df):
+    """
+    Clean time allocation data by calculating the share of a primary activity
+    in a 24 hours day of a person. 
+
+    Thin wrapper around `make_pivot_table()` and `group_by_and_average()`.
+    Parameters
+    ----------
+    df : pd.DataFrame
+
+    Returns
+    -------
+    pd.DataFrame
+    """
+    df = make_pivot_table(df, index=["interview_key", "members_id", "time_slot"], category_columns="primary_activity")
+
+    avg_cols = [c for c in df.columns if c.startswith('primary_activity_')]
+    df = group_by_and_average(df, ['interview_key', 'members_id'], avg_cols)
+
+    return df
+
 # ============================================================
 # EDA STUFF
 # ============================================================
@@ -543,8 +590,6 @@ def most_common_or_nan(x):
     if counts.empty:
         return pd.NA
     return counts.idxmax()
-
-
 
 
 # def fill_missings(df, feature_dict):
