@@ -301,10 +301,10 @@ OFF_FARM_EMPLOYMENT_2023 = {
     "r_members__id":            ("members_id",                                                  "object",   None,   None),
     "lbr3_1":                   ("sector_off_farm_empl_last_12_months",                         "object",   None,   mappings.employment_sector),
     # "lbr3_1_oth":             ("sector_off_farm_empl_last_12_months_other",                   "object",   None,   None),
-    "emp_form":                 ("empl_type",                                                   "object",   None,   None),
+    "emp_form":                 ("empl_type",                                                   "object",   None,   None), #Self-employed or employee
 
     #SELF-EMPLOYMENT / OWN BUSINESS
-    "bus_yr":                   ("self_empl_duration_in_months_last_12_months",                 "float64",  None,   None),
+    # "bus_yr":                 ("self_empl_duration_in_months_last_12_months",                 "float64",  None,   None),
     "bus_dry":                  ("self_empl_duration_dry_season_in_months_last_12_months",      "float64",  None,   None),
     "bus_rain":                 ("self_empl_duration_rainy_season_in_months_last_12_months",    "float64",  None,   None), 
     "bus_days_wk":              ("self_empl_days_per_week",                                     "float64",  None,   None),
@@ -376,17 +376,17 @@ OFF_FARM_EMPLOYMENT_2023 = {
     "lbr3_4":                   ("wage_empl_type",                                                              "object",  None,   None), #permanent or seasonal?
 
     #permanent
-    "lbr3_5":                   ("wage_empl_permament_wage_per_month",                                          "float64", None,   None),
-    "lbr3_5_1__1":              ("wage_empl_permament_main_use_invest_in_own_business",                         "float64", None,   None),
-    "lbr3_5_1__2":              ("wage_empl_permament_main_use_food",                                           "float64", None,   None),
-    "lbr3_5_1__3":              ("wage_empl_permament_main_use_education",                                      "float64", None,   None),
-    "lbr3_5_1__4":              ("wage_empl_permament_main_use_health",                                         "float64", None,   None),
-    "lbr3_5_1__5":              ("wage_empl_permament_main_use_housing_furniture",                              "float64", None,   None),
-    "lbr3_5_1__6":              ("wage_empl_permament_main_use_transportation",                                 "float64", None,   None),
-    "lbr3_5_1__7":              ("wage_empl_permament_main_use_entertainment",                                  "float64", None,   None),
-    # "lbr3_5_1_oth":           ("wage_empl_permament_main_use_other",                                          "object",  None,   None),
-    "lbr3_6":                   ("wage_empl_permament_days_per_week",                                           "float64", None,   None),
-    "lbr3_7":                   ("wage_empl_permament_hours_per_day",                                           "float64", None,   None),
+    "lbr3_5":                   ("wage_empl_permanent_wage_per_month",                                          "float64", None,   None),
+    "lbr3_5_1__1":              ("wage_empl_permanent_main_use_invest_in_own_business",                         "float64", None,   None),
+    "lbr3_5_1__2":              ("wage_empl_permanent_main_use_food",                                           "float64", None,   None),
+    "lbr3_5_1__3":              ("wage_empl_permanent_main_use_education",                                      "float64", None,   None),
+    "lbr3_5_1__4":              ("wage_empl_permanent_main_use_health",                                         "float64", None,   None),
+    "lbr3_5_1__5":              ("wage_empl_permanent_main_use_housing_furniture",                              "float64", None,   None),
+    "lbr3_5_1__6":              ("wage_empl_permanent_main_use_transportation",                                 "float64", None,   None),
+    "lbr3_5_1__7":              ("wage_empl_permanent_main_use_entertainment",                                  "float64", None,   None),
+    # "lbr3_5_1_oth":           ("wage_empl_permanent_main_use_other",                                          "object",  None,   None),
+    "lbr3_6":                   ("wage_empl_permanent_days_per_week",                                           "float64", None,   None),
+    "lbr3_7":                   ("wage_empl_permanent_hours_per_day",                                           "float64", None,   None),
 
     #seasonal/casual
     "lbr3_8":                   ("wage_empl_seasonal_casual_payment_frequency",                                 "object",  None,   None),
