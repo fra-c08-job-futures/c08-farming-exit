@@ -487,8 +487,8 @@ def create_other_income_features(df, country, frequency_col='other_income_freque
 
 def create_shock_features(df, category_col="shock_type_affected_last_12_months", index="interview_key"):
     """
-    Map a category column through a dict, then pivot the result into a wide-format dataframe. 
-    Combines `mapping()` + `make_pivot_table()`.
+    Pivot the result into a wide-format dataframe. 
+    Uses `make_pivot_table()`.
 
     Parameters
     ----------
@@ -504,9 +504,6 @@ def create_shock_features(df, category_col="shock_type_affected_last_12_months",
     pd.DataFrame (wide-format dataframe)
 
     """
-
-    #
-    # df = mapping(df, country, category_col=category_col, mapping=mapping_dict, new_col=category_col)
     df = make_pivot_table(df, index=index, category_columns=category_col)
     return df
 
@@ -514,7 +511,7 @@ def create_coping_features(df, likelihood_col="shock_future_likelihood_change_in
     """
     Create coping features out of the shocks_and_coping dataframe. 
 
-    Uses `mapping()` + `flag_group_if_any_true()`.
+    Uses `flag_group_if_any_true()`.
   
     Parameters
     ----------
@@ -539,9 +536,9 @@ def create_coping_features(df, likelihood_col="shock_future_likelihood_change_in
 def create_off_farm_employment_features(df):
     """
     Clean off-farm employment data by resolving duplicate member-level
-    records and flagging shared household-level attributes.
+    records.
 
-    Thin wrapper around `resolve_duplicates()` and `flag_group_if_any_true()`.
+    Thin wrapper around `resolve_duplicates()`.
     Parameters
     ----------
     df : pd.DataFrame
@@ -553,10 +550,6 @@ def create_off_farm_employment_features(df):
     key_col = ["interview_key", "members_id"]
 
     df = resolve_duplicates(df, key_col=key_col, sort_col="empl_type", ascending=True)
-
-    #Create a dummy out of all "main_use" columns
-    flag_cols = [c for c in df.columns if "main_use" in c]
-    df = flag_group_if_any_true(df, key_col=key_col, flag_cols=flag_cols)
 
     return df
 

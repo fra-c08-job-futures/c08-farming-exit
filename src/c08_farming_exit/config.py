@@ -14,4 +14,3 @@ STATA_EDITION = "se" # "se" = Stata SE | "mp" = Stata/MP | "be" = Stata/BE
 STATA_PATH = r"C:\Program Files\Stata18\utilities" # path to Stata's "utilities" folder, adjust per machine
 
 WEEKS_PER_MONTH = 4.345  # 52/12
-

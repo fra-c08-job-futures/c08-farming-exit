@@ -425,27 +425,35 @@ OFF_FARM_EMPLOYMENT_2023 = {
 }
 
 ON_FARM_EMPLOYMENT_2023 = {
-    "interview__key": ("interview_key",                                                         "object",   None,   None),
-    "r_members__id":  ("members_id",                                                            "object",   None,   None),
-    "lbr13":          ("farm_empl_last_12_months",                                              "float64",  "dummy", None),
+    "interview__key":       ("interview_key",                                                         "object",   None,   None),
+    "r_members__id":        ("members_id",                                                            "object",   None,   None),
+    "lbr13":                ("farm_empl_last_12_months",                                              "float64",  "dummy", None),
 
     #CROPS
-    "Ibr13_1":        ("farm_empl_cash_crops_duration_rainy_season_in_months_last_12_months",   "float64",  None,   None),
-    "Ibr13_2":        ("farm_empl_cash_crops_duration_dry_season_in_months_last_12_months",     "float64",  None,   None),
-    "Ibr13_3":        ("farm_empl_cash_crops_days_per_week",                                    "float64",  None,   None),
-    "Ibr13_4":        ("farm_empl_cash_crops_hours_per_day",                                    "float64",  None,   None),
-    "Ibr13_5":        ("farm_empl_food_crops_duration_rainy_season_in_months_last_12_months",   "float64",  None,   None),
-    "Ibr13_6":        ("farm_empl_food_crops_duration_dry_season_in_months_last_12_months",     "float64",  None,   None),
-    "Ibr13_8":        ("farm_empl_food_crops_days_per_week",                                    "float64",  None,   None),
-    "Ibr13_9":        ("farm_empl_food_crops_hours_per_day",                                    "float64",  None,   None),
-    "years_exp_crp":  ("farm_empl_crops_years_experience_in_years",                             "float64",  None,   None),
+    "Ibr13_1":              ("farm_empl_cash_crops_duration_rainy_season_in_months_last_12_months",   "float64",  None,   None),
+    "Ibr13_2":              ("farm_empl_cash_crops_duration_dry_season_in_months_last_12_months",     "float64",  None,   None),
+    "Ibr13_3":              ("farm_empl_cash_crops_days_per_week",                                    "float64",  None,   None),
+    "Ibr13_4":              ("farm_empl_cash_crops_hours_per_day",                                    "float64",  None,   None),
+    "Ibr13_5":              ("farm_empl_food_crops_duration_rainy_season_in_months_last_12_months",   "float64",  None,   None),
+    "Ibr13_6":              ("farm_empl_food_crops_duration_dry_season_in_months_last_12_months",     "float64",  None,   None),
+    "Ibr13_8":              ("farm_empl_food_crops_days_per_week",                                    "float64",  None,   None),
+    "Ibr13_9":              ("farm_empl_food_crops_hours_per_day",                                    "float64",  None,   None),
+    "years_exp_crp":        ("farm_empl_crops_years_experience_in_years",                             "float64",  None,   None),
 
     #LIVESTOCK
-    "Ibr13_10":       ("farm_empl_livestock_duration_rainy_season_in_months_last_12_months",    "float64",  None,   None), 
-    "Ibr13_11":       ("farm_empl_livestock_duration_dry_season_in_months_last_12_months",      "float64",  None,   None), 
-    "Ibr13_12":       ("farm_empl_livestock_days_per_week",                                     "float64",  None,   None), 
-    "Ibr13_13":       ("farm_empl_livestock_hours_per_day",                                     "float64",  None,   None), 
-    "years_exp_liv":  ("farm_empl_livestock_years_experience_in_years",                         "float64",  None,   None),
+    "Ibr13_10":             ("farm_empl_livestock_duration_rainy_season_in_months_last_12_months",    "float64",  None,   None), 
+    "Ibr13_11":             ("farm_empl_livestock_duration_dry_season_in_months_last_12_months",      "float64",  None,   None), 
+    "Ibr13_12":             ("farm_empl_livestock_days_per_week",                                     "float64",  None,   None), 
+    "Ibr13_13":             ("farm_empl_livestock_hours_per_day",                                     "float64",  None,   None), 
+    "years_exp_liv":        ("farm_empl_livestock_years_experience_in_years",                         "float64",  None,   None),
+
+    "onfarm_main_use__1":   ("farm_empl_main_use_invest_in_own_business",                             "float64",  None,   None),
+    "onfarm_main_use__2":   ("farm_empl_main_use_food",                                               "float64",  None,   None),
+    "onfarm_main_use__3":   ("farm_empl_main_use_education",                                          "float64",  None,   None),
+    "onfarm_main_use__4":   ("farm_empl_main_use_health",                                             "float64",  None,   None),
+    "onfarm_main_use__5":   ("farm_empl_main_use_housing_furniture",                                  "float64",  None,   None),
+    "onfarm_main_use__6":   ("farm_empl_main_use_transportation",                                     "float64",  None,   None),
+    "onfarm_main_use__7":   ("farm_empl_main_use_entertainment",                                      "float64",  None,   None),
 }
 
 MIGRATION_2023 = {
