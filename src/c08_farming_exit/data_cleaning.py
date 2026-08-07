@@ -384,8 +384,8 @@ def create_crop_production_features(df, key_col="interview_key"):
     df = df.rename(columns={'crop_home_consumption_amount': 'crop_home_consumption'})
 
     #Calculate the total sale revenues of crop production per hh (in local currency)
-    df = calculate_revenue(df, "crop_sale_amount", "crop_sale_price_per_unit", "crop_sale_revenue")
-    df["crop_sale_revenue"] = df.groupby("interview_key")["crop_sale_revenue"].transform("sum")
+    df = calculate_revenue(df, "crop_sale_amount", "crop_sale_price_per_unit", "crop_sale_revenue_last_12_months")
+    df["crop_sale_revenue_last_12_months"] = df.groupby("interview_key")["crop_sale_revenue_last_12_months"].transform("sum")
 
     #Calculcate unique crop types per hh
     df["crop_type_diversity"] = df.groupby("interview_key")["crop_type"].transform("nunique")
@@ -480,7 +480,7 @@ def create_other_income_features(df, country, frequency_col='other_income_freque
     if n_dropped > 0:
         print(f"create_other_income_features: {country} - Dropped {n_dropped} rows with NaN in '{frequency_col}'")
 
-    df = apply_factor(df, frequency_col, ["other_income_amount"], "monthly")
+    df = apply_factor(df, frequency_col, ["other_income_amount"], "annual")
     df = aggregate_by_hh(df, [source_col, frequency_col])
 
     return df
@@ -571,6 +571,8 @@ def create_time_allocation_features(df):
 
     avg_cols = [c for c in df.columns if c.startswith('primary_activity_')]
     df = group_by_and_average(df, ['interview_key', 'members_id'], avg_cols)
+
+    df = df.rename(columns={c: f"{c}_share" for c in avg_cols})
 
     return df
 

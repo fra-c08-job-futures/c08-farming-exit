@@ -93,11 +93,11 @@ livestock_conversion_factors = {
 }
 
 other_income_frequency = {
-    "Monthly": 1.0,
-    "Every three months": 1/3,
-    "Every 6 months": 1/6,
-    "Every year": 1/12,
-    "Lump sum (single payment)": 1/12,   
+    "Monthly": 12,
+    "Every three months": 4,
+    "Every 6 months": 2,
+    "Every year": 1,
+    "Lump sum (single payment)": 1,   
 }
 
 shock_categories = {
@@ -312,12 +312,12 @@ agreement = { #ordinal encoding
     "Strongly agree":               4,
 }
 
-worries = { #ordinal encoding
-    "Not at all worried":   0,
-    "Slightly worried":     1,
+worries = { #ordinal encoding -inverted logic compared to agreement! -> hh sentiment index
+    "Not at all worried":   4,
+    "Slightly worried":     3,
     "Worried":              2,
-    "Very worried":         3,
-    "Extremely worried":    4,
+    "Very worried":         1,
+    "Extremely worried":    0,
 }
 
 lighting_source = { #ordinal encoding
@@ -443,11 +443,10 @@ cooking_energy_source = { #ordinal encoding
 # FEATURE ENGINEERING MAPPINGS
 # ============================================================
 
-#WHERE TO USE: LIVESTOCK + CROPS SOLD + ASSET VALUE + OTHER INCOME + WAGES + YIELDS
-eur_exchange_rates = {
-    "Botswana": 0.069,   # BWP -> EUR
-    "Kenya": 0.0071,     # KES -> EUR
-    "Namibia": 0.049,    # NAD -> EUR
-    "Tanzania": 0.00034, # TZS -> EUR
-    "Zambia": 0.033,     # ZMW -> EUR
+usd_exchange_rates = {
+    "Botswana": 0.073,    # BWP -> USD
+    "Kenya": 0.0077,      # KES -> USD
+    "Namibia": 0.061,     # NAD -> USD
+    "Tanzania": 0.00038,  # TZS -> USD
+    "Zambia": 0.053,      # ZMW -> USD
 }

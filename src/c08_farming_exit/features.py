@@ -137,7 +137,7 @@ LIFESTOCK_GRAZING_2023 = {
     "grazing_challenges__8":     ("grazing_land_challenges_no_water",                 "float64",    "dummy",    None), 
     "grazing_challenges__9":     ("grazing_land_challenges_too_far",                  "float64",    "dummy",    None), 
     "grazing_challenges__10":    ("grazing_land_challenges_expensive",                "float64",    "dummy",    None), 
-    "grazing_challenges__11":    ("grazing_land_challenges_None",                     "float64",    "dummy",    None), 
+    # "grazing_challenges__11":  ("grazing_land_challenges_None",                     "float64",    "dummy",    None), 
     # "grazing_challenge_other": ("grazing_land_challenges_other",                    "object",     None,       None),
 }
 
@@ -247,16 +247,16 @@ SOCIAL_NETWORK_2023 = {
 }
 
 SOCIAL_EMBEDDEDNESS_2023 = {
-    # ONLY RESPONDAND ASEKD:CAN BE USED AS A PROXY FOR THE OPTIMISM OF THE HH
+    # ONLY RESPONDAND ASKED:CAN BE USED AS A PROXY FOR THE OPTIMISM OF THE HH
     "interview__key":   ("interview_key",                                "object",  None, None),
-    "as_loc01_in":      ("my_life_course_depends_on_me",                 "object",  None, mappings.agreement),
-    "as_loc02_in":      ("success_is_hard_work",                         "object",  None, mappings.agreement),
-    "as_loc03_in":      ("ability_is_more_important_than_effort",        "object",  None, mappings.agreement),
-    "as_loc04_in":      ("my_plans_will_work",                           "object",  None, mappings.agreement),
-    "as_loc06_in":      ("I_can_shape_my_future_positively",             "object",  None, mappings.agreement),
-    "as_loc12_in":      ("I_am_optimistic_about_my_future",              "object",  None, mappings.agreement),
-    "as_loc13_in":      ("I_am_optimistic_about_my_familys_future",      "object",  None, mappings.agreement),
-    "exp_ev1_01":       ("worry_about_job_loss_or_economic_livelihood",  "object",  None, mappings.worries), 
+    "as_loc01_in":      ("my_life_course_depends_on_me",                 "object",  None, mappings.agreement),  #positive 
+    #"as_loc02_in":      ("success_is_hard_work",                         "object",  None, mappings.agreement), #difficult to interpret
+    #"as_loc03_in":      ("ability_is_more_important_than_effort",        "object",  None, mappings.agreement), #difficult to interpret
+    "as_loc04_in":      ("my_plans_will_work",                           "object",  None, mappings.agreement),  #positive 
+    "as_loc06_in":      ("I_can_shape_my_future_positively",             "object",  None, mappings.agreement),  #positive 
+    "as_loc12_in":      ("I_am_optimistic_about_my_future",              "object",  None, mappings.agreement),  #positive 
+    "as_loc13_in":      ("I_am_optimistic_about_my_familys_future",      "object",  None, mappings.agreement),  #positive 
+    "exp_ev1_01":       ("worry_about_job_loss_or_economic_livelihood",  "object",  None, mappings.worries),    #negative 
 }
 
 FOOD_INSECURITY_2023 = {
@@ -462,7 +462,7 @@ MIGRATION_2023 = {
     "migrant_ind":    ("migrant_last_12_months",                "float64",  "dummy",    None),
     "migrant_current":("current_migrant",                       "float64",  "dummy",    None),
     "migr_itt":       ("migration_intention_next_12_months",    "object",   None,       mappings.migration_intention),
-    "remit_amt":      ("remittance_amount_sent",                "float64",  None,       None),
+    "remit_amt":      ("remittance_amount_sent_last_12_months", "float64",  None,       None),
 }
 
 ASPIRATIONS_2023 = {

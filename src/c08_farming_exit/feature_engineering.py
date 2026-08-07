@@ -152,4 +152,30 @@ def collapse_main_income_use(df, employment_types, spending_categories):
 
     return df
 
+def convert_currency(df, columns, country_col, rates):
+    """
+    Convert specified local-currency columns to another currency based on
+    a provided mapping logic.
 
+    Parameters
+    ----------
+    df : pd.DataFrame
+    columns : list[str]
+        Names of the columns (in local currency) to convert.
+    country_col : str
+    rates : dict
+        Mapping of local-currency columns to another currency.
+
+    Returns
+    -------
+    pd.DataFrame
+    """
+    df = df.copy()
+
+    # Map country to rate; unmatched countries become NaN
+    rate_series = df[country_col].map(rates)
+
+    for col in columns:
+        df[col] = df[col] * rate_series
+
+    return df
