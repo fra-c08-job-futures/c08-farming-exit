@@ -393,13 +393,21 @@ roof_material = { #ordinal encoding
     "Other➡️ Please specify":     float("nan"),
 }
 
-market_type = { #ordinal encoding
+livestock_market_type = { #ordinal encoding
     "Directly at the homestead":                      0,
     "Directly at the farm":                           1,
     "Market in this village":                         2,
     "Rural market in neighbouring other village":     3,
     "Urban market (town) in this region":             4,
     "Large city market in this or other region":      5,
+}
+
+market_type = {  # ordinal encoding
+    "Direct individuals not in a market":          0,
+    "Market in this village":                      1,
+    "Rural market in the neighbouring village":    2,
+    "Urban market (town) in this region":          3,
+    "Large city market in this or other region":   4,
 }
 
 buyer_type = { #ordinal encoding

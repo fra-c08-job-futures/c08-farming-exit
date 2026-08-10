@@ -92,10 +92,10 @@ MARKET_ACCESS_2023 = {
     "interview__key":        ("interview_key",                    "object",     None,       None),
     "markt_output_dist":     ("market_output_distance_in_km",     "float64",    None,       None), #0-70% missings, too valueable to dismiss -> special treatment
     "markt_input_dist":      ("market_input_distance_in_km",      "float64",    None,       None), #0-70% missings, too valueable to dismiss -> special treatment
-    "markt_buyer":           ("market_type",                      "object",     None,       None),
+    "markt_buyer":           ("market_type",                      "object",     None,       mappings.market_type),
     # "markt_buyer_oth":     ("market_type_other",                "object",     None,       None),
     "crop_contract":         ("crop_contract",                    "float64",    "dummy",    None),
-    "contract_crop":         ("crop_contract_crop_type",          "object",     None,       None),
+    "contract_crop":         ("crop_contract_crop_type",          "object",     None,       None), #almost all MAIZE!
     "input_access_subsidy":  ("subsidy",                          "float64",    "dummy",    None),
     "subsidy_type__1":       ("subsidy_type_seeds",               "float64",    "dummy",    None),
     "subsidy_type__2":       ("subsidy_type_fertilizer",          "float64",    "dummy",    None),
@@ -154,7 +154,7 @@ LIFESTOCK_INCOME_2023 = {
     # "which_liv_pdts_oth": ("livestock_products_sold_other",                "object",      None,      None),
     "liv_buyer":            ("livestock_products_buyer",                     "object",      None,      mappings.buyer_type),
     # "liv_buyer_oth":       ("livestock_products_buyer_other",              "object",      None,      None),
-    "liv_buyer_where":      ("livestock_products_market_type",               "object",      None,      mappings.market_type),
+    "liv_buyer_where":      ("livestock_products_market_type",               "object",      None,      mappings.livestock_market_type),
     "livmkt_dist":          ("livestock_market_distance_in_km",              "float64",     None,      None),
     "liv_pdt_inc":          ("livestock_income_last_12_months",              "float64",     None,      None),
     "liv_contract":         ("livestock_contract",                           "float64",     "dummy",   None),
