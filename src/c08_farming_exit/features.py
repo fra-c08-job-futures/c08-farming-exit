@@ -286,7 +286,7 @@ ROAD_CONNECTIVITY_2023 = {
 HH_MEMBERS_2023 = {
     "interview__key":   ("interview_key",        "object",  None,       None                        ),
     "r_members__id":    ("members_id",           "object",  None,       None                        ),
-    "ha03":             ("gender",               "object",  None,       None                        ),
+    "ha03":             ("female",               "object",  None,       mappings.gender             ),
     "ha_rel":           ("relation_to_head",     "object",  None,       None                        ),
     "age":              ("age",                  "float64", None,       None                        ),
     "ha07":             ("ethnic_group",         "object",  None,       None                        ), #there are 129 different ethnic groups in the 5 countries, sure you want to keep this?

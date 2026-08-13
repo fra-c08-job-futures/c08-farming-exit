@@ -4,6 +4,34 @@
 # DATA CLEANING MAPPINGS
 # ============================================================
 
+gender = {
+    'Female':   1,
+    'Male':     0,
+}
+
+relation_to_head = {  # ordinal encoding
+    # 0: Myself
+    "Self/Head":                       0,
+    # 1: Core nuclear/direct-line family
+    "Wife/Husband":                    1,
+    "Child/Adopted Child":             1,
+    # 2: Direct-line ascending/lateral relatives
+    "Grandchild":                      2,
+    "Mother/Father":                   2,
+    "Grandfather/Mother":              2,
+    "Sister/Brother":                  2,
+    # 3: In-laws
+    "Son/Daughter-In-Law":             3,
+    "Brother/Sister-In-Law":           3,
+    "Father/Mother-In-Law":            3,
+    # 4: More distant blood/general relatives
+    "Niece/Nephew":                    4,
+    "Other Relative":                  4,
+    # 5: Non-family
+    "Other Non-Relative":              5,
+    "Servant Or Servant's Relative":   5,
+}
+
 years_of_schooling = {
     # No education 
     "No formal education":          0,

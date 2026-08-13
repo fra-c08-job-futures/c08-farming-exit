@@ -587,37 +587,6 @@ def most_common_or_nan(x):
     return counts.idxmax()
 
 
-# def fill_missings(df, feature_dict):
-#     """
-#     Fills missing values in df's columns based on mapping.
-
-#     Parameters
-#     ----------
-#     df : pd.DataFrame
-#     mapping : dict
-#         Dict of {original_col_name: (new_name, dtype, fill_value)}.
-#         fill_value can be None (skip), 0 (or any literal), "mean",
-#         "median", or "missing".
-
-#     Returns
-#     -------
-#     pd.DataFrame
-#     """
-#     for col, (_, _, fill_value, _) in feature_dict.items():
-#         if fill_value is None:
-#             continue
-#         if fill_value == "mean":
-#             df[col] = df[col].fillna(df[col].mean())
-#         elif fill_value == "median":
-#             df[col] = df[col].fillna(df[col].median())
-#         elif fill_value == "missing":
-#             df[col] = df[col].fillna("missing")
-#         elif fill_value == "dummy":
-#             df[col] = df[col].fillna(0.0)
-#         else:
-#             df[col] = df[col].fillna(fill_value)
-
-#     return df
 
 
 
