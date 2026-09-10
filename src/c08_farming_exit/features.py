@@ -13,13 +13,14 @@ from c08_farming_exit import mappings
 # ============================================================
 
 IDENTIFYING_INFO_2023 = {
-    "ctry":           ("country",                       "object",   None,        None),
-    "interview__key": ("interview_key",                 "object",   None,        None),
-    #"hhid":          ("hhid",                          "object",   None,        None),
-    "ea":             ("enumeration_area",              "object",   None,        None),
-    "dist":           ("district",                      "object",   None,        None),
-    "region":         ("region",                        "object",   None,        None),
-    "res_rel":        ("respondant_relation_to_head",   "object",   None,        None), 
+    "ctry":           ("country",                                      "object",   None,        None),
+    "interview__key": ("interview_key",                                "object",   None,        None),
+    #"hhid":          ("hhid",                                         "object",   None,        None),
+    "ea":             ("enumeration_area",                             "object",   None,        None),
+    "dist":           ("district",                                     "object",   None,        None),
+    "region":         ("region",                                       "object",   None,        None),
+    "res_head":       ("respondant_head_or_representative",            "object",   None,        None), 
+    "res_rel":        ("respondant_representative_relation_to_head",   "object",   None,        None), 
 }
 
 LAND_OWNERSHIP_ACCESS_2023 = {
