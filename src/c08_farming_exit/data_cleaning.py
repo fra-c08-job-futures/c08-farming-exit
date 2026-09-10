@@ -384,8 +384,8 @@ def create_crop_production_features(df, key_col="interview_key"):
     df = df.rename(columns={'crop_home_consumption_amount': 'crop_home_consumption'})
 
     #Calculate the total sale revenues of crop production per hh (in local currency)
-    df = calculate_revenue(df, "crop_sale_amount", "crop_sale_price_per_unit", "crop_sale_revenue")
-    df["crop_sale_revenue"] = df.groupby("interview_key")["crop_sale_revenue"].transform("sum")
+    df = calculate_revenue(df, "crop_sale_amount", "crop_sale_price_per_unit", "crop_sale_revenue_last_12_months")
+    df["crop_sale_revenue_last_12_months"] = df.groupby("interview_key")["crop_sale_revenue_last_12_months"].transform("sum")
 
     #Calculcate unique crop types per hh
     df["crop_type_diversity"] = df.groupby("interview_key")["crop_type"].transform("nunique")
@@ -480,15 +480,15 @@ def create_other_income_features(df, country, frequency_col='other_income_freque
     if n_dropped > 0:
         print(f"create_other_income_features: {country} - Dropped {n_dropped} rows with NaN in '{frequency_col}'")
 
-    df = apply_factor(df, frequency_col, ["other_income_amount"], "monthly")
+    df = apply_factor(df, frequency_col, ["other_income_amount"], "annual")
     df = aggregate_by_hh(df, [source_col, frequency_col])
 
     return df
 
 def create_shock_features(df, category_col="shock_type_affected_last_12_months", index="interview_key"):
     """
-    Map a category column through a dict, then pivot the result into a wide-format dataframe. 
-    Combines `mapping()` + `make_pivot_table()`.
+    Pivot the result into a wide-format dataframe. 
+    Uses `make_pivot_table()`.
 
     Parameters
     ----------
@@ -504,9 +504,6 @@ def create_shock_features(df, category_col="shock_type_affected_last_12_months",
     pd.DataFrame (wide-format dataframe)
 
     """
-
-    #
-    # df = mapping(df, country, category_col=category_col, mapping=mapping_dict, new_col=category_col)
     df = make_pivot_table(df, index=index, category_columns=category_col)
     return df
 
@@ -514,7 +511,7 @@ def create_coping_features(df, likelihood_col="shock_future_likelihood_change_in
     """
     Create coping features out of the shocks_and_coping dataframe. 
 
-    Uses `mapping()` + `flag_group_if_any_true()`.
+    Uses `flag_group_if_any_true()`.
   
     Parameters
     ----------
@@ -539,9 +536,9 @@ def create_coping_features(df, likelihood_col="shock_future_likelihood_change_in
 def create_off_farm_employment_features(df):
     """
     Clean off-farm employment data by resolving duplicate member-level
-    records and flagging shared household-level attributes.
+    records.
 
-    Thin wrapper around `resolve_duplicates()` and `flag_group_if_any_true()`.
+    Thin wrapper around `resolve_duplicates()`.
     Parameters
     ----------
     df : pd.DataFrame
@@ -553,10 +550,6 @@ def create_off_farm_employment_features(df):
     key_col = ["interview_key", "members_id"]
 
     df = resolve_duplicates(df, key_col=key_col, sort_col="empl_type", ascending=True)
-
-    #Create a dummy out of all "main_use" columns
-    flag_cols = [c for c in df.columns if "main_use" in c]
-    df = flag_group_if_any_true(df, key_col=key_col, flag_cols=flag_cols)
 
     return df
 
@@ -579,6 +572,8 @@ def create_time_allocation_features(df):
     avg_cols = [c for c in df.columns if c.startswith('primary_activity_')]
     df = group_by_and_average(df, ['interview_key', 'members_id'], avg_cols)
 
+    df = df.rename(columns={c: f"{c}_share" for c in avg_cols})
+
     return df
 
 # ============================================================
@@ -592,37 +587,6 @@ def most_common_or_nan(x):
     return counts.idxmax()
 
 
-# def fill_missings(df, feature_dict):
-#     """
-#     Fills missing values in df's columns based on mapping.
-
-#     Parameters
-#     ----------
-#     df : pd.DataFrame
-#     mapping : dict
-#         Dict of {original_col_name: (new_name, dtype, fill_value)}.
-#         fill_value can be None (skip), 0 (or any literal), "mean",
-#         "median", or "missing".
-
-#     Returns
-#     -------
-#     pd.DataFrame
-#     """
-#     for col, (_, _, fill_value, _) in feature_dict.items():
-#         if fill_value is None:
-#             continue
-#         if fill_value == "mean":
-#             df[col] = df[col].fillna(df[col].mean())
-#         elif fill_value == "median":
-#             df[col] = df[col].fillna(df[col].median())
-#         elif fill_value == "missing":
-#             df[col] = df[col].fillna("missing")
-#         elif fill_value == "dummy":
-#             df[col] = df[col].fillna(0.0)
-#         else:
-#             df[col] = df[col].fillna(fill_value)
-
-#     return df
 
 
 

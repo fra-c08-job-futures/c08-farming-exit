@@ -4,6 +4,34 @@
 # DATA CLEANING MAPPINGS
 # ============================================================
 
+gender = {
+    'Female':   1,
+    'Male':     0,
+}
+
+relation_to_head = {  # ordinal encoding
+    # 0: Myself
+    "Self/Head":                       0,
+    # 1: Core nuclear/direct-line family
+    "Wife/Husband":                    1,
+    "Child/Adopted Child":             1,
+    # 2: Direct-line ascending/lateral relatives
+    "Grandchild":                      2,
+    "Mother/Father":                   2,
+    "Grandfather/Mother":              2,
+    "Sister/Brother":                  2,
+    # 3: In-laws
+    "Son/Daughter-In-Law":             3,
+    "Brother/Sister-In-Law":           3,
+    "Father/Mother-In-Law":            3,
+    # 4: More distant blood/general relatives
+    "Niece/Nephew":                    4,
+    "Other Relative":                  4,
+    # 5: Non-family
+    "Other Non-Relative":              5,
+    "Servant Or Servant's Relative":   5,
+}
+
 years_of_schooling = {
     # No education 
     "No formal education":          0,
@@ -93,11 +121,11 @@ livestock_conversion_factors = {
 }
 
 other_income_frequency = {
-    "Monthly": 1.0,
-    "Every three months": 1/3,
-    "Every 6 months": 1/6,
-    "Every year": 1/12,
-    "Lump sum (single payment)": 1/12,   
+    "Monthly": 12,
+    "Every three months": 4,
+    "Every 6 months": 2,
+    "Every year": 1,
+    "Lump sum (single payment)": 1,   
 }
 
 shock_categories = {
@@ -312,12 +340,12 @@ agreement = { #ordinal encoding
     "Strongly agree":               4,
 }
 
-worries = { #ordinal encoding
-    "Not at all worried":   0,
-    "Slightly worried":     1,
+worries = { #ordinal encoding -inverted logic compared to agreement! -> hh sentiment index
+    "Not at all worried":   4,
+    "Slightly worried":     3,
     "Worried":              2,
-    "Very worried":         3,
-    "Extremely worried":    4,
+    "Very worried":         1,
+    "Extremely worried":    0,
 }
 
 lighting_source = { #ordinal encoding
@@ -393,13 +421,21 @@ roof_material = { #ordinal encoding
     "Other➡️ Please specify":     float("nan"),
 }
 
-market_type = { #ordinal encoding
+livestock_market_type = { #ordinal encoding
     "Directly at the homestead":                      0,
     "Directly at the farm":                           1,
     "Market in this village":                         2,
     "Rural market in neighbouring other village":     3,
     "Urban market (town) in this region":             4,
     "Large city market in this or other region":      5,
+}
+
+market_type = {  # ordinal encoding
+    "Direct individuals not in a market":          0,
+    "Market in this village":                      1,
+    "Rural market in the neighbouring village":    2,
+    "Urban market (town) in this region":          3,
+    "Large city market in this or other region":   4,
 }
 
 buyer_type = { #ordinal encoding
@@ -443,11 +479,10 @@ cooking_energy_source = { #ordinal encoding
 # FEATURE ENGINEERING MAPPINGS
 # ============================================================
 
-#WHERE TO USE: LIVESTOCK + CROPS SOLD + ASSET VALUE + OTHER INCOME + WAGES + YIELDS
-eur_exchange_rates = {
-    "Botswana": 0.069,   # BWP -> EUR
-    "Kenya": 0.0071,     # KES -> EUR
-    "Namibia": 0.049,    # NAD -> EUR
-    "Tanzania": 0.00034, # TZS -> EUR
-    "Zambia": 0.033,     # ZMW -> EUR
+usd_exchange_rates = {
+    "Botswana": 0.073,    # BWP -> USD
+    "Kenya": 0.0077,      # KES -> USD
+    "Namibia": 0.061,     # NAD -> USD
+    "Tanzania": 0.00038,  # TZS -> USD
+    "Zambia": 0.053,      # ZMW -> USD
 }

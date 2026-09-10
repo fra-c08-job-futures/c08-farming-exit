@@ -5,13 +5,16 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12,<3.14"
 dependencies = [
+    "econml>=0.17.0",
     "ipykernel>=7.2.0",
     "jupyter>=1.1.1",
     "matplotlib>=3.10.9",
     "pandas>=2.3.3",
     "scikit-learn>=1.9.0",
     "setuptools>=70,<81",
+    "shap>=0.52.0",
     "sweetviz>=2.3.3",
+    "xgboost>=3.4.0",
     "ydata-profiling>=4.12.2",
 ]
 

@@ -92,10 +92,10 @@ MARKET_ACCESS_2023 = {
     "interview__key":        ("interview_key",                    "object",     None,       None),
     "markt_output_dist":     ("market_output_distance_in_km",     "float64",    None,       None), #0-70% missings, too valueable to dismiss -> special treatment
     "markt_input_dist":      ("market_input_distance_in_km",      "float64",    None,       None), #0-70% missings, too valueable to dismiss -> special treatment
-    "markt_buyer":           ("market_type",                      "object",     None,       None),
+    "markt_buyer":           ("market_type",                      "object",     None,       mappings.market_type),
     # "markt_buyer_oth":     ("market_type_other",                "object",     None,       None),
     "crop_contract":         ("crop_contract",                    "float64",    "dummy",    None),
-    "contract_crop":         ("crop_contract_crop_type",          "object",     None,       None),
+    "contract_crop":         ("crop_contract_crop_type",          "object",     None,       None), #almost all MAIZE!
     "input_access_subsidy":  ("subsidy",                          "float64",    "dummy",    None),
     "subsidy_type__1":       ("subsidy_type_seeds",               "float64",    "dummy",    None),
     "subsidy_type__2":       ("subsidy_type_fertilizer",          "float64",    "dummy",    None),
@@ -137,7 +137,7 @@ LIFESTOCK_GRAZING_2023 = {
     "grazing_challenges__8":     ("grazing_land_challenges_no_water",                 "float64",    "dummy",    None), 
     "grazing_challenges__9":     ("grazing_land_challenges_too_far",                  "float64",    "dummy",    None), 
     "grazing_challenges__10":    ("grazing_land_challenges_expensive",                "float64",    "dummy",    None), 
-    "grazing_challenges__11":    ("grazing_land_challenges_None",                     "float64",    "dummy",    None), 
+    # "grazing_challenges__11":  ("grazing_land_challenges_None",                     "float64",    "dummy",    None), 
     # "grazing_challenge_other": ("grazing_land_challenges_other",                    "object",     None,       None),
 }
 
@@ -154,7 +154,7 @@ LIFESTOCK_INCOME_2023 = {
     # "which_liv_pdts_oth": ("livestock_products_sold_other",                "object",      None,      None),
     "liv_buyer":            ("livestock_products_buyer",                     "object",      None,      mappings.buyer_type),
     # "liv_buyer_oth":       ("livestock_products_buyer_other",              "object",      None,      None),
-    "liv_buyer_where":      ("livestock_products_market_type",               "object",      None,      mappings.market_type),
+    "liv_buyer_where":      ("livestock_products_market_type",               "object",      None,      mappings.livestock_market_type),
     "livmkt_dist":          ("livestock_market_distance_in_km",              "float64",     None,      None),
     "liv_pdt_inc":          ("livestock_income_last_12_months",              "float64",     None,      None),
     "liv_contract":         ("livestock_contract",                           "float64",     "dummy",   None),
@@ -247,16 +247,16 @@ SOCIAL_NETWORK_2023 = {
 }
 
 SOCIAL_EMBEDDEDNESS_2023 = {
-    # ONLY RESPONDAND ASEKD:CAN BE USED AS A PROXY FOR THE OPTIMISM OF THE HH
+    # ONLY RESPONDAND ASKED:CAN BE USED AS A PROXY FOR THE OPTIMISM OF THE HH
     "interview__key":   ("interview_key",                                "object",  None, None),
-    "as_loc01_in":      ("my_life_course_depends_on_me",                 "object",  None, mappings.agreement),
-    "as_loc02_in":      ("success_is_hard_work",                         "object",  None, mappings.agreement),
-    "as_loc03_in":      ("ability_is_more_important_than_effort",        "object",  None, mappings.agreement),
-    "as_loc04_in":      ("my_plans_will_work",                           "object",  None, mappings.agreement),
-    "as_loc06_in":      ("I_can_shape_my_future_positively",             "object",  None, mappings.agreement),
-    "as_loc12_in":      ("I_am_optimistic_about_my_future",              "object",  None, mappings.agreement),
-    "as_loc13_in":      ("I_am_optimistic_about_my_familys_future",      "object",  None, mappings.agreement),
-    "exp_ev1_01":       ("worry_about_job_loss_or_economic_livelihood",  "object",  None, mappings.worries), 
+    "as_loc01_in":      ("my_life_course_depends_on_me",                 "object",  None, mappings.agreement),  #positive 
+    #"as_loc02_in":      ("success_is_hard_work",                         "object",  None, mappings.agreement), #difficult to interpret
+    #"as_loc03_in":      ("ability_is_more_important_than_effort",        "object",  None, mappings.agreement), #difficult to interpret
+    "as_loc04_in":      ("my_plans_will_work",                           "object",  None, mappings.agreement),  #positive 
+    "as_loc06_in":      ("I_can_shape_my_future_positively",             "object",  None, mappings.agreement),  #positive 
+    "as_loc12_in":      ("I_am_optimistic_about_my_future",              "object",  None, mappings.agreement),  #positive 
+    "as_loc13_in":      ("I_am_optimistic_about_my_familys_future",      "object",  None, mappings.agreement),  #positive 
+    "exp_ev1_01":       ("worry_about_job_loss_or_economic_livelihood",  "object",  None, mappings.worries),    #negative 
 }
 
 FOOD_INSECURITY_2023 = {
@@ -286,7 +286,7 @@ ROAD_CONNECTIVITY_2023 = {
 HH_MEMBERS_2023 = {
     "interview__key":   ("interview_key",        "object",  None,       None                        ),
     "r_members__id":    ("members_id",           "object",  None,       None                        ),
-    "ha03":             ("gender",               "object",  None,       None                        ),
+    "ha03":             ("female",               "object",  None,       mappings.gender             ),
     "ha_rel":           ("relation_to_head",     "object",  None,       None                        ),
     "age":              ("age",                  "float64", None,       None                        ),
     "ha07":             ("ethnic_group",         "object",  None,       None                        ), #there are 129 different ethnic groups in the 5 countries, sure you want to keep this?
@@ -301,10 +301,10 @@ OFF_FARM_EMPLOYMENT_2023 = {
     "r_members__id":            ("members_id",                                                  "object",   None,   None),
     "lbr3_1":                   ("sector_off_farm_empl_last_12_months",                         "object",   None,   mappings.employment_sector),
     # "lbr3_1_oth":             ("sector_off_farm_empl_last_12_months_other",                   "object",   None,   None),
-    "emp_form":                 ("empl_type",                                                   "object",   None,   None),
+    "emp_form":                 ("empl_type",                                                   "object",   None,   None), #Self-employed or employee
 
     #SELF-EMPLOYMENT / OWN BUSINESS
-    "bus_yr":                   ("self_empl_duration_in_months_last_12_months",                 "float64",  None,   None),
+    # "bus_yr":                 ("self_empl_duration_in_months_last_12_months",                 "float64",  None,   None),
     "bus_dry":                  ("self_empl_duration_dry_season_in_months_last_12_months",      "float64",  None,   None),
     "bus_rain":                 ("self_empl_duration_rainy_season_in_months_last_12_months",    "float64",  None,   None), 
     "bus_days_wk":              ("self_empl_days_per_week",                                     "float64",  None,   None),
@@ -376,17 +376,17 @@ OFF_FARM_EMPLOYMENT_2023 = {
     "lbr3_4":                   ("wage_empl_type",                                                              "object",  None,   None), #permanent or seasonal?
 
     #permanent
-    "lbr3_5":                   ("wage_empl_permament_wage_per_month",                                          "float64", None,   None),
-    "lbr3_5_1__1":              ("wage_empl_permament_main_use_invest_in_own_business",                         "float64", None,   None),
-    "lbr3_5_1__2":              ("wage_empl_permament_main_use_food",                                           "float64", None,   None),
-    "lbr3_5_1__3":              ("wage_empl_permament_main_use_education",                                      "float64", None,   None),
-    "lbr3_5_1__4":              ("wage_empl_permament_main_use_health",                                         "float64", None,   None),
-    "lbr3_5_1__5":              ("wage_empl_permament_main_use_housing_furniture",                              "float64", None,   None),
-    "lbr3_5_1__6":              ("wage_empl_permament_main_use_transportation",                                 "float64", None,   None),
-    "lbr3_5_1__7":              ("wage_empl_permament_main_use_entertainment",                                  "float64", None,   None),
-    # "lbr3_5_1_oth":           ("wage_empl_permament_main_use_other",                                          "object",  None,   None),
-    "lbr3_6":                   ("wage_empl_permament_days_per_week",                                           "float64", None,   None),
-    "lbr3_7":                   ("wage_empl_permament_hours_per_day",                                           "float64", None,   None),
+    "lbr3_5":                   ("wage_empl_permanent_wage_per_month",                                          "float64", None,   None),
+    "lbr3_5_1__1":              ("wage_empl_permanent_main_use_invest_in_own_business",                         "float64", None,   None),
+    "lbr3_5_1__2":              ("wage_empl_permanent_main_use_food",                                           "float64", None,   None),
+    "lbr3_5_1__3":              ("wage_empl_permanent_main_use_education",                                      "float64", None,   None),
+    "lbr3_5_1__4":              ("wage_empl_permanent_main_use_health",                                         "float64", None,   None),
+    "lbr3_5_1__5":              ("wage_empl_permanent_main_use_housing_furniture",                              "float64", None,   None),
+    "lbr3_5_1__6":              ("wage_empl_permanent_main_use_transportation",                                 "float64", None,   None),
+    "lbr3_5_1__7":              ("wage_empl_permanent_main_use_entertainment",                                  "float64", None,   None),
+    # "lbr3_5_1_oth":           ("wage_empl_permanent_main_use_other",                                          "object",  None,   None),
+    "lbr3_6":                   ("wage_empl_permanent_days_per_week",                                           "float64", None,   None),
+    "lbr3_7":                   ("wage_empl_permanent_hours_per_day",                                           "float64", None,   None),
 
     #seasonal/casual
     "lbr3_8":                   ("wage_empl_seasonal_casual_payment_frequency",                                 "object",  None,   None),
@@ -425,27 +425,35 @@ OFF_FARM_EMPLOYMENT_2023 = {
 }
 
 ON_FARM_EMPLOYMENT_2023 = {
-    "interview__key": ("interview_key",                                                         "object",   None,   None),
-    "r_members__id":  ("members_id",                                                            "object",   None,   None),
-    "lbr13":          ("farm_empl_last_12_months",                                              "float64",  "dummy", None),
+    "interview__key":       ("interview_key",                                                         "object",   None,   None),
+    "r_members__id":        ("members_id",                                                            "object",   None,   None),
+    "lbr13":                ("farm_empl_last_12_months",                                              "float64",  "dummy", None),
 
     #CROPS
-    "Ibr13_1":        ("farm_empl_cash_crops_duration_rainy_season_in_months_last_12_months",   "float64",  None,   None),
-    "Ibr13_2":        ("farm_empl_cash_crops_duration_dry_season_in_months_last_12_months",     "float64",  None,   None),
-    "Ibr13_3":        ("farm_empl_cash_crops_days_per_week",                                    "float64",  None,   None),
-    "Ibr13_4":        ("farm_empl_cash_crops_hours_per_day",                                    "float64",  None,   None),
-    "Ibr13_5":        ("farm_empl_food_crops_duration_rainy_season_in_months_last_12_months",   "float64",  None,   None),
-    "Ibr13_6":        ("farm_empl_food_crops_duration_dry_season_in_months_last_12_months",     "float64",  None,   None),
-    "Ibr13_8":        ("farm_empl_food_crops_days_per_week",                                    "float64",  None,   None),
-    "Ibr13_9":        ("farm_empl_food_crops_hours_per_day",                                    "float64",  None,   None),
-    "years_exp_crp":  ("farm_empl_crops_years_experience_in_years",                             "float64",  None,   None),
+    "Ibr13_1":              ("farm_empl_cash_crops_duration_rainy_season_in_months_last_12_months",   "float64",  None,   None),
+    "Ibr13_2":              ("farm_empl_cash_crops_duration_dry_season_in_months_last_12_months",     "float64",  None,   None),
+    "Ibr13_3":              ("farm_empl_cash_crops_days_per_week",                                    "float64",  None,   None),
+    "Ibr13_4":              ("farm_empl_cash_crops_hours_per_day",                                    "float64",  None,   None),
+    "Ibr13_5":              ("farm_empl_food_crops_duration_rainy_season_in_months_last_12_months",   "float64",  None,   None),
+    "Ibr13_6":              ("farm_empl_food_crops_duration_dry_season_in_months_last_12_months",     "float64",  None,   None),
+    "Ibr13_8":              ("farm_empl_food_crops_days_per_week",                                    "float64",  None,   None),
+    "Ibr13_9":              ("farm_empl_food_crops_hours_per_day",                                    "float64",  None,   None),
+    "years_exp_crp":        ("farm_empl_crops_years_experience_in_years",                             "float64",  None,   None),
 
     #LIVESTOCK
-    "Ibr13_10":       ("farm_empl_livestock_duration_rainy_season_in_months_last_12_months",    "float64",  None,   None), 
-    "Ibr13_11":       ("farm_empl_livestock_duration_dry_season_in_months_last_12_months",      "float64",  None,   None), 
-    "Ibr13_12":       ("farm_empl_livestock_days_per_week",                                     "float64",  None,   None), 
-    "Ibr13_13":       ("farm_empl_livestock_hours_per_day",                                     "float64",  None,   None), 
-    "years_exp_liv":  ("farm_empl_livestock_years_experience_in_years",                         "float64",  None,   None),
+    "Ibr13_10":             ("farm_empl_livestock_duration_rainy_season_in_months_last_12_months",    "float64",  None,   None), 
+    "Ibr13_11":             ("farm_empl_livestock_duration_dry_season_in_months_last_12_months",      "float64",  None,   None), 
+    "Ibr13_12":             ("farm_empl_livestock_days_per_week",                                     "float64",  None,   None), 
+    "Ibr13_13":             ("farm_empl_livestock_hours_per_day",                                     "float64",  None,   None), 
+    "years_exp_liv":        ("farm_empl_livestock_years_experience_in_years",                         "float64",  None,   None),
+
+    "onfarm_main_use__1":   ("farm_empl_main_use_invest_in_own_business",                             "float64",  None,   None),
+    "onfarm_main_use__2":   ("farm_empl_main_use_food",                                               "float64",  None,   None),
+    "onfarm_main_use__3":   ("farm_empl_main_use_education",                                          "float64",  None,   None),
+    "onfarm_main_use__4":   ("farm_empl_main_use_health",                                             "float64",  None,   None),
+    "onfarm_main_use__5":   ("farm_empl_main_use_housing_furniture",                                  "float64",  None,   None),
+    "onfarm_main_use__6":   ("farm_empl_main_use_transportation",                                     "float64",  None,   None),
+    "onfarm_main_use__7":   ("farm_empl_main_use_entertainment",                                      "float64",  None,   None),
 }
 
 MIGRATION_2023 = {
@@ -454,7 +462,7 @@ MIGRATION_2023 = {
     "migrant_ind":    ("migrant_last_12_months",                "float64",  "dummy",    None),
     "migrant_current":("current_migrant",                       "float64",  "dummy",    None),
     "migr_itt":       ("migration_intention_next_12_months",    "object",   None,       mappings.migration_intention),
-    "remit_amt":      ("remittance_amount_sent",                "float64",  None,       None),
+    "remit_amt":      ("remittance_amount_sent_last_12_months", "float64",  None,       None),
 }
 
 ASPIRATIONS_2023 = {
