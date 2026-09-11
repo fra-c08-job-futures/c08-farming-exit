@@ -431,6 +431,9 @@ def create_asset_features(df, category_col='asset_type'):
     computes the value of owned assets, adds asset diversity and aggregates 
     across asset types to the household level.
 
+    It also creates features stating how many normal mobile phones, smartphones,
+    and computers there are in each household. 
+
     Parameters
     ----------
     df : pd.DataFrame
@@ -442,11 +445,18 @@ def create_asset_features(df, category_col='asset_type'):
     -------
     pd.DataFrame
     """
-    df = calculate_revenue(df, "asset_number_owned", "asset_price_per_unit", "asset_value")
-    df["asset_diversity"] = 1
-    df = aggregate_by_hh(df, [category_col])
+    #Get asset diversity and asset value
+    assets = calculate_revenue(df, "asset_number_owned", "asset_price_per_unit", "asset_value")
+    assets["asset_diversity"] = 1
+    assets = aggregate_by_hh(assets, [category_col])
 
-    return df
+    #Get information about phones and computers owned
+    phones = df[df["asset_type"].isin(("Simple Mobile Phone", "Smart Phone", "Computer- laptop or desktop"))]
+    phones = make_pivot_table(phones, index='interview_key', category_columns='asset_type', aggfunc='sum', values='asset_number_owned')
+
+    merge = assets.merge(phones, on=["interview_key"], how="outer")
+
+    return merge
 
 def create_other_income_features(df, country, frequency_col='other_income_frequency', source_col='other_income_source'):
     """

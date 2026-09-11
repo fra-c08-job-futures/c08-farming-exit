@@ -204,10 +204,13 @@ ASSETS_OWNED_2023 = {
 }
 
 INTERNET_ACCESS_2023 = {
-    "interview__key":    ("interview_key",                          "object",   None,    None),
-    "access_internet":   ("internet_access",                        "float64",  "dummy", None),
-    "internet_home":     ("internet_access_at_home",                "float64",  "dummy", None),
-    # "distance_internet": ("internet_access_distance_in_meters",   "float64",  None,    None), #dropped: 100% missings
+    "interview__key":       ("interview_key",                          "object",   None,    None),
+    "access_internet":      ("internet_access",                        "float64",  "dummy", None),
+    "internet_home":        ("internet_access_at_home",                "float64",  "dummy", None),
+    # "distance_internet":  ("internet_access_distance_in_meters",     "float64",  None,    None), #dropped: 100% missings
+    "inter_activity__9":    ("internet_activity_pay_bills",            "float64",  "dummy", None),
+    "inter_activity__10":   ("internet_activity_operate_business",     "float64",  "dummy", None),
+    "cost_internet":        ("internet_monthly_cost",                  "float64",  None, None),
     #TODO: What Types of Online Activities Do you Engage in when using the Internet? Available
 }
 
