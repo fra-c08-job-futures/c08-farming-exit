@@ -283,6 +283,8 @@ ROAD_CONNECTIVITY_2023 = {
     "road_6":               ("road_distance_in_minutes",    "float64", None,    None), #very little missings, so mean is a save option!
 }
 
+
+
 # ============================================================
 # INDIVIDUAL-LEVEL FEATURES
 # ============================================================
@@ -502,3 +504,12 @@ TIME_ALLOCATION_2023 = { #In the last complete 24 hours, starting yesterday morn
     "f_time__id":         ("time_slot",                             "object",   None, None),
     "f_prim":             ("primary_activity",                      "object",   None, mappings.primary_activity),
 }
+
+DECISION_MAKING_2023 = {
+    "interview__key":       ("interview_key",               "object",  None,    None),
+    "r_members__id":        ("members_id",                  "object",  None,    None),
+    "decision_code":        ("decision_type",               "object",  None,    mappings.decision_code),
+    "decision_maker_1":     ("decision_maker_1",            "object",  None,    None), 
+    "decision_maker_2":     ("decision_maker_2",            "object",  None,    None),
+}
+

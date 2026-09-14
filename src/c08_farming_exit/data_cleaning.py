@@ -586,6 +586,53 @@ def create_time_allocation_features(df):
 
     return df
 
+def create_decision_making_features(df, country):
+    """
+    Creates decision making features by identifying who takes what specific household decision.
+    In addition, the main hh decision maker is identified.
+    This function is a wrapper around `make_pivot_table()`.
+
+    Parameters
+    ----------
+    df : pd.DataFrame
+    country: str
+        used to create personal_id.
+
+    Returns
+    -------
+    pd.DataFrame
+    """
+    #Overwrite decision_maker_1 and decision_maker_2 with personal_id, but only where not NaN
+    df["decision_maker_1"] = df["decision_maker_1"].where(
+        df["decision_maker_1"].isna(),
+        country + "_" + df["interview_key"].astype(str) + "_" + df["decision_maker_1"].astype("Int64").astype(str)
+    )
+    df["decision_maker_2"] = df["decision_maker_2"].where(
+        df["decision_maker_2"].isna(),
+        country + "_" + df["interview_key"].astype(str) + "_" + df["decision_maker_2"].astype("Int64").astype(str)
+    )
+
+    #Pivot table
+    df = make_pivot_table(df, 
+                          index=['interview_key', 'members_id'], 
+                          category_columns="decision_type", 
+                          aggfunc="first", 
+                          values=["decision_maker_1", "decision_maker_2"])
+    df.columns = (
+            df.columns.str.replace(r"decision_type_\('", "", regex=True)
+            .str.replace("', '", "_", regex=False)
+            .str.replace(r"'\)", "", regex=True)
+    )
+
+    # Identify main decision maker
+    decision_cols = [
+        col for col in df.columns 
+        if col.startswith("decision_maker_1_") or col.startswith("decision_maker_2_")
+    ]
+    df["main_decision_maker"] = df[decision_cols].mode(axis=1)[0]
+
+    return df
+
 # ============================================================
 # EDA STUFF
 # ============================================================

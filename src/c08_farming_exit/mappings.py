@@ -474,6 +474,30 @@ cooking_energy_source = { #ordinal encoding
     "Electric cookers":      3,
 }
 
+decision_code = {
+    "weai_1": "crop_farming_management",
+    "weai_2": "marketing_crop_produce",
+    "weai_3": "crop_farming_income_expenditure",
+    "weai_4": "farm_inputs_expenditure",
+    "weai_5": "consulting_agricultural_experts",
+    "weai_6": "buying_and_selling_livestock",
+    "weai_7": "livestock_income_expenditure",
+    "weai_8": "use_of_large_livestock",
+    "weai_9": "use_of_small_livestock",
+    "weai_10": "non_agricultural_activities",
+    "weai_11": "off_farm_employment_income_expenditure",
+    "weai_12": "food_expenditure",
+    "weai_13": "agricultural_capital_investments",
+    "weai_14": "buying_and_selling_durable_goods",
+    "weai_15": "buying_and_selling_land_houses",
+    "weai_16": "children_education_expenditure",
+    "weai_17": "remittance_allocation",
+    "weai_18": "borrowing_money_and_loan_size",
+    "weai_19": "training_and_seminar_attendance",
+    "weai_20": "adopting_new_techniques_knowledge",
+    "weai_21": "use_of_land",
+}
+
 
 # ============================================================
 # FEATURE ENGINEERING MAPPINGS
